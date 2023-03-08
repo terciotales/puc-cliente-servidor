@@ -1,16 +1,8 @@
-module com.example.aula01 {
+module com.example.aula01javafx {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.web;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
 
-    opens com.example.aula01 to javafx.fxml;
-    exports com.example.aula01;
+    opens com.example.aula01javafx to javafx.fxml;
+    exports com.example.aula01javafx;
 }
