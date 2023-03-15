@@ -5,16 +5,22 @@ import model.Profissao;
 import model.Utilidade;
 
 public class Item {
-    int id;
+    int index;
 
-    Pessoa pessoa;
+    public Pessoa pessoa;
 
     Profissao profissao;
 
-    public Item(int id) {
-        this.id = id;
+    public Item(int index) {
+        this.index = index;
         this.pessoa = new Pessoa("", 0);
         this.profissao = new Profissao(0, "");
+    }
+
+    public Item(int index, Pessoa pessoa, Profissao profissao) {
+        this.index = index;
+        this.pessoa = pessoa;
+        this.profissao = profissao;
     }
 
     public void setPessoa(Pessoa pessoa) {
@@ -25,7 +31,7 @@ public class Item {
         this.profissao = profissao;
     }
 
-    public int getId() {
-        return id;
+    public int getIndex() {
+        return index;
     }
 }

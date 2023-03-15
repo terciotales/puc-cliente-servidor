@@ -40,7 +40,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_change" layoutX="40.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="26.0" prefWidth="320.0" text="Alterar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Button fx:id="btn_change" layoutX="40.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onChange" prefHeight="26.0" prefWidth="320.0" text="Alterar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

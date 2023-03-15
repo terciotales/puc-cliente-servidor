@@ -20,9 +20,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    private Item item = new Item(0);
-
-    private Utilidade utilidade = new Utilidade(item);
+    private Utilidade utilidade = Utilidade.getInstance();
     @FXML
     private AnchorPane anchor;
 
@@ -47,26 +45,35 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void onClick(MouseEvent event) {
-        String nome = txt_name.getText();
-        int codProfissao = combobox_role.getValue().getCodigo();
+    void onChange(MouseEvent event) {
+        String name = txt_name.getText();
+        int codProfissao = combobox_role.getSelectionModel().getSelectedItem().getCodigo();
 
-        System.out.println(codProfissao);
+        utilidade.setActualItem(name, codProfissao);
     }
 
     @FXML
     void onNext(MouseEvent event) {
-        item = new Item(utilidade.size());
-        utilidade.add(item);
+        utilidade.next();
+
+        setController();
     }
 
     @FXML
     void onPrevious(MouseEvent event) {
-        item = utilidade.get(item.getId() - 1);
+        utilidade.previous();
+
+        setController();
+    }
+
+    private void setController() {
+        txt_name.setText(utilidade.getActualItem().pessoa.getNome());
+        combobox_role.getSelectionModel().select(utilidade.getActualItem().pessoa.getCodProfissao());
     }
 
     private void setCombobox_roles() {
         ObservableList<Profissao> elements = FXCollections.observableArrayList(
+                new Profissao(0, "Selecione uma profissão"),
                 new Profissao(1, "Programador"),
                 new Profissao(2, "Analista"),
                 new Profissao(3, "Designer"),
