@@ -1,4 +1,4 @@
-module com.example.combobox {
+module main.app {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,6 +7,11 @@ module com.example.combobox {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.combobox to javafx.fxml;
-    exports com.example.combobox;
+    opens model to javafx.fxml;
+    opens controller to javafx.fxml;
+    exports model;
+    exports controller;
+
+    opens main.app to javafx.fxml;
+    exports main.app;
 }

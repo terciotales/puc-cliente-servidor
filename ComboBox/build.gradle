@@ -17,16 +17,16 @@ ext {
     junitVersion = '5.9.1'
 }
 
-sourceCompatibility = '14'
-targetCompatibility = '14'
+sourceCompatibility = '19'
+targetCompatibility = '19'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 application {
-    mainModule = 'com.example.combobox'
-    mainClass = 'com.example.combobox.HelloApplication'
+    mainModule = 'main.app'
+    mainClass = 'main.app.App'
 }
 
 javafx {
