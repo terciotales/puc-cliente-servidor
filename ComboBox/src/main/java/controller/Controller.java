@@ -1,37 +1,22 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.util.StringConverter;
-import model.Pessoa;
 import model.Profissao;
 import model.Utilidade;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    private Utilidade utilidade = Utilidade.getInstance();
-    @FXML
-    private AnchorPane anchor;
-
-    @FXML
-    private Button btn_change;
-
-    @FXML
-    private Button btn_next;
-
-    @FXML
-    private Button btn_previous;
+    // Singleton da classe Utilidade
+    private final Utilidade utilidade = Utilidade.getInstance();
 
     @FXML
     private ComboBox<Profissao> combobox_role;
@@ -39,39 +24,52 @@ public class Controller implements Initializable {
     @FXML
     private TextField txt_name;
 
-
     public void initialize(URL location, ResourceBundle resources) {
-        setCombobox_roles();
+        setComboboxRoles();
     }
 
+    /**
+     * Método para adicionar um novo item
+     */
     @FXML
     void onChange(MouseEvent event) {
         String name = txt_name.getText();
-        int codProfissao = combobox_role.getSelectionModel().getSelectedItem().getCodigo();
+        int codProfissao = combobox_role.getSelectionModel().getSelectedItem().codigo();
 
         utilidade.setActualItem(name, codProfissao);
     }
 
+    /**
+     * Método para avançar para o próximo item
+     */
     @FXML
     void onNext(MouseEvent event) {
         utilidade.next();
-
         setController();
     }
 
+    /**
+     * Método para voltar para o item anterior
+     */
     @FXML
     void onPrevious(MouseEvent event) {
         utilidade.previous();
-
         setController();
     }
 
+    /**
+     * Método para popular os campos de texto com os dados do item atual
+     */
     private void setController() {
         txt_name.setText(utilidade.getActualItem().pessoa.getNome());
         combobox_role.getSelectionModel().select(utilidade.getActualItem().pessoa.getCodProfissao());
     }
 
-    private void setCombobox_roles() {
+    /**
+     * Método para popular o combobox de profissões
+     */
+    public void setComboboxRoles() {
+        // Lista de objetos Profissao
         ObservableList<Profissao> elements = FXCollections.observableArrayList(
                 new Profissao(0, "Selecione uma profissão"),
                 new Profissao(1, "Programador"),
@@ -93,35 +91,14 @@ public class Controller implements Initializable {
                 new Profissao(17, "Jardineiro"),
                 new Profissao(18, "Padeiro"),
                 new Profissao(19, "Pintor"),
-                new Profissao(20, "Fotógrafo"),
-                new Profissao(21, "Jornalista"),
-                new Profissao(22, "Escritor"),
-                new Profissao(23, "Ator"),
-                new Profissao(24, "Cantor"),
-                new Profissao(25, "Dançarino"),
-                new Profissao(26, "Cientista"),
-                new Profissao(27, "Arqueólogo"),
-                new Profissao(28, "Músico"),
-                new Profissao(29, "Físico"),
-                new Profissao(30, "Matemático"),
-                new Profissao(31, "Químico"),
-                new Profissao(32, "Biólogo"),
-                new Profissao(33, "Historiador"),
-                new Profissao(34, "Geógrafo"),
-                new Profissao(35, "Filósofo"),
-                new Profissao(36, "Psicólogo"),
-                new Profissao(37, "Economista"),
-                new Profissao(38, "Administrador"),
-                new Profissao(39, "Contador"),
-                new Profissao(40, "Militar"),
-                new Profissao(41, "Político"),
-                new Profissao(42, "Empresário")
+                new Profissao(20, "Fotógrafo")
         );
 
+        // Converter para exibir a descrição do objeto Profissao no combobox
         combobox_role.setConverter(new StringConverter<>() {
             @Override
             public String toString(Profissao object) {
-                return object.getDescricao();
+                return object.descricao();
             }
 
             @Override
@@ -130,7 +107,10 @@ public class Controller implements Initializable {
             }
         });
 
+        // Adiciona os elementos ao combobox
         combobox_role.setItems(elements);
+
+        // Seleciona o primeiro elemento
         combobox_role.getSelectionModel().selectFirst();
     }
 }

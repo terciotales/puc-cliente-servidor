@@ -6,64 +6,65 @@ import java.util.ArrayList;
 
 public class Utilidade {
 
+    // Singleton da classe Utilidade
     private static Utilidade instance;
 
-    public final ArrayList<Item> list;
+    // Lista de itens
+    private final ArrayList<Item> list;
 
-    private Item actualItem;
+    // Item atual
+    private Item actualItem = new Item(0);
 
-    public Utilidade(Item item) {
-        this.actualItem = item;
+    // Construtor privado
+    private Utilidade() {
         this.list = new ArrayList<>() {
             {
-                add(item);
+                add(actualItem);
             }
         };
     }
 
+    // Método para retornar a instância da classe
     public static synchronized Utilidade getInstance() {
         if (instance == null) {
-            instance = new Utilidade(new Item(0));
+            instance = new Utilidade();
         }
 
         return instance;
     }
 
+    // Método para retornar o item atual
     public Item getActualItem() {
         return this.actualItem;
     }
 
+    // Método para setar o item atual
     public void setActualItem(String nome, int codProfissao) {
         this.actualItem.pessoa.setNome(nome);
         this.actualItem.pessoa.setCodProfissao(codProfissao);
     }
 
-    public void addNew() {
+    // Método para adicionar um novo item
+    public void addNewItem() {
         this.actualItem = new Item(this.list.size());
         this.list.add(this.actualItem);
     }
 
+    // Método para avançar para o próximo item
     public void next() {
+        // Se o item atual for o último da lista, adiciona um novo item
         try {
             this.actualItem = this.list.get(this.actualItem.getIndex() + 1);
         } catch (IndexOutOfBoundsException e) {
-            this.addNew();
+            this.addNewItem();
         }
     }
 
+    // Método para voltar para o item anterior
     public void previous() {
-        if (this.actualItem.getIndex() == 0) {
-            this.actualItem = this.list.get(this.list.size() - 1);
-        } else {
+        // Se o item atual não for o primeiro da lista, volta para o item anterior
+        if (this.actualItem.getIndex() != 0) {
             this.actualItem = this.list.get(this.actualItem.getIndex() - 1);
         }
-    }
-
-    public int getActualItemIndex() {
-        return this.actualItem.getIndex();
-    }
-
-    public int size() {
-        return this.list.size();
     }
 }

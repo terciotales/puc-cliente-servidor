@@ -29,7 +29,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="combobox_role" layoutX="40.0" layoutY="191.0" prefWidth="320.0" />
+      <ComboBox fx:id="combobox_role" layoutX="40.0" layoutY="191.0" prefWidth="320.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
       <Button fx:id="btn_previous" layoutX="44.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onPrevious" prefHeight="26.0" prefWidth="150.0" text="Anterior" AnchorPane.leftAnchor="40.0">
          <font>
             <Font name="System Bold" size="12.0" />
