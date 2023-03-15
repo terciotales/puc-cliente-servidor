@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Cadastro de Pessoas" textAlignment="CENTER" textFill="#303234" AnchorPane.leftAnchor="76.40000000000003" AnchorPane.rightAnchor="76.4">
          <padding>
@@ -30,17 +30,17 @@
          </font>
       </Label>
       <ComboBox fx:id="combobox_role" layoutX="40.0" layoutY="191.0" prefWidth="320.0" />
-      <Button fx:id="btn_previous" layoutX="44.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Anterior" AnchorPane.leftAnchor="40.0">
+      <Button fx:id="btn_previous" layoutX="44.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onPrevious" prefHeight="26.0" prefWidth="150.0" text="Anterior" AnchorPane.leftAnchor="40.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_next" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="150.0" text="Próximo" AnchorPane.rightAnchor="40.0">
+      <Button fx:id="btn_next" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onNext" prefWidth="150.0" text="Próximo" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_change" layoutX="40.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="320.0" text="Alterar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Button fx:id="btn_change" layoutX="40.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="26.0" prefWidth="320.0" text="Alterar" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
