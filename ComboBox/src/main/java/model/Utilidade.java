@@ -44,6 +44,14 @@ public class Utilidade {
         this.actualItem.pessoa.setCodProfissao(codProfissao);
     }
 
+    public void setActualItemIndex(int index) {
+        try {
+            this.actualItem = this.list.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Não foi possível setar o item atual");
+        }
+    }
+
     // Método para adicionar um novo item
     public void addNewItem() {
         this.actualItem = new Item(this.list.size());

@@ -27,6 +27,7 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             setComboboxRoles();
+            setDefaultValues();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -116,5 +117,33 @@ public class Controller implements Initializable {
 
         // Seleciona o primeiro elemento
         combobox_role.getSelectionModel().selectFirst();
+    }
+
+    /**
+     * Método para setar os valores padrão
+     */
+
+    private void setDefaultValues() {
+        utilidade.setActualItem("João", 1);
+        utilidade.nextItem();
+        utilidade.setActualItem("Marcos", 2);
+        utilidade.nextItem();
+        utilidade.setActualItem("Pedro", 3);
+        utilidade.nextItem();
+        utilidade.setActualItem("Paulo", 4);
+        utilidade.nextItem();
+        utilidade.setActualItem("José", 5);
+        utilidade.nextItem();
+        utilidade.setActualItem("Maria", 6);
+        utilidade.nextItem();
+        utilidade.setActualItem("Ana", 7);
+        utilidade.nextItem();
+        utilidade.setActualItem("Julia", 8);
+        utilidade.nextItem();
+        utilidade.setActualItem("Carla", 9);
+        utilidade.nextItem();
+        utilidade.setActualItem("Larissa", 10);
+        utilidade.setActualItemIndex(0);
+        setController();
     }
 }
