@@ -51,7 +51,7 @@ public class Utilidade {
     }
 
     // Método para avançar para o próximo item
-    public void next() {
+    public void nextItem() {
         // Se o item atual for o último da lista, adiciona um novo item
         try {
             this.actualItem = this.list.get(this.actualItem.getIndex() + 1);
@@ -61,7 +61,7 @@ public class Utilidade {
     }
 
     // Método para voltar para o item anterior
-    public void previous() {
+    public void previousItem() {
         // Se o item atual não for o primeiro da lista, volta para o item anterior
         if (this.actualItem.getIndex() != 0) {
             this.actualItem = this.list.get(this.actualItem.getIndex() - 1);

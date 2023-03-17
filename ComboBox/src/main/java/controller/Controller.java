@@ -25,7 +25,11 @@ public class Controller implements Initializable {
     private TextField txt_name;
 
     public void initialize(URL location, ResourceBundle resources) {
-        setComboboxRoles();
+        try {
+            setComboboxRoles();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -34,7 +38,7 @@ public class Controller implements Initializable {
     @FXML
     void onChange(MouseEvent event) {
         String name = txt_name.getText();
-        int codProfissao = combobox_role.getSelectionModel().getSelectedItem().codigo();
+        int codProfissao = combobox_role.getSelectionModel().getSelectedItem().getCodigo();
 
         utilidade.setActualItem(name, codProfissao);
     }
@@ -44,7 +48,7 @@ public class Controller implements Initializable {
      */
     @FXML
     void onNext(MouseEvent event) {
-        utilidade.next();
+        utilidade.nextItem();
         setController();
     }
 
@@ -53,7 +57,7 @@ public class Controller implements Initializable {
      */
     @FXML
     void onPrevious(MouseEvent event) {
-        utilidade.previous();
+        utilidade.previousItem();
         setController();
     }
 
@@ -98,7 +102,7 @@ public class Controller implements Initializable {
         combobox_role.setConverter(new StringConverter<>() {
             @Override
             public String toString(Profissao object) {
-                return object.descricao();
+                return object.getDescricao();
             }
 
             @Override

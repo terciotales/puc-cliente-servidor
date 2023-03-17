@@ -2,7 +2,7 @@ package model;
 
 public class Pessoa {
     String nome;
-    int codProfissao;
+    private int codProfissao;
 
     public Pessoa(String nome, int codProfissao) {
         this.nome = nome;
