@@ -26,6 +26,12 @@ public class Cliente {
 
     public void setId(int id) {
         this.id = id;
+
+        if (this.telefones != null) {
+            for (Telefone telefone : this.telefones) {
+                telefone.setClienteId(id);
+            }
+        }
     }
 
     public String getNome() {
@@ -58,22 +64,16 @@ public class Cliente {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.cadastrar(this);
 
-        if (this.id != 0) {
-            telefones.forEach((telefone) -> {
-                try {
-                    telefone.setClienteId(this.id);
-                    telefone.cadastrar();
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            });
-        }
 
-        System.out.println("Cliente cadastrado com sucesso!");
     }
 
     @Override
     public String toString() {
-        return "Cliente [id=" + id + ", nome=" + nome + ", telefones=" + telefones + "]";
+        return "Cliente: \n\n" +
+                "[\n  " +
+                "ID: " + id + "\n  " +
+                "Nome: " + nome + "\n  " +
+                "Telefone: " + telefones + "\n" +
+                "]\n";
     }
 }

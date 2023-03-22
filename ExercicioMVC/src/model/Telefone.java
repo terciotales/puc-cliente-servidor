@@ -4,6 +4,7 @@ import dao.TelefoneDAO;
 
 public class Telefone {
 
+    private int id;
     private int clienteId;
     private String telefone;
 
@@ -11,13 +12,21 @@ public class Telefone {
         // super();
     }
 
-    public Telefone (String telefone) {
+    public Telefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public Telefone(int clienteId, String telefone) {
+    public Telefone(int id, int clienteId, String telefone) {
         this.clienteId = clienteId;
         this.telefone = telefone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getClienteId() {
@@ -43,6 +52,6 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "Telefone [clienteId=" + clienteId + ", telefone=" + telefone + "]";
+        return "Telefone: [ ID: " + id + ", ID do Cliente: " + clienteId + ", Número: " + telefone + " ]";
     }
 }
