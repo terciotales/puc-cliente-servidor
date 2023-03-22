@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Cliente {
 
-    private int id;
-    private String nome;
-    private ArrayList<Telefone> telefones;
+    private int id = 0;
+    private String nome = "";
+    private ArrayList<Telefone> telefones = new ArrayList<>();
 
     public Cliente() {
         // super();
@@ -57,6 +57,19 @@ public class Cliente {
     public void cadastrar() throws Exception {
         ClienteDAO clienteDAO = new ClienteDAO();
         clienteDAO.cadastrar(this);
+
+        if (this.id != 0) {
+            telefones.forEach((telefone) -> {
+                try {
+                    telefone.setClienteId(this.id);
+                    telefone.cadastrar();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
+
+        System.out.println("Cliente cadastrado com sucesso!");
     }
 
     @Override

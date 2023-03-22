@@ -10,6 +10,6 @@ public class ClienteDAO {
 
         String sql = "INSERT INTO clientes (nome) VALUES ('" + cliente.getNome() + "')";
         conexao.executar(sql);
-        System.out.println("Cliente cadastrado com sucesso!");
+        cliente.setId(conexao.getResultId());
     }
 }

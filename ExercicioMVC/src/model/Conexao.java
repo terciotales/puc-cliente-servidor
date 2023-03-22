@@ -12,6 +12,7 @@ public class Conexao {
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
+    private long resultId = 0;
 
     // Conecta ao banco de dados
     public void conectar() throws Exception {
@@ -30,7 +31,7 @@ public class Conexao {
     }
 
     // Fecha a conexão
-    private void close() {
+    public void close() {
         try {
             if (resultSet != null) {
                 resultSet.close();
@@ -50,10 +51,16 @@ public class Conexao {
 
     public void executar(String sql) {
         try {
-            this.connection.setAutoCommit(false);
+            String[] generatedColumns = {"ID"};
 
-            this.preparedStatement = connection.prepareStatement(sql);
+            this.connection.setAutoCommit(false);
+            this.preparedStatement = connection.prepareStatement(sql, generatedColumns);
             this.preparedStatement.executeUpdate();
+            this.resultSet = preparedStatement.getGeneratedKeys();
+
+            if (resultSet.next()) {
+                this.resultId = resultSet.getLong(1);
+            }
 
             this.connection.commit();
         } catch (SQLException e) {
@@ -64,8 +71,6 @@ public class Conexao {
             }
 
             e.printStackTrace();
-        } finally {
-            close();
         }
     }
 
@@ -77,5 +82,9 @@ public class Conexao {
         }
 
         return this.resultSet;
+    }
+
+    public int getResultId() {
+        return Integer.parseInt(String.valueOf(this.resultId));
     }
 }

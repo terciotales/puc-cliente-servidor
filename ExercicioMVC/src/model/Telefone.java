@@ -1,5 +1,7 @@
 package model;
 
+import dao.TelefoneDAO;
+
 public class Telefone {
 
     private int clienteId;
@@ -7,6 +9,10 @@ public class Telefone {
 
     public Telefone() {
         // super();
+    }
+
+    public Telefone (String telefone) {
+        this.telefone = telefone;
     }
 
     public Telefone(int clienteId, String telefone) {
@@ -28,6 +34,11 @@ public class Telefone {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public void cadastrar() throws Exception {
+        TelefoneDAO clienteDAO = new TelefoneDAO();
+        clienteDAO.cadastrar(this);
     }
 
     @Override
