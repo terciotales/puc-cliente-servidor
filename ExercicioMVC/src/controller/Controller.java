@@ -43,29 +43,41 @@ public class Controller {
         cliente = ClienteDAO.getCliente(cliente.getId());
 
         System.out.println(cliente);
-        System.out.println("Qual campo deseja alterar?");
-        System.out.println("1 - Nome");
-        System.out.println("2 - Telefone");
 
-        int opcao = scanner.nextInt();
+        String opcao = View.changeClienteMenu();
 
         switch (opcao) {
-            case 1 -> {
+            case "1" -> {
                 cliente.setNome(View.getClienteNome());
                 ClienteDAO.alterar(cliente);
             }
-            case 2 -> {
-                System.out.println("Digite o ID do telefone que deseja alterar:");
-                int idTelefone = scanner.nextInt();
-                for (Telefone telefone : cliente.getTelefones()) {
-                    if (telefone.getId() == idTelefone) {
-                        telefone.setTelefone(View.getTelefone());
-                        TelefoneDAO.alterar(telefone);
-                    }
+            case "2" -> {
+                this.alterarTelefone(cliente);
+            }
+            default -> View.printMessage("Opção inválida.");
+        }
+    }
+
+    public void alterarTelefone(Cliente cliente) throws Exception {
+        Telefone telefone = new Telefone();
+        boolean telefoneEncontrado = false;
+
+        while (!telefoneEncontrado) {
+            int telefoneId = View.getTelefoneID();
+            for (Telefone t : cliente.getTelefones()) {
+                if (Objects.equals(t.getId(), telefoneId)) {
+                    telefoneEncontrado = true;
+                    telefone = t;
+                    break;
                 }
             }
-            default -> System.out.println("Opção inválida.");
+            if (!telefoneEncontrado) {
+                View.printMessage("Telefone não encontrado!");
+            }
         }
+
+        telefone.setTelefone(View.getTelefone());
+        TelefoneDAO.alterar(telefone);
     }
 
     public void excluirCliente() {

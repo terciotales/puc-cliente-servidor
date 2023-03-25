@@ -29,11 +29,13 @@ public class View {
             case "2": {
                 System.out.println("Alteração de cliente");
                 controller.alterarCliente();
+                System.out.println("Alteração realizada com sucesso!");
                 break;
             }
             case "3": {
                 System.out.println("Exclusão de cliente");
                 controller.excluirCliente();
+                System.out.println("Cliente excluído com sucesso!");
                 break;
             }
             case "4": {
@@ -69,7 +71,7 @@ public class View {
         }
     }
 
-    public static void changeClienteMenu() throws Exception {
+    public static String changeClienteMenu() throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Qual campo deseja alterar?");
@@ -78,20 +80,12 @@ public class View {
 
         String userOption = scanner.nextLine();
 
-        switch (userOption) {
-            case "1": {
-                controller.alterarClienteNome();
-                break;
-            }
-            case "2": {
-                controller.alterarClienteTelefone();
-                break;
-            }
-            default: {
-                System.out.println("Opção inválida");
-                break;
-            }
+        while (!userOption.equals("1") && !userOption.equals("2")) {
+            System.out.println("Opção inválida");
+            userOption = scanner.nextLine();
         }
+
+        return userOption;
     }
 
     public static int getClienteId() {
@@ -136,6 +130,21 @@ public class View {
         return telefone;
     }
 
+    public static int getTelefoneID() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o ID do telefone:");
+        String userAnswer = scanner.nextLine();
+        int id = Integer.parseInt(userAnswer);
+
+        while (id <= 0 || userAnswer.equals("")) {
+            System.out.println("O ID não pode ser menor ou igual a zero!");
+            id = scanner.nextInt();
+        }
+
+        return id;
+    }
+
     public static ArrayList<Telefone> getTelefones() {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Telefone> telefones = new ArrayList<>();
@@ -154,6 +163,18 @@ public class View {
         }
 
         return telefones;
+    }
+
+    public static void printCliente(String nome, ArrayList<Telefone> telefones) {
+        System.out.println("Nome: " + nome);
+        System.out.println("Telefones: ");
+        for (Telefone telefone : telefones) {
+            System.out.println(telefone.getTelefone());
+        }
+    }
+
+    public static void printMessage(String message) {
+        System.out.println(message);
     }
 
     public void exit() {
