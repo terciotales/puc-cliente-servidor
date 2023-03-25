@@ -31,7 +31,7 @@ public class ClienteDAO {
 
         ResultSet resultSet = conexao.consultar(sql);
 
-        return resultSet.next();
+        return !resultSet.next();
     }
 
     public static Cliente getCliente(int id) throws Exception {
@@ -51,5 +51,22 @@ public class ClienteDAO {
         }
 
         return cliente;
+    }
+
+    public static void excluir(int id) throws Exception {
+        Conexao conexao = new Conexao();
+        conexao.conectar();
+
+        if (!TelefoneDAO.checkByClienteId(id)) {
+            TelefoneDAO.excluirByClienteId(id);
+        }
+
+        String sql = "DELETE FROM clientes WHERE id = " + id;
+
+        try {
+            conexao.executar(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

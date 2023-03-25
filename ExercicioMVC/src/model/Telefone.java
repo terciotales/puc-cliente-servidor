@@ -46,8 +46,7 @@ public class Telefone {
     }
 
     public void cadastrar() throws Exception {
-        TelefoneDAO clienteDAO = new TelefoneDAO();
-        clienteDAO.cadastrar(this);
+        TelefoneDAO.cadastrar(this);
     }
 
     @Override

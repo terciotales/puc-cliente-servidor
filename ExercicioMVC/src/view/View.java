@@ -27,23 +27,35 @@ public class View {
                 break;
             }
             case "2": {
+                System.out.println("Adicionar telefone a um cliente");
+                controller.adicionarTelefone();
+                System.out.println("Telefone adicionado com sucesso!");
+                break;
+            }
+            case "3": {
                 System.out.println("Alteração de cliente");
                 controller.alterarCliente();
                 System.out.println("Alteração realizada com sucesso!");
                 break;
             }
-            case "3": {
+            case "4": {
                 System.out.println("Exclusão de cliente");
                 controller.excluirCliente();
                 System.out.println("Cliente excluído com sucesso!");
                 break;
             }
-            case "4": {
+            case "5": {
+                System.out.println("Exclusão de telefone");
+                controller.excluirTelefone();
+                System.out.println("Telefone excluído com sucesso!");
+                break;
+            }
+            case "6": {
                 System.out.println("Pesquisa de cliente");
                 controller.pesquisarCliente();
                 break;
             }
-            case "5": {
+            case "7": {
                 exit();
                 break;
             }
@@ -61,10 +73,12 @@ public class View {
         while (running) {
             System.out.println("Escolha uma opção:");
             System.out.println("1 - Cadastrar novo cliente");
-            System.out.println("2 - Alterar cliente");
-            System.out.println("3 - Excluir cliente");
-            System.out.println("4 - Pesquisar cliente");
-            System.out.println("5 - Sair");
+            System.out.println("2 - Adicionar telefone a um cliente");
+            System.out.println("3 - Alterar cliente ou telefone");
+            System.out.println("4 - Excluir cliente");
+            System.out.println("5 - Excluir telefone");
+            System.out.println("6 - Pesquisar cliente");
+            System.out.println("7 - Sair");
 
             String userOption = scanner.nextLine();
             callController(userOption);
@@ -175,6 +189,22 @@ public class View {
 
     public static void printMessage(String message) {
         System.out.println(message);
+    }
+
+    public static String exclusionConfirmation(String toBeDeleted) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Tem certeza que deseja excluir o " + toBeDeleted + "? (s/n)");
+
+
+        String userOption = scanner.nextLine();
+
+        while (!userOption.equals("s") && !userOption.equals("n")) {
+            System.out.println("Opção inválida");
+            userOption = scanner.nextLine();
+        }
+
+        return userOption;
     }
 
     public void exit() {

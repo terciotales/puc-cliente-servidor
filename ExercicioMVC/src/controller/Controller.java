@@ -7,7 +7,6 @@ import model.Telefone;
 import view.View;
 
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Controller {
     public void cadastrarCliente() throws Exception {
@@ -27,14 +26,37 @@ public class Controller {
         telefoneDAO.cadastrarVarios(cliente.getTelefones());
     }
 
-    public void alterarCliente() throws Exception {
+    public void adicionarTelefone() throws Exception {
         Cliente cliente = new Cliente();
-        Scanner scanner = new Scanner(System.in);
+        Telefone telefone = new Telefone();
 
         while (cliente.getId() == 0) {
             cliente.setId(View.getClienteId());
 
-            if (!ClienteDAO.check(cliente.getId())) {
+            if (ClienteDAO.check(cliente.getId())) {
+                System.out.println("Cliente não encontrado.");
+                cliente.setId(0);
+            }
+        }
+
+        telefone.setClienteId(cliente.getId());
+        telefone.setTelefone(View.getTelefone());
+
+        while (Objects.equals(telefone.getTelefone(), "")) {
+            telefone.setTelefone(View.getTelefone());
+        }
+
+        TelefoneDAO.cadastrar(telefone);
+
+    }
+
+    public void alterarCliente() throws Exception {
+        Cliente cliente = new Cliente();
+
+        while (cliente.getId() == 0) {
+            cliente.setId(View.getClienteId());
+
+            if (ClienteDAO.check(cliente.getId())) {
                 System.out.println("Cliente não encontrado.");
                 cliente.setId(0);
             }
@@ -80,11 +102,49 @@ public class Controller {
         TelefoneDAO.alterar(telefone);
     }
 
-    public void excluirCliente() {
+    public void excluirCliente() throws Exception {
+        Cliente cliente = new Cliente();
 
+        while (cliente.getId() == 0) {
+            cliente.setId(View.getClienteId());
+
+            if (ClienteDAO.check(cliente.getId())) {
+                System.out.println("Cliente não encontrado.");
+                cliente.setId(0);
+            }
+        }
+
+        String confirm = View.exclusionConfirmation("cliente");
+
+        if (confirm.equals("s")) {
+            ClienteDAO.excluir(cliente.getId());
+        } else {
+            View.printMessage("Exclusão cancelada.");
+        }
     }
 
     public void pesquisarCliente() {
 
+    }
+
+    public void excluirTelefone() throws Exception {
+        Telefone telefone = new Telefone();
+
+        while (telefone.getId() == 0) {
+            telefone.setId(View.getTelefoneID());
+
+            if (TelefoneDAO.check(telefone.getId())) {
+                View.printMessage("Telefone não encontrado.");
+                telefone.setId(0);
+            }
+        }
+
+        String confirm = View.exclusionConfirmation("telefone");
+
+        if (confirm.equals("s")) {
+            TelefoneDAO.excluir(telefone.getId());
+        } else {
+            View.printMessage("Exclusão cancelada.");
+        }
     }
 }
