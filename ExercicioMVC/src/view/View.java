@@ -1,6 +1,7 @@
 package view;
 
 import controller.Controller;
+import model.Cliente;
 import model.Telefone;
 
 import java.util.ArrayList;
@@ -20,48 +21,168 @@ public class View {
 
     public void callController(String userOption) throws Exception {
         switch (userOption) {
-            case "1": {
+            case "1" -> {
                 System.out.println("Cadastro de cliente");
-                controller.cadastrarCliente();
+
+                Cliente cliente = new Cliente();
+
+                while (Objects.equals(cliente.getNome(), "")) {
+                    cliente.setNome(View.getClienteNome());
+                }
+
+                while (cliente.getTelefones().isEmpty()) {
+                    cliente.setTelefones(View.getTelefones());
+                }
+
+                controller.cadastrarCliente(cliente);
                 System.out.println("Cliente cadastrado com sucesso!");
-                break;
             }
-            case "2": {
+            case "2" -> {
                 System.out.println("Adicionar telefone a um cliente");
-                controller.adicionarTelefone();
+
+                Cliente cliente = new Cliente();
+                Telefone telefone = new Telefone();
+
+                while (cliente.getId() == 0) {
+                    cliente.setId(View.getClienteId());
+
+                    if (controller.checkCliente(cliente.getId())) {
+                        System.out.println("Cliente não encontrado.");
+                        cliente.setId(0);
+                    }
+                }
+
+                telefone.setClienteId(cliente.getId());
+                telefone.setTelefone(View.getTelefone());
+
+                while (Objects.equals(telefone.getTelefone(), "")) {
+                    telefone.setTelefone(View.getTelefone());
+                }
+
+                controller.adicionarTelefone(telefone);
+
                 System.out.println("Telefone adicionado com sucesso!");
-                break;
             }
-            case "3": {
+            case "3" -> {
                 System.out.println("Alteração de cliente");
-                controller.alterarCliente();
+
+                Cliente cliente = new Cliente();
+
+                while (cliente.getId() == 0) {
+                    cliente.setId(View.getClienteId());
+
+                    if (controller.checkCliente(cliente.getId())) {
+                        System.out.println("Cliente não encontrado.");
+                        cliente.setId(0);
+                    }
+                }
+
+                cliente = controller.getCliente(cliente.getId());
+
+                System.out.println(cliente);
+
+                String opcao = View.changeClienteMenu();
+
+                switch (opcao) {
+                    case "1" -> {
+                        cliente.setNome(View.getClienteNome());
+                        controller.alterarCliente(cliente);
+                    }
+                    case "2" -> {
+                        Telefone telefone = new Telefone();
+                        boolean telefoneEncontrado = false;
+
+                        while (!telefoneEncontrado) {
+                            int telefoneId = View.getTelefoneID();
+                            for (Telefone t : cliente.getTelefones()) {
+                                if (Objects.equals(t.getId(), telefoneId)) {
+                                    telefoneEncontrado = true;
+                                    telefone = t;
+                                    break;
+                                }
+                            }
+                            if (!telefoneEncontrado) {
+                                System.out.println("Telefone não encontrado!");
+                            }
+                        }
+
+                        telefone.setTelefone(View.getTelefone());
+
+                        controller.alterarTelefone(telefone);
+                    }
+                    default -> System.out.println("Opção inválida.");
+                }
+
+                controller.alterarCliente(cliente);
                 System.out.println("Alteração realizada com sucesso!");
-                break;
             }
-            case "4": {
+            case "4" -> {
                 System.out.println("Exclusão de cliente");
-                controller.excluirCliente();
-                System.out.println("Cliente excluído com sucesso!");
-                break;
+                Cliente cliente = new Cliente();
+
+                while (cliente.getId() == 0) {
+                    cliente.setId(View.getClienteId());
+
+                    if (controller.checkCliente(cliente.getId())) {
+                        System.out.println("Cliente não encontrado.");
+                        cliente.setId(0);
+                    }
+                }
+
+                String confirm = View.exclusionConfirmation("cliente");
+
+                if (confirm.equals("s")) {
+                    System.out.println("Cliente excluído com sucesso!");
+                    controller.excluirCliente(cliente);
+                } else {
+                    System.out.println("Exclusão cancelada.");
+                }
             }
-            case "5": {
+            case "5" -> {
                 System.out.println("Exclusão de telefone");
-                controller.excluirTelefone();
-                System.out.println("Telefone excluído com sucesso!");
-                break;
+                Telefone telefone = new Telefone();
+
+                while (telefone.getId() == 0) {
+                    telefone.setId(View.getTelefoneID());
+
+                    if (controller.checkTelefone(telefone.getId())) {
+                        System.out.println("Telefone não encontrado.");
+                        telefone.setId(0);
+                    }
+                }
+
+                String confirm = View.exclusionConfirmation("telefone");
+
+                if (confirm.equals("s")) {
+                    controller.excluirTelefone(telefone);
+                    System.out.println("Telefone excluído com sucesso!");
+                } else {
+                    System.out.println("Exclusão cancelada.");
+                }
             }
-            case "6": {
+            case "6" -> {
                 System.out.println("Pesquisa de cliente");
-                controller.pesquisarCliente();
-                break;
+
+                Cliente cliente = new Cliente();
+
+                while (cliente.getId() == 0) {
+                    cliente.setId(View.getClienteId());
+
+                    if (controller.checkCliente(cliente.getId())) {
+                        System.out.println("Cliente não encontrado.");
+                        cliente.setId(0);
+                    }
+                }
+
+                cliente = controller.getCliente(cliente.getId());
+
+                View.printCliente(cliente.getNome(), cliente.getTelefones());
             }
-            case "7": {
+            case "7" -> {
                 exit();
-                break;
             }
-            default: {
+            default -> {
                 System.out.println("Opção inválida");
-                break;
             }
         }
     }
@@ -69,6 +190,8 @@ public class View {
     // Menu principal
     public void mainMenu() throws Exception {
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println();
 
         while (running) {
             System.out.println("Escolha uma opção:");
@@ -81,6 +204,9 @@ public class View {
             System.out.println("7 - Sair");
 
             String userOption = scanner.nextLine();
+
+            System.out.println();
+
             callController(userOption);
         }
     }
@@ -182,13 +308,11 @@ public class View {
     public static void printCliente(String nome, ArrayList<Telefone> telefones) {
         System.out.println("Nome: " + nome);
         System.out.println("Telefones: ");
+        int i = 1;
         for (Telefone telefone : telefones) {
-            System.out.println(telefone.getTelefone());
+            System.out.println(i + " - " + telefone.getTelefone());
+            i++;
         }
-    }
-
-    public static void printMessage(String message) {
-        System.out.println(message);
     }
 
     public static String exclusionConfirmation(String toBeDeleted) {
