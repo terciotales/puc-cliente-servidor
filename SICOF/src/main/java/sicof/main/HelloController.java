@@ -1,4 +1,4 @@
-package sicof.sicof;
+package sicof.main;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-module sicof.sicof {
+module sicof.main {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,6 +7,6 @@ module sicof.sicof {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens sicof.sicof to javafx.fxml;
-    exports sicof.sicof;
+    opens sicof.main to javafx.fxml;
+    exports sicof.main;
 }

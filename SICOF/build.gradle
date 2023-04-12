@@ -25,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'sicof.sicof'
-    mainClass = 'sicof.sicof.HelloApplication'
+    mainModule = 'sicof.main'
+    mainClass = 'sicof.main.HelloApplication'
 }
 
 javafx {

@@ -1,4 +1,4 @@
-package sicof.sicof;
+package sicof.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
