@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Ator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Filme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/connection/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/UsuarioDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/main/FXMLTopMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Top_Menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/top_menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/sicof/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/main/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/sicof/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/main/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/sicof/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,15 +67,33 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/terci/puc/puc-cliente-servidor/ComboBox",
+    "last_directory_selection": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/java/sicof/main",
+    "last_opened_file_path": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/resources/fonts",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.6310345",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\terci\puc\puc-cliente-servidor\SICOF\src\main\resources\fonts" />
+      <recent name="C:\Users\terci\puc\puc-cliente-servidor\SICOF\src\main\resources\icons" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681261828423</updated>
-      <workItem from="1681261829128" duration="998000" />
+      <workItem from="1681261829128" duration="9469000" />
     </task>
     <servers />
   </component>

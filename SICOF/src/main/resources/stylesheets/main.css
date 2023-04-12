@@ -1,0 +1,11 @@
+@import "./top_menu.css";
+@import "./left_menu.css";
+
+.root {
+    -fx-background-color: #151515;
+    -fx-base: #151515;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Arial;
+    -fx-text-fill: #F9F9F9;
+}
