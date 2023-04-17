@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" styleClass="root" stylesheets="@../../stylesheets/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" styleClass="root" stylesheets="@../../stylesheets/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sicof.controller.FXML_View">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="border_pane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <Pane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="700.0" styleClass="top-menu" BorderPane.alignment="CENTER_RIGHT">
+            <Pane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="700.0" styleClass="top-menu" BorderPane.alignment="CENTER_RIGHT">
                <children>
                   <Group layoutX="15.0" layoutY="10.0">
                      <children>
-                        <Label styleClass="title" text="Filmes" />
+                        <Label fx:id="page_title" styleClass="title" text="Filmes" />
                         <Label alignment="TOP_RIGHT" layoutX="595.0" styleClass="logo" text="SICOF" />
                      </children>
                   </Group>
@@ -29,7 +29,7 @@
             </Pane>
          </top>
          <left>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="200.0" spacing="20.0" styleClass="left-menu" translateY="-100.0" BorderPane.alignment="CENTER">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="200.0" spacing="20.0" styleClass="left-menu" translateY="-45.0" BorderPane.alignment="CENTER">
                <children>
                   <Group layoutY="15.0" styleClass="menu-title">
                      <children>
@@ -40,23 +40,23 @@
                         </Label>
                      </children>
                   </Group>
-                  <VBox>
+                  <VBox fx:id="buttons">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Filmes">
+                        <Button id="btn_filmes" alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Filmes">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <padding>
                               <Insets left="15.0" />
                            </padding></Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Categorias">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Categorias">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <padding>
                               <Insets left="15.0" />
                            </padding></Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Atores">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Atores">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -71,6 +71,9 @@
                </padding>
             </VBox>
          </left>
+         <center>
+            <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

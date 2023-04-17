@@ -15,3 +15,7 @@
     -fx-background-color: #333333;
     -fx-cursor: hand;
 }
+
+.nav-menu.active {
+    -fx-background-color: #ED315C;
+}

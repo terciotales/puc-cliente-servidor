@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/connection/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/UsuarioDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/main/FXMLTopMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Top_Menu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/top_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Atores.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Categorias.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/FXMLTopMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Top_Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -63,31 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/java/sicof/main",
-    "last_opened_file_path": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/resources/fonts",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.6310345",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/java/sicof/main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/resources/fonts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6310345&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\terci\puc\puc-cliente-servidor\SICOF\src\main\resources\fonts" />
@@ -102,7 +95,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681261828423</updated>
-      <workItem from="1681261829128" duration="9469000" />
+      <workItem from="1681261829128" duration="9903000" />
+      <workItem from="1681752802997" duration="2683000" />
+      <workItem from="1681744715915" duration="872000" />
     </task>
     <servers />
   </component>
