@@ -1,5 +1,6 @@
 @import "./top_menu.css";
 @import "./left_menu.css";
+@import "./atores.css";
 
 .root {
     -fx-background-color: #151515;

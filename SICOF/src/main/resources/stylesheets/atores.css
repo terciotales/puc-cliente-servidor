@@ -1,0 +1,25 @@
+.root-atores {
+    -fx-background-color: #151515;
+    -fx-base: #151515;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Arial;
+    -fx-text-fill: #F9F9F9;
+}
+
+.nav-menu {
+    -fx-background-color: transparent;
+}
+
+.nav-menu:hover {
+    -fx-background-color: #333333;
+    -fx-cursor: hand;
+}
+
+.nav-menu.active {
+    -fx-background-color: #ED315C;
+}
+
+.content {
+    -fx-background-color: #262626;
+}

@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Atores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Categorias.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/FXMLTopMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Top_Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -97,7 +89,7 @@
       <updated>1681261828423</updated>
       <workItem from="1681261829128" duration="9903000" />
       <workItem from="1681752802997" duration="2683000" />
-      <workItem from="1681744715915" duration="872000" />
+      <workItem from="1681744715915" duration="3492000" />
     </task>
     <servers />
   </component>
