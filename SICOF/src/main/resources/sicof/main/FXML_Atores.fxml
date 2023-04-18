@@ -5,40 +5,38 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="700.0" styleClass="root-atores" stylesheets="@../../stylesheets/atores.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="border_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="root-atores" stylesheets="@../../stylesheets/atores.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sicof.controller.FXML_Atores">
    <top>
       <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="700.0" spacing="220.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox minWidth="250.0" prefHeight="100.0" prefWidth="250.0">
+            <HBox fx:id="buttons" minWidth="250.0" prefHeight="100.0" prefWidth="250.0">
                <children>
-                  <Button minHeight="30.0" mnemonicParsing="false" styleClass="nav-menu" text="Listar">
+                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Listar">
                      <padding>
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Button>
-                  <Button minHeight="30.0" mnemonicParsing="false" styleClass="nav-menu" text="Adicionar">
+                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Adicionar">
                      <padding>
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Button>
-                  <Button minHeight="30.0" mnemonicParsing="false" styleClass="nav-menu" text="Editar">
+                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Editar">
                      <padding>
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Button>
                </children>
             </HBox>
-            <TextField prefWidth="200.0" promptText="Buscar" />
+            <TextField fx:id="search" onKeyTyped="#onSearch" prefWidth="200.0" promptText="Buscar" />
          </children>
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>
       </HBox>
    </top>
-   <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="content" BorderPane.alignment="CENTER" />
-   </center>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
 </BorderPane>

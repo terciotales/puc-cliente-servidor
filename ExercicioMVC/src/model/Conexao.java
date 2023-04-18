@@ -18,7 +18,7 @@ public class Conexao {
     public void conectar() throws Exception {
         try {
             // Carrega o driver MySQL, cada banco de dados tem seu próprio driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+//            Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Configura a conexão com o banco de dados
             this.connection = DriverManager.getConnection("jdbc:mysql://localhost/clientes?" + "user=admin&password=admin");

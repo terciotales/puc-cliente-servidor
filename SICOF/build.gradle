@@ -36,6 +36,7 @@ javafx {
 
 dependencies {
     implementation('org.controlsfx:controlsfx:11.1.2')
+    implementation('mysql:mysql-connector-java:8.0.32')
     implementation('com.dlsc.formsfx:formsfx-core:11.5.0') {
         exclude(group: 'org.openjfx')
     }

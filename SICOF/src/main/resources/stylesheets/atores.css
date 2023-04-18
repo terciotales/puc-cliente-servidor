@@ -7,19 +7,25 @@
     -fx-text-fill: #F9F9F9;
 }
 
-.nav-menu {
+.nav-menu-content {
     -fx-background-color: transparent;
 }
 
-.nav-menu:hover {
-    -fx-background-color: #333333;
+.nav-menu-content:hover, .nav-menu-content.active {
+    -fx-background-color: #262626;
     -fx-cursor: hand;
 }
 
-.nav-menu.active {
-    -fx-background-color: #ED315C;
+.root-atores-listar, .root-atores-adicionar {
+    -fx-background-color: #262626;
 }
 
-.content {
-    -fx-background-color: #262626;
+Text {
+    -fx-fill: #F9F9F9;
+    -fx-font-weight: 600;
+    -fx-font-size: 16px;
+}
+
+.action-button {
+    -fx-font-weight: bold;
 }
