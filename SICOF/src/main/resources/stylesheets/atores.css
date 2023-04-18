@@ -16,7 +16,7 @@
     -fx-cursor: hand;
 }
 
-.root-atores-listar, .root-atores-adicionar {
+.root-atores-listar, .root-atores-adicionar, .root-atores-editar {
     -fx-background-color: #262626;
 }
 
@@ -24,6 +24,11 @@ Text {
     -fx-fill: #F9F9F9;
     -fx-font-weight: 600;
     -fx-font-size: 16px;
+}
+
+ListView {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9;
 }
 
 .action-button {

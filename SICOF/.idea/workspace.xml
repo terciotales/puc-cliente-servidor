@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresAdicionar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresEditar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresListar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresAdicionar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresEditar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresListar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ExercicioMVC/src/model/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExercicioMVC/src/model/Conexao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/connection/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Atores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Atores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Ator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Atores.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresAdicionar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresEditar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresListar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresAdicionar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresAdicionar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresEditar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresEditar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_AtoresListar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +201,7 @@
       <workItem from="1681780346758" duration="4398000" />
       <workItem from="1681784813624" duration="2026000" />
       <workItem from="1681790414383" duration="168000" />
-      <workItem from="1681790617594" duration="4095000" />
+      <workItem from="1681790617594" duration="7547000" />
     </task>
     <servers />
   </component>

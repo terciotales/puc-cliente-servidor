@@ -10,6 +10,6 @@
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
    <children>
-      <ListView fx:id="list" layoutX="10.0" layoutY="10.0" prefWidth="680.0" />
+      <ListView fx:id="list" fixedCellSize="20.0" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="680.0" />
    </children>
 </AnchorPane>
