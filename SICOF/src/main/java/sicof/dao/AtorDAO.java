@@ -6,12 +6,9 @@ import sicof.model.Ator;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 public class AtorDAO extends DBConnection {
-//    private Connection connection = null;
-    private final Statement statement = null;
     private PreparedStatement preparedStatement = null;
 
     public boolean insert(Ator ator) {
@@ -138,7 +135,7 @@ public class AtorDAO extends DBConnection {
             Connection connection = new DBConnection().getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM actors";
+            String sql = "SELECT * FROM actors ORDER BY name";
             this.preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 

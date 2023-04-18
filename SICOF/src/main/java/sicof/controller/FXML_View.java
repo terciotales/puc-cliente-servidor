@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 public class FXML_View implements Initializable {
-    private String page = "Atores";
+    private String page = "Categorias";
 
     @FXML
     private Label page_title;
@@ -33,6 +33,7 @@ public class FXML_View implements Initializable {
         try {
             this.loadPage();
             this.setActiveButton();
+            page_title.setText(page);
         } catch (Exception e) {
             e.printStackTrace();
         }

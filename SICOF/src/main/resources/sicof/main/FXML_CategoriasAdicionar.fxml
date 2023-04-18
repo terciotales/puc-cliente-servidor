@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root-categorias-adicionar" stylesheets="@../../stylesheets/atores.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sicof.controller.FXML_CategoriasAdicionar">
+   <children>
+      <Text layoutX="43.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome da categoria:" />
+      <TextField id="nome" fx:id="nome" layoutX="162.0" layoutY="136.0" prefHeight="26.0" prefWidth="393.0" promptText="Nome" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="100.0" />
+      <Button alignment="CENTER" layoutX="240.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="26.0" prefWidth="119.0" styleClass="action-button" text="ADICIONAR" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root-categorias-editar" stylesheets="@../../stylesheets/categorias.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sicof.controller.FXML_CategoriasEditar">
+   <children>
+      <ComboBox fx:id="combo_box" layoutX="150.0" layoutY="84.0" prefHeight="26.0" prefWidth="372.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="100.0" />
+      <Text layoutX="100.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:" AnchorPane.leftAnchor="100.0" />
+      <TextField fx:id="new_name" layoutX="200.0" layoutY="155.0" prefHeight="26.0" prefWidth="304.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="100.0" />
+      <Text layoutX="98.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo nome:" />
+      <Button layoutX="236.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="26.0" prefWidth="126.0" text="SALVAR" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+      <Button layoutX="243.0" layoutY="310.0" mnemonicParsing="false" onMouseClicked="#exclude" prefHeight="26.0" prefWidth="112.0" text="EXCLUIR CATEGORIA" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" />
+   </children>
+</AnchorPane>

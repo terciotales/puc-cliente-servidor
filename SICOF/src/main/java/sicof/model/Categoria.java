@@ -4,6 +4,9 @@ public class Categoria {
     private int id;
     private String name;
 
+    public Categoria() {
+    }
+
     public Categoria(int id, String name) {
         this.id = id;
         this.name = name;
@@ -24,5 +27,9 @@ public class Categoria {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String toString() {
+        return getName();
     }
 }

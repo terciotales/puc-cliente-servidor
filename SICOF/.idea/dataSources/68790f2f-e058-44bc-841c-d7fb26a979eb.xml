@@ -1071,7 +1071,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="292" name="category">
+    <table id="301" parent="292" name="categories">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
@@ -1169,7 +1169,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <foreign-key id="321" parent="302" name="category_id">
       <ColNames>category_id</ColNames>
       <RefColNames>id</RefColNames>
-      <RefTableName>category</RefTableName>
+      <RefTableName>categories</RefTableName>
     </foreign-key>
     <index id="322" parent="302" name="PRIMARY">
       <ColNames>id</ColNames>
