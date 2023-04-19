@@ -90,6 +90,28 @@ public class Main {
         System.out.println("Informe a quantidade de dígitos da sequência: ");
         int quantidadeDigitos = entrada.nextInt();
 
+
+        ArrayList<Pessoa> pessoas = getPessoas();
+
+        for (int i = 0; i < 30; i++) {
+            Pessoa pessoa = pessoas.get(i);
+
+            System.out.println(gerador.formatarSequencia(valorInicial, quantidadeDigitos) + " " + pessoa.getNome() + " " + pessoa.getDataNascimento() + " " + pessoa.getCpf() + " " + pessoa.getProfissao().getNome());
+            if (pessoa.getDependentes().size() > 0) {
+                System.out.println("Dependentes:");
+                for (Dependente dependente : pessoa.getDependentes()) {
+                    System.out.println(dependente.getNome() + " " + dependente.getDataNascimento() + " " + dependente.getTipo());
+                }
+            }
+            System.out.println("");
+            valorInicial++;
+        }
+
+    }
+
+    public static ArrayList<Pessoa> getPessoas() {
+        GeradorDados gerador = new GeradorDados();
+
         ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
         pessoas = gerador.gerarPessoas(30);
         int i = 0;
@@ -120,29 +142,7 @@ public class Main {
         }
 
         Collections.shuffle(pessoas);
-        System.out.println(cabecalho);
-        
-        for (i = 0; i < 30; i++) {
-            Pessoa pessoa = pessoas.get(i);
 
-            System.out.println(gerador.formatarSequencia(valorInicial, quantidadeDigitos) + " " + pessoa.getNome() + " " + pessoa.getDataNascimento() + " " + pessoa.getCpf() + " " + pessoa.getProfissao().getNome());
-            if (pessoa.getDependentes().size() > 0) {
-                System.out.println("Dependentes:");
-                for (Dependente dependente : pessoa.getDependentes()) {
-                    System.out.println(dependente.getNome() + " " + dependente.getDataNascimento() + " " + dependente.getTipo());
-                }
-            }
-            System.out.println("");
-            valorInicial++;
-        }
-
-    }
-
-    private Pessoa adicionarDependentes(Pessoa pessoa, int quantidadeDependentes) {
-        GeradorDados gerador = new GeradorDados();
-        for (int i = 0; i < quantidadeDependentes; i++) {
-            pessoa.getDependentes().add(gerador.gerarDependente());
-        }
-        return pessoa;
+        return pessoas;
     }
 }
