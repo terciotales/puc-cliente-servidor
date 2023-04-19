@@ -3,12 +3,16 @@ import java.util.Date;
 
 public class Pessoa {
     private String nome;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String cpf;
     private Profissao profissao;
     private ArrayList<Dependente> dependentes;
 
-    public Pessoa(String nome, Date dataNascimento, String cpf, Profissao profissao) {
+    public Pessoa() {
+
+    }
+
+    public Pessoa(String nome, String dataNascimento, String cpf, Profissao profissao) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
@@ -20,7 +24,7 @@ public class Pessoa {
         return nome;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
@@ -38,5 +42,10 @@ public class Pessoa {
 
     public void addDependente(Dependente dependente) {
         this.dependentes.add(dependente);
+    }
+
+    @Override
+    public String toString() {
+        return getNome() + " " + getDataNascimento() + " " + getCpf() + " " + getProfissao().getNome();
     }
 }

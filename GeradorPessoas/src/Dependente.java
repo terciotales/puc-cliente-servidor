@@ -2,10 +2,10 @@ import java.util.Date;
 
 public class Dependente {
     private String nome;
-    private Date dataNascimento;
-    private int tipo;
+    private String dataNascimento;
+    private String tipo;
 
-    public Dependente(String nome, Date dataNascimento, int tipo) {
+    public Dependente(String nome, String dataNascimento, String tipo) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.tipo = tipo;
@@ -15,11 +15,11 @@ public class Dependente {
         return nome;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 }
