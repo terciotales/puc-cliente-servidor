@@ -72,7 +72,7 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <AnchorPane fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="700.0" translateY="-20.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </children>

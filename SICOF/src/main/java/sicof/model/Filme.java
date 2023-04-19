@@ -8,7 +8,10 @@ public class Filme {
     private String title;
     private Date releaseDate;
     private Categoria category;
-    private ArrayList<Ator> actors = new ArrayList<Ator>();
+    private ArrayList<Ator> actors = new ArrayList<>();
+
+    public Filme() {
+    }
 
     public Filme(int id, String title, Date releaseDate, Categoria category, ArrayList<Ator> actors) {
         this.id = id;

@@ -9,6 +9,7 @@
 
 .nav-menu {
     -fx-background-color: transparent;
+    -fx-border-radius: 0;
 }
 
 .nav-menu:hover {

@@ -100,6 +100,32 @@ public class CategoriaDAO extends DBConnection {
         }
     }
 
+    public Categoria getById(int id) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM categories WHERE id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, id);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            Categoria categoria = new Categoria();
+            if (resultSet.next()) {
+                categoria.setId(resultSet.getInt("id"));
+                categoria.setName(resultSet.getString("name"));
+            }
+
+            connection.commit();
+            connection.close();
+
+            return categoria;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public ArrayList<Categoria> search(String name) {
         try {
             Connection connection = this.getConnection();

@@ -1,0 +1,72 @@
+.root-filmes {
+    -fx-background-color: #262626;
+    -fx-base: #262626;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Arial;
+    -fx-text-fill: #F9F9F9;
+}
+
+.nav-menu-content {
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+
+}
+
+.nav-menu-content:hover, .nav-menu-content.active {
+    -fx-fill: #ED315C!important;
+    -fx-cursor: hand;
+}
+
+.root-filmes-listar, .root-filmes-adicionar, .root-filmes-editar {
+    -fx-background-color: #151515;
+    -fx-fill: #ED315C!important;
+}
+
+Text {
+    -fx-fill: #F9F9F9;
+    -fx-font-weight: 600;
+    -fx-font-size: 16px;
+}
+
+.title {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.field-title {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.action-button {
+    -fx-font-weight: bold;
+}
+
+.action-filmes-button {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9;
+    -fx-font-weight: bold;
+    -fx-border-color: #F9F9F9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+.action-filmes-button:hover {
+    -fx-background-color: #F9F9F9;
+    -fx-text-fill: #262626;
+}
+
+.table-filmes {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9;
+    -fx-border-radius: 20px;
+}
+
+.table-filmes .column-header,
+.table-filmes .column-header .filler,
+.table-filmes .column-header-background .filler {
+    -fx-background-color: #412831;
+    -fx-text-fill: #ED315C;
+    -fx-border-radius: 8px;
+}

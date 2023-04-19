@@ -5,22 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasAdicionar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasEditar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasListar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_CategoriasAdicionar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_CategoriasEditar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_CategoriasListar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/categorias.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/TableFilme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesAdicionar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesListar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Categorias.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Categorias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,37 +96,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/java/sicof/main",
-    "last_opened_file_path": "C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/resources/sicof/main",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.6310345",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/java/sicof/main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/terci/puc/puc-cliente-servidor/SICOF/src/main/resources/sicof/main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6310345&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\terci\puc\puc-cliente-servidor\SICOF\src\main\resources\sicof\main" />
@@ -134,6 +137,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="sicof.controller" />
+      <recent name="sicof.model" />
     </key>
   </component>
   <component name="RunManager">
@@ -214,6 +218,9 @@
       <workItem from="1681784813624" duration="2026000" />
       <workItem from="1681790414383" duration="168000" />
       <workItem from="1681790617594" duration="10096000" />
+      <workItem from="1681840535410" duration="2526000" />
+      <workItem from="1681832277354" duration="5714000" />
+      <workItem from="1681864297173" duration="2082000" />
     </task>
     <servers />
   </component>

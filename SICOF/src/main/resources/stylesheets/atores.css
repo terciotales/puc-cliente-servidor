@@ -9,15 +9,19 @@
 
 .nav-menu-content {
     -fx-background-color: transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: transparent;
 }
 
 .nav-menu-content:hover, .nav-menu-content.active {
-    -fx-background-color: #262626;
+    -fx-fill: #ED315C;
+    -fx-text-fill: #ED315C;
+    -fx-border-color: #ED315C;
     -fx-cursor: hand;
 }
 
 .root-atores-listar, .root-atores-adicionar, .root-atores-editar {
-    -fx-background-color: #262626;
+    -fx-fill: #ED315C!important;
 }
 
 Text {

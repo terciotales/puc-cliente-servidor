@@ -1,10 +1,11 @@
 @import "./top_menu.css";
 @import "./left_menu.css";
 @import "./atores.css";
+@import "./filmes.css";
 
 .root {
-    -fx-background-color: #151515;
-    -fx-base: #151515;
+    -fx-background-color: #262626;
+    -fx-base: #262626;
     -fx-control-inner-background: derive(-fx-base, 35%);
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;

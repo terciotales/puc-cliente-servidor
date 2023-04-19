@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 public class FXML_View implements Initializable {
-    private String page = "Categorias";
+    private String page = "Filmes";
 
     @FXML
     private Label page_title;
