@@ -4,25 +4,41 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.util.converter.LocalDateStringConverter;
 import sicof.dao.AtorDAO;
 import sicof.dao.AtorFilmesDAO;
 import sicof.dao.CategoriaDAO;
 import sicof.dao.FilmeDAO;
+import sicof.main.Main;
 import sicof.model.Ator;
 import sicof.model.AtorFilmes;
 import sicof.model.Categoria;
 import sicof.model.Filme;
 
+import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class FXML_FilmesAdicionar implements Initializable {
+import static sicof.helpers.Utils.dateFormatter;
+
+public class FXML_FilmesEditar implements Initializable {
+
+    @FXML
+    private AnchorPane editar_filme_root;
+
+    private Filme filme;
 
     @FXML
     private ComboBox<Ator> actor;
@@ -44,6 +60,14 @@ public class FXML_FilmesAdicionar implements Initializable {
 
     @FXML
     private Button remove_ator;
+
+    public void setFilme(Filme filme) {
+        this.filme = filme;
+        this.title.setText(filme.getTitle());
+        this.release_date.setValue(dateFormatter(filme.getReleaseDate().toString()));
+        this.category.setValue(filme.getCategory());
+        this.list_actors.getItems().addAll(filme.getActors());
+    }
 
     public void initialize(URL location, ResourceBundle resources) {
         AtorDAO atorDAO = new AtorDAO();
@@ -85,7 +109,8 @@ public class FXML_FilmesAdicionar implements Initializable {
     @FXML
     void addActor(MouseEvent event) {
         Ator ator = this.actor.getValue();
-        if (ator != null && !this.list_actors.getItems().contains(ator)) {
+
+        if (ator != null) {
             this.list_actors.getItems().add(ator);
             this.actor.setValue(null);
         }
@@ -114,37 +139,53 @@ public class FXML_FilmesAdicionar implements Initializable {
         }
 
         releaseDate = Date.from(this.release_date.getValue().atStartOfDay().toInstant(zoneOffset));
-        Filme filme = new Filme(0, title, releaseDate, category, actors);
+        Filme filme = new Filme(this.filme.getId(), title, releaseDate, category, actors);
         FilmeDAO filmeDAO = new FilmeDAO();
         AtorFilmes atorFilmes;
 
-        boolean insert = filmeDAO.insert(filme);
-
         Alert alert;
-        if (insert) {
-            filme = filmeDAO.getLast();
-            AtorDAO atorDAO = new AtorDAO();
-            for (Ator ator : actors) {
-                atorFilmes = new AtorFilmes(atorDAO.get(ator.getName()), filme);
-                AtorFilmesDAO atorFilmesDAO = new AtorFilmesDAO();
-                if (!atorFilmesDAO.insert(atorFilmes)) {
-                    alert = new Alert(Alert.AlertType.ERROR, "Erro ao adicionar filme!", ButtonType.OK);
-                    alert.showAndWait();
-                    return;
+        if (filmeDAO.update(filme)) {
+            AtorFilmesDAO atorFilmesDAO = new AtorFilmesDAO();
+            for (Ator ator : filme.getActors()) {
+                if (!this.filme.getActors().contains(ator)) {
+                    atorFilmes = new AtorFilmes(ator, filme);
+                    atorFilmesDAO.insert(atorFilmes);
                 }
             }
 
-            alert = new Alert(Alert.AlertType.INFORMATION, "Filme adicionado com sucesso!", ButtonType.OK);
+            for (Ator ator : this.filme.getActors()) {
+                if (!filme.getActors().contains(ator)) {
+                    atorFilmes = new AtorFilmes(ator, filme);
+                    atorFilmesDAO.delete(atorFilmes);
+                }
+            }
 
-            this.title.setText("");
-            this.release_date.setValue(null);
-            this.category.setValue(null);
-            this.list_actors.getItems().clear();
-            this.actor.setValue(null);
+            alert = new Alert(Alert.AlertType.INFORMATION, "Filme editado com sucesso!", ButtonType.OK);
         } else {
-            alert = new Alert(Alert.AlertType.ERROR, "Erro ao adicionar filme!", ButtonType.OK);
+            alert = new Alert(Alert.AlertType.ERROR, "Erro ao editar filme!", ButtonType.OK);
         }
 
         alert.showAndWait();
+    }
+
+    public void cancelEdit(MouseEvent mouseEvent) {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Deseja cancelar a edição?", ButtonType.YES, ButtonType.NO);
+        alert.showAndWait();
+
+        if (alert.getResult() == ButtonType.NO) {
+            return;
+        }
+
+        Parent root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("FXML_FilmesListar.fxml"));
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BorderPane borderPane = (BorderPane) editar_filme_root.getParent();
+        borderPane.setCenter(root);
     }
 }

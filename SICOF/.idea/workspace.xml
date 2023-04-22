@@ -5,25 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abc62dc7-9ff6-4f7f-b102-0d8ed0704ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/TableFilme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesAdicionar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesListar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesEditar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorFilmesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/helpers/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sicof/model/AtorFilmes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesEditar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExercicioMVC/out/production/ExercicioMVC/model/Conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ExercicioMVC/out/production/ExercicioMVC/model/Conexao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GeradorPessoas/out/production/GeradorPessoas/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GeradorPessoas/out/production/GeradorPessoas/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GeradorPessoas/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GeradorPessoas/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_Filmes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/CategoriaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/FilmeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Ator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Filmes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/TableFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/TableFilme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_Categorias.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_CategoriasListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_CategoriasListar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesAdicionar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesAdicionar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_FilmesListar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/left_menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/categorias.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/categorias.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +227,9 @@
       <workItem from="1681840535410" duration="2526000" />
       <workItem from="1681832277354" duration="5714000" />
       <workItem from="1681864297173" duration="2082000" />
+      <workItem from="1681869843751" duration="7162000" />
+      <workItem from="1682358982796" duration="1886000" />
+      <workItem from="1682350083533" duration="3218000" />
     </task>
     <servers />
   </component>

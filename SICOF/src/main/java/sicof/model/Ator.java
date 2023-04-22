@@ -4,6 +4,9 @@ public class Ator {
     private int id;
     private String name;
 
+    public Ator() {
+    }
+
     public Ator(int id, String name) {
         this.id = id;
         this.name = name;

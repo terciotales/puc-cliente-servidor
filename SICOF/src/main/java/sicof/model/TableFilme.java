@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 public class TableFilme {
     private SimpleIntegerProperty id;
@@ -16,10 +17,10 @@ public class TableFilme {
     public TableFilme() {
     }
 
-    public TableFilme(int id, String title, Date releaseDate, Categoria category, ArrayList<Ator> actors) {
+    public TableFilme(int id, String title, String releaseDate, Categoria category, ArrayList<Ator> actors) {
         this.id = new SimpleIntegerProperty(id);
         this.title = new SimpleStringProperty(title);
-        this.releaseDate = new SimpleStringProperty(releaseDate.toString());
+        this.releaseDate = new SimpleStringProperty(releaseDate);
         this.category = new SimpleStringProperty(category.getName());
         this.actors = new SimpleStringProperty(actors.toString());
     }
@@ -73,7 +74,20 @@ public class TableFilme {
     }
 
     public String getActors() {
-        return actors.get();
+        String actors = this.actors.get();
+        // Substring separated by line break
+        String actorsSubstring = "";
+
+        if (actors.length() > 0) {
+            actorsSubstring = actors.substring(1, actors.length() - 1);
+            actorsSubstring = actorsSubstring.replaceAll(", ", "\n");
+        }
+
+        return actorsSubstring;
+    }
+
+    public String replaceAll(String regex, String replacement) {
+        return Pattern.compile(regex).matcher((CharSequence) this).replaceAll(replacement);
     }
 
     public SimpleStringProperty actorsProperty() {

@@ -3,25 +3,40 @@ package sicof.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderPane;
+import sicof.dao.AtorDAO;
 import sicof.dao.FilmeDAO;
+import sicof.main.Main;
+import sicof.model.Ator;
 import sicof.model.Categoria;
 import sicof.model.Filme;
 import sicof.model.TableFilme;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 public class FXML_FilmesListar implements Initializable {
+
+    @FXML
+    private AnchorPane listar_filmes_root;
+
+    @FXML
+    private TextField busca;
 
     @FXML
     private TableView<TableFilme> table;
@@ -59,7 +74,7 @@ public class FXML_FilmesListar implements Initializable {
         table_actor.setCellValueFactory(new PropertyValueFactory<>("Actors"));
 
         for (Filme filme : filmes) {
-            tableFilmes.add(new TableFilme(filme.getId(), filme.getTitle(), filme.getReleaseDate(), filme.getCategory(), filme.getActors()));
+            tableFilmes.add(new TableFilme(filme.getId(), filme.getTitle(), filme.getReleaseDateFormatted(), filme.getCategory(), filme.getActors()));
         }
 
         table.setItems(tableFilmes);
@@ -85,8 +100,37 @@ public class FXML_FilmesListar implements Initializable {
         filme = filmeDAO.getById(table.getSelectionModel().getSelectedItem().getId());
 
         if (filme != null) {
-            System.out.println(filme.getTitle());
+            Parent root = null;
+            try {
+                FXMLLoader loader = new FXMLLoader(Main.class.getResource("FXML_FilmesEditar.fxml"));
+                root = loader.load();
+                FXML_FilmesEditar controller = loader.getController();
+                controller.setFilme(filme);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            BorderPane borderPane = (BorderPane) listar_filmes_root.getParent();
+            borderPane.setCenter(root);
         }
+    }
+
+    @FXML
+    public void onSearch(KeyEvent keyEvent) {
+        FilmeDAO filmeDAO = new FilmeDAO();
+        ArrayList<Filme> filmes = filmeDAO.search(busca.getText());
+        ObservableList<TableFilme> tableFilmes = FXCollections.observableArrayList();
+
+        if (Objects.equals(busca.getText(), "")) {
+            filmes = filmeDAO.getAll();
+        }
+
+        for (Filme filme : filmes) {
+            tableFilmes.add(new TableFilme(filme.getId(), filme.getTitle(), filme.getReleaseDateFormatted(), filme.getCategory(), filme.getActors()));
+        }
+
+        table.getItems().clear();
+        table.setItems(tableFilmes);
     }
 
     public void clickDelete(MouseEvent mouseEvent) {
@@ -102,8 +146,18 @@ public class FXML_FilmesListar implements Initializable {
             alert.showAndWait();
 
             if (alert.getResult().getText().equals("OK")) {
-                filmeDAO.delete(filme);
-                table.getItems().remove(table.getSelectionModel().getSelectedItem());
+                if (filmeDAO.delete(filme)) {
+                    table.getItems().remove(table.getSelectionModel().getSelectedItem());
+                    alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Deletar Filme");
+                    alert.setHeaderText("Filme deletado com sucesso!");
+                    alert.showAndWait();
+                } else {
+                    alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Deletar Filme");
+                    alert.setHeaderText("Erro ao deletar filme!");
+                    alert.showAndWait();
+                }
             } else {
                 alert.close();
             }

@@ -1,6 +1,6 @@
 .root-categorias {
-    -fx-background-color: #151515;
-    -fx-base: #151515;
+    -fx-background-color: #262626;
+    -fx-base: #262626;
     -fx-control-inner-background: derive(-fx-base, 35%);
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;
@@ -9,15 +9,17 @@
 
 .nav-menu-content {
     -fx-background-color: transparent;
+    -fx-font-weight: bold;
 }
 
 .nav-menu-content:hover, .nav-menu-content.active {
-    -fx-background-color: #262626;
+    -fx-fill: #ED315C!important;
     -fx-cursor: hand;
 }
 
 .root-categorias-listar, .root-categorias-adicionar, .root-categorias-editar {
-    -fx-background-color: #262626;
+    -fx-background-color: #151515;
+    -fx-fill: #ED315C!important;
 }
 
 Text {

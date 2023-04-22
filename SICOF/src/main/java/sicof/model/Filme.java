@@ -1,5 +1,7 @@
 package sicof.model;
 
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -39,6 +41,16 @@ public class Filme {
 
     public Date getReleaseDate() {
         return releaseDate;
+    }
+
+    public String getReleaseDateFormatted() {
+        String newDateString;
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date d = sdf.parse(String.valueOf(releaseDate), new ParsePosition(0));
+        sdf.applyPattern("dd/MM/yyyy");
+        newDateString = sdf.format(d);
+        return newDateString;
     }
 
     public void setReleaseDate(Date releaseDate) {

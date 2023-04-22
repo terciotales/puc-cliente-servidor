@@ -10,7 +10,6 @@
 .nav-menu-content {
     -fx-background-color: transparent;
     -fx-font-weight: bold;
-
 }
 
 .nav-menu-content:hover, .nav-menu-content.active {
@@ -69,4 +68,5 @@ Text {
     -fx-background-color: #412831;
     -fx-text-fill: #ED315C;
     -fx-border-radius: 8px;
+    -fx-pref-height: 30px;
 }
