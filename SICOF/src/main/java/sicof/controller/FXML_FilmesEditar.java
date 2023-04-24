@@ -169,7 +169,6 @@ public class FXML_FilmesEditar implements Initializable {
     }
 
     public void cancelEdit(MouseEvent mouseEvent) {
-
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Deseja cancelar a edição?", ButtonType.YES, ButtonType.NO);
         alert.showAndWait();
 

@@ -1,7 +1,9 @@
-package sicof.model;
+package sicof.helpers;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import sicof.model.Ator;
+import sicof.model.Categoria;
 
 import java.util.ArrayList;
 import java.util.Date;

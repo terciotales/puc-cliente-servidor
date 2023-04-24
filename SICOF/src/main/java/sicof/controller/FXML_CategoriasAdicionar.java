@@ -8,15 +8,23 @@ import javafx.scene.input.MouseEvent;
 import sicof.dao.CategoriaDAO;
 import sicof.model.Categoria;
 
+import java.util.Objects;
+
 public class FXML_CategoriasAdicionar {
 
     @FXML
     private TextField nome;
 
     @FXML
-    void onClick(MouseEvent event) {
+    void save(MouseEvent event) {
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         if (nome.getText().length() > 0) {
+            if (categoriaDAO.getByName(nome.getText()) != null && Objects.equals(categoriaDAO.getByName(nome.getText()).getName(), nome.getText())) {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Categoria já existe!", ButtonType.OK);
+                alert.showAndWait();
+                return;
+            }
+
             Categoria categoria = new Categoria(0, nome.getText());
             boolean insert = categoriaDAO.insert(categoria);
             nome.setText("");

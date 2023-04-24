@@ -102,7 +102,7 @@ public class FXML_FilmesAdicionar implements Initializable {
     @FXML
     void saveFilme(MouseEvent event) {
         String title = this.title.getText();
-        ZoneOffset zoneOffset = ZoneOffset.ofHours(0);
+        ZoneOffset zoneOffset = ZoneOffset.ofHours(5);
         Date releaseDate;
         Categoria category = this.category.getValue();
         ArrayList<Ator> actors = new ArrayList<>(this.list_actors.getItems());

@@ -14,4 +14,6 @@ module sicof.main {
     opens sicof.controller to javafx.fxml;
     exports sicof.model;
     opens sicof.model to javafx.fxml;
+    exports sicof.helpers;
+    opens sicof.helpers to javafx.fxml;
 }

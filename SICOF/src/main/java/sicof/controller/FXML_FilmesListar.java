@@ -12,23 +12,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
-import sicof.dao.AtorDAO;
 import sicof.dao.FilmeDAO;
 import sicof.main.Main;
-import sicof.model.Ator;
-import sicof.model.Categoria;
 import sicof.model.Filme;
-import sicof.model.TableFilme;
+import sicof.helpers.TableFilme;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class FXML_FilmesListar implements Initializable {
 

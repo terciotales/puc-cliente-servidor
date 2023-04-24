@@ -199,4 +199,26 @@ public class FilmeDAO extends DBConnection {
             return null;
         }
     }
+
+    public boolean existsWithCategory(int categoryId) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM movies WHERE category_id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, categoryId);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            boolean exists = resultSet.next();
+
+            connection.commit();
+            connection.close();
+
+            return exists;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
