@@ -182,4 +182,32 @@ public class AtorDAO extends DBConnection {
 
         return atores;
     }
+
+    public Ator getById(int id) {
+        Ator ator = null;
+
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM actors WHERE id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, id);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                ator = new Ator(
+                        resultSet.getInt("id"),
+                        resultSet.getString("name")
+                );
+            }
+
+            connection.commit();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return ator;
+    }
 }

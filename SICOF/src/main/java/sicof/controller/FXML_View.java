@@ -50,7 +50,9 @@ public class FXML_View implements Initializable {
     private void setActiveButton() {
         this.buttons.getChildren().forEach(button -> {
             if (Objects.equals(((Button) button).getText(), this.page)) {
-                ((Button) button).getStyleClass().add("active");
+                if (!((Button) button).getStyleClass().contains("active")) {
+                    ((Button) button).getStyleClass().add("active");
+                }
             } else {
                 ((Button) button).getStyleClass().remove("active");
             }

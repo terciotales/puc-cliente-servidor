@@ -45,7 +45,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="table" editable="true" maxHeight="385.0" prefHeight="385.0" prefWidth="680.0" styleClass="table-filmes" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <TableView fx:id="table" editable="true" maxHeight="385.0" prefHeight="385.0" prefWidth="680.0" styleClass="table-categorias" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <columns>
                   <TableColumn fx:id="table_id" maxWidth="100.0" minWidth="25.0" prefWidth="100.0" text="ID" />
                   <TableColumn fx:id="table_title" prefWidth="224.00000762939453" text="Categoria" />

@@ -7,39 +7,9 @@
     -fx-text-fill: #F9F9F9;
 }
 
-.nav-menu-content {
-    -fx-background-color: transparent;
-    -fx-font-weight: bold;
-}
-
-.nav-menu-content:hover, .nav-menu-content.active {
-    -fx-fill: #ED315C!important;
-    -fx-cursor: hand;
-}
-
 .root-filmes-listar, .root-filmes-adicionar, .root-filmes-editar {
     -fx-background-color: #151515;
     -fx-fill: #ED315C!important;
-}
-
-Text {
-    -fx-fill: #F9F9F9;
-    -fx-font-weight: 600;
-    -fx-font-size: 16px;
-}
-
-.title {
-    -fx-font-weight: bold;
-    -fx-font-size: 20px;
-}
-
-.field-title {
-    -fx-font-weight: bold;
-    -fx-font-size: 15px;
-}
-
-.action-button {
-    -fx-font-weight: bold;
 }
 
 .action-filmes-button {
