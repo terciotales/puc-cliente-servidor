@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -13,6 +14,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import sicof.dao.FilmeDAO;
 import sicof.main.Main;
 import sicof.model.Filme;
@@ -106,6 +108,20 @@ public class FXML_FilmesListar implements Initializable {
 
             BorderPane borderPane = (BorderPane) listar_filmes_root.getParent();
             borderPane.setCenter(root);
+
+            for (Node node : borderPane.getChildren()) {
+                if (node.getStyleClass().contains("header-menu") && Objects.equals(node.getTypeSelector(), "HBox")) {
+                    for (Node child : ((HBox) node).getChildren()) {
+                        if (Objects.equals(child.getTypeSelector(), "HBox")) {
+                            for (Node button : ((HBox) child).getChildren()) {
+                               if (Objects.equals(button.getTypeSelector(), "Button")) {
+                                   button.getStyleClass().remove("active");
+                               }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

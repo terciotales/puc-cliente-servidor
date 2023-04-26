@@ -6,11 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.util.converter.LocalDateStringConverter;
 import sicof.dao.AtorDAO;
 import sicof.dao.AtorFilmesDAO;
@@ -27,9 +29,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import static sicof.helpers.Utils.dateFormatter;
 
@@ -139,6 +139,10 @@ public class FXML_FilmesEditar implements Initializable {
         }
 
         releaseDate = Date.from(this.release_date.getValue().atStartOfDay().toInstant(zoneOffset));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(releaseDate);
+        calendar.add(Calendar.DATE, 1);
+        releaseDate = calendar.getTime();
         Filme filme = new Filme(this.filme.getId(), title, releaseDate, category, actors);
         FilmeDAO filmeDAO = new FilmeDAO();
         AtorFilmes atorFilmes;
@@ -186,5 +190,19 @@ public class FXML_FilmesEditar implements Initializable {
 
         BorderPane borderPane = (BorderPane) editar_filme_root.getParent();
         borderPane.setCenter(root);
+
+        for (Node node : borderPane.getChildren()) {
+            if (node.getStyleClass().contains("header-menu") && Objects.equals(node.getTypeSelector(), "HBox")) {
+                for (Node child : ((HBox) node).getChildren()) {
+                    if (Objects.equals(child.getTypeSelector(), "HBox")) {
+                        for (Node button : ((HBox) child).getChildren()) {
+                            if (Objects.equals(button.getTypeSelector(), "Button") && Objects.equals(((Button) button).getText(), "Listar")) {
+                                button.getStyleClass().add("active");
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

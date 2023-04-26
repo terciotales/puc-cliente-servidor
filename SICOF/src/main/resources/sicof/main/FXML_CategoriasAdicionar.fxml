@@ -11,7 +11,7 @@
       <Text layoutX="25.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nome" AnchorPane.leftAnchor="25.0" />
       <TextField id="nome" fx:id="nome" layoutX="25.0" layoutY="117.0" prefHeight="30.0" prefWidth="393.0" promptText="Digite o nome da categoria" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
       <Text layoutX="35.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Adicionar categoria" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0" />
-      <Button layoutX="465.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="120.0" minHeight="-Infinity" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="25.0" prefWidth="120.0" text="Salvar" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="25.0" />
+      <Button layoutX="465.0" layoutY="354.0" maxHeight="-Infinity" maxWidth="120.0" minHeight="-Infinity" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="25.0" prefWidth="120.0" text="Adicionar" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="25.0" />
    </children>
    <stylesheets>
       <URL value="@../../stylesheets/atores.css" />

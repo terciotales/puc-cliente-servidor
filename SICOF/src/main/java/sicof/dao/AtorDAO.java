@@ -107,7 +107,7 @@ public class AtorDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM actors WHERE name = ?";
+            String sql = "SELECT * FROM actors WHERE LOWER(name) = LOWER(?)";
             this.preparedStatement = connection.prepareStatement(sql);
             this.preparedStatement.setString(1, name);
             ResultSet resultSet = this.preparedStatement.executeQuery();

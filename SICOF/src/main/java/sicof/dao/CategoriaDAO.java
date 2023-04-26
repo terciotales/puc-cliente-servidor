@@ -131,13 +131,14 @@ public class CategoriaDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM categories WHERE name = ?";
+            String sql = "SELECT * FROM categories WHERE LOWER(name) = LOWER(?)";
             this.preparedStatement = connection.prepareStatement(sql);
             this.preparedStatement.setString(1, name);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 
-            Categoria categoria = new Categoria();
+            Categoria categoria = null;
             if (resultSet.next()) {
+                categoria = new Categoria();
                 categoria.setId(resultSet.getInt("id"));
                 categoria.setName(resultSet.getString("name"));
             }

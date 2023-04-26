@@ -10,4 +10,8 @@ public class Utils {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         return LocalDate.parse(s, formatter);
     }
+
+    public static String removeSpecialCharacters(String s) {
+        return s.replaceAll("[^a-zA-Z0-9]", "");
+    }
 }

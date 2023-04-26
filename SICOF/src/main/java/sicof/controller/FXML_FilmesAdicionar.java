@@ -19,6 +19,7 @@ import sicof.model.Filme;
 import java.net.URL;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -102,7 +103,7 @@ public class FXML_FilmesAdicionar implements Initializable {
     @FXML
     void saveFilme(MouseEvent event) {
         String title = this.title.getText();
-        ZoneOffset zoneOffset = ZoneOffset.ofHours(5);
+        ZoneOffset zoneOffset = ZoneOffset.ofHours(0);
         Date releaseDate;
         Categoria category = this.category.getValue();
         ArrayList<Ator> actors = new ArrayList<>(this.list_actors.getItems());
@@ -114,6 +115,10 @@ public class FXML_FilmesAdicionar implements Initializable {
         }
 
         releaseDate = Date.from(this.release_date.getValue().atStartOfDay().toInstant(zoneOffset));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(releaseDate);
+        calendar.add(Calendar.DATE, 1);
+        releaseDate = calendar.getTime();
         Filme filme = new Filme(0, title, releaseDate, category, actors);
         FilmeDAO filmeDAO = new FilmeDAO();
         AtorFilmes atorFilmes;

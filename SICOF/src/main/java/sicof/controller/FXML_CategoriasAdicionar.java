@@ -10,6 +10,8 @@ import sicof.model.Categoria;
 
 import java.util.Objects;
 
+import static sicof.helpers.Utils.removeSpecialCharacters;
+
 public class FXML_CategoriasAdicionar {
 
     @FXML
@@ -19,7 +21,7 @@ public class FXML_CategoriasAdicionar {
     void save(MouseEvent event) {
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         if (nome.getText().length() > 0) {
-            if (categoriaDAO.getByName(nome.getText()) != null && Objects.equals(categoriaDAO.getByName(nome.getText()).getName(), nome.getText())) {
+            if (categoriaDAO.getByName(nome.getText()) != null || categoriaDAO.getByName(removeSpecialCharacters(nome.getText())) != null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Categoria já existe!", ButtonType.OK);
                 alert.showAndWait();
                 return;

@@ -25,6 +25,7 @@ public class Main extends Application {
         stage.getIcons().add(new Image("icons/icon.png"));
         stage.setTitle("SICOF - Sistema de Controle de Filmes");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
         mainStage = stage;
     }

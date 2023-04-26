@@ -154,4 +154,27 @@ public class AtorFilmesDAO extends DBConnection {
 
         return atores;
     }
+
+    public boolean hasFilmes(Ator ator) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM actor_movies WHERE actor_id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, ator.getId());
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                return true;
+            }
+
+            connection.commit();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 }
