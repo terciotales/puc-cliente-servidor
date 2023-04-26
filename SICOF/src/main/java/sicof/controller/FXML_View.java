@@ -71,4 +71,9 @@ public class FXML_View implements Initializable {
 
         border_pane.setCenter(root);
     }
+
+    @FXML
+    void closeApplication(MouseEvent event) {
+        System.exit(0);
+    }
 }

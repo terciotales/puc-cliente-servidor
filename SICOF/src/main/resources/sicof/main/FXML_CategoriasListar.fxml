@@ -47,8 +47,8 @@
             </HBox>
             <TableView fx:id="table" editable="true" maxHeight="385.0" prefHeight="385.0" prefWidth="680.0" styleClass="table-categorias" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <columns>
-                  <TableColumn fx:id="table_id" maxWidth="30.0" minWidth="25.0" prefWidth="30.0" text="ID" />
-                  <TableColumn fx:id="table_title" maxWidth="1.7976931348623157E308" prefWidth="645.5999221801758" text="Categoria" />
+                  <TableColumn fx:id="table_id" maxWidth="45.0" minWidth="45.0" prefWidth="45.0" text="ID" />
+                  <TableColumn fx:id="table_title" maxWidth="1.7976931348623157E308" prefWidth="630.3999404907227" text="Categoria" />
                </columns>
             </TableView>
          </children>

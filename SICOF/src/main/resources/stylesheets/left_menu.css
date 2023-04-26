@@ -20,3 +20,14 @@
 .nav-menu.active {
     -fx-background-color: #ED315C;
 }
+
+.close-button {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3px;
+}
+
+.close-button:hover {
+    -fx-background-color: #ED315C;
+}

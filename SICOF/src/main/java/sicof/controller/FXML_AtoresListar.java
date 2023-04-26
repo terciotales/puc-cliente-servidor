@@ -1,4 +1,5 @@
 package sicof.controller;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -49,17 +50,22 @@ public class FXML_AtoresListar implements Initializable {
     @FXML
     private TableColumn<TableAtor, String> table_title;
 
+    @FXML
+    private TableColumn<TableAtor, Integer> table_filmes;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         AtorDAO atorDAO = new AtorDAO();
+        AtorFilmesDAO atorFilmesDAO = new AtorFilmesDAO();
         ArrayList<Ator> atores = atorDAO.getAll();
         ObservableList<TableAtor> tableAtores = FXCollections.observableArrayList();
 
         table_id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         table_title.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        table_filmes.setCellValueFactory(new PropertyValueFactory<>("Filmes"));
 
         for (Ator ator : atores) {
-            tableAtores.add(new TableAtor(ator.getId(), ator.getName()));
+            tableAtores.add(new TableAtor(ator.getId(), ator.getName(), atorFilmesDAO.countAtorFilmes(ator)));
         }
 
         table.setItems(tableAtores);
@@ -146,15 +152,17 @@ public class FXML_AtoresListar implements Initializable {
     @FXML
     void onSearch(KeyEvent event) {
         AtorDAO atorDAO = new AtorDAO();
+        AtorFilmesDAO atorFilmesDAO = new AtorFilmesDAO();
         ArrayList<Ator> atores = atorDAO.getAll();
         ObservableList<TableAtor> tableAtores = FXCollections.observableArrayList();
 
         table_id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         table_title.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        table_filmes.setCellValueFactory(new PropertyValueFactory<>("Filmes"));
 
         for (Ator ator : atores) {
             if (Objects.requireNonNull(ator.getName()).toLowerCase().contains(busca.getText().toLowerCase())) {
-                tableAtores.add(new TableAtor(ator.getId(), ator.getName()));
+                tableAtores.add(new TableAtor(ator.getId(), ator.getName(), atorFilmesDAO.countAtorFilmes(ator)));
             }
         }
 

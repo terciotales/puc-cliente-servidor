@@ -177,4 +177,29 @@ public class AtorFilmesDAO extends DBConnection {
 
         return false;
     }
+
+    public int countAtorFilmes(Ator ator) {
+        int count = 0;
+
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT COUNT(*) FROM actor_movies WHERE actor_id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, ator.getId());
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+
+            connection.commit();
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return count;
+    }
 }

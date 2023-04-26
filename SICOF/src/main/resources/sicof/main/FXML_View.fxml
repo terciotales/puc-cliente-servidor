@@ -65,6 +65,18 @@
                            </padding></Button>
                      </children>
                   </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="30.0" prefWidth="180.0" styleClass="close-button" text="Sair">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
                <padding>
                   <Insets top="15.0" />
