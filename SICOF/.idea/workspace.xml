@@ -5,42 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/68790f2f-e058-44bc-841c-d7fb26a979eb/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/connection/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TableEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/eventos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/left_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/top_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Eventos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo-light.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo-light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/main.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresAdicionar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresEditar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_AtoresListar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasAdicionar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasEditar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_CategoriasListar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesAdicionar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesEditar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorFilmesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/dao/AtorFilmesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableAtor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableAtor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/helpers/TableFilme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/helpers/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/helpers/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/model/AtorFilmes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/model/AtorFilmes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sicof/main/FXML_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/atores.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/categorias.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/categorias.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/filmes.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/terci/puc/puc-cliente-servidor/SICOF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/terci/puc/puc-cliente-servidor/SICOF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.6310345&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +73,9 @@
       <option name="presentableId" value="Default" />
       <updated>1684885479576</updated>
       <workItem from="1684885480679" duration="960000" />
+      <workItem from="1685483498692" duration="1835000" />
+      <workItem from="1685487324473" duration="1689000" />
+      <workItem from="1685978697847" duration="646000" />
     </task>
     <servers />
   </component>

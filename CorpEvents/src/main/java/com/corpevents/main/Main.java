@@ -7,19 +7,22 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("images/icon.png")));
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_View.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 550);
+        scene.getStylesheets().add(String.valueOf(Main.class.getResource("css/main.css")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/icon.png"))));
+        stage.setTitle("CorpEvents - Gerenciamento de eventos corporativos");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
