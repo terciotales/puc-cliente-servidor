@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 public class FXML_View implements Initializable {
-    private String page = "Eventos";
+    private String page = "Dashboard";
 
     @FXML
     private Label page_title;
@@ -47,7 +47,8 @@ public class FXML_View implements Initializable {
             user.setText(Usuario.getInstance().getPessoa().getNome() + "!");
 
             if (!Usuario.getInstance().isAdministrador()) {
-                buttons.getChildren().remove(1);
+                buttons.getChildren().remove(2);
+                buttons.getChildren().remove(4);
             }
         } catch (Exception e) {
             e.printStackTrace();

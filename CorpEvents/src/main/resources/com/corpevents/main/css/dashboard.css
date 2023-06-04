@@ -1,0 +1,27 @@
+.root-dashboard {
+    -fx-background-color: #151515;
+    -fx-base: #151515;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Arial;
+    -fx-text-fill: #F9F9F9;
+}
+
+.box-container {
+    -fx-background-color: #262626;
+    -fx-border-radius: 8px!important;
+}
+
+.big-letter {
+    -fx-text-fill: #F9F9F9;
+    -fx-fill: #F9F9F9!important;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+}
+
+.small-letter {
+    -fx-text-fill: #F9F9F9;
+    -fx-fill: #F9F9F9!important;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}

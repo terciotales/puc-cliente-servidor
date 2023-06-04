@@ -23,7 +23,7 @@
                <children>
                   <Group layoutX="15.0" layoutY="10.0">
                      <children>
-                        <Label fx:id="page_title" layoutY="1.0" styleClass="title" text="Eventos" />
+                        <Label fx:id="page_title" layoutY="1.0" styleClass="title" text="Dashboard" />
                      </children>
                   </Group>
                   <ImageView fitHeight="30.0" fitWidth="150.0" layoutX="535.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
@@ -57,7 +57,17 @@
                   </Group>
                   <VBox fx:id="buttons">
                      <children>
-                        <Button id="btn_eventos" alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Eventos">
+                        <Button id="btn_eventos" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Dashboard">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f9f9f9" glyphName="PIE_CHART" />
+                           </graphic></Button>
+                        <Button id="btn_eventos" alignment="BASELINE_LEFT" graphicTextGap="12.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Eventos">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -66,7 +76,8 @@
                            </padding>
                            <graphic>
                               <FontAwesomeIconView fill="#f9f9f9" glyphName="CALENDAR_ALT" />
-                           </graphic></Button>
+                           </graphic>
+                        </Button>
                         <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Pessoas">
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -98,6 +109,21 @@
                            <graphic>
                               <FontAwesomeIconView fill="#f9f9f9" glyphName="FILE" />
                            </graphic></Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="116.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Opções">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f9f9f9" glyphName="TH" size="12">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                        </Button>
                      </children>
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
@@ -114,7 +140,7 @@
                                     <Text fx:id="user" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user" text="Usuário" />
                                  </children>
                                  <padding>
-                                    <Insets top="16.0" />
+                                    <Insets top="18.0" />
                                  </padding>
                                  <VBox.margin>
                                     <Insets top="10.0" />

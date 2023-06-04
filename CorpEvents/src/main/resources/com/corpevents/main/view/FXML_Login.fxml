@@ -79,24 +79,29 @@
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Nome de usuário">
                            <VBox.margin>
-                              <Insets top="40.0" />
+                              <Insets top="35.0" />
                            </VBox.margin>
                         </Text>
-                        <TextField fx:id="username_field" prefHeight="30.0">
+                        <TextField fx:id="username_field" prefHeight="35.0">
                            <VBox.margin>
                               <Insets top="8.0" />
                            </VBox.margin>
                         </TextField>
                         <Text layoutX="10.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Senha">
                            <VBox.margin>
-                              <Insets top="20.0" />
+                              <Insets top="15.0" />
                            </VBox.margin>
                         </Text>
-                        <PasswordField fx:id="password_field" prefHeight="30.0">
+                        <PasswordField fx:id="password_field" prefHeight="35.0">
                            <VBox.margin>
                               <Insets top="8.0" />
                            </VBox.margin>
                         </PasswordField>
+                        <Text fx:id="message_error" fill="#dc0a0a" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login-error-message" text="* Usuário ou senha estão incorretos.">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </Text>
                         <Button contentDisplay="RIGHT" graphicTextGap="8.0" mnemonicParsing="false" onMouseClicked="#tryLogin" prefHeight="35.0" prefWidth="330.0" styleClass="login-button" text="Entrar">
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -105,7 +110,7 @@
                               <Font size="14.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="30.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIconView fill="#f9f9f9" glyphName="ARROW_CIRCLE_ALT_RIGHT" size="14">

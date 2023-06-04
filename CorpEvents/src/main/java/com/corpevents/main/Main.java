@@ -16,8 +16,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        String resource = "view/FXML_Login.fxml";
+
+        if (Usuario.getInstance().isLogged()) {
+            resource = "view/FXML_Dashboard.fxml";
+        }
+
         mainStage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(resource));
         Scene scene = new Scene(fxmlLoader.load(), 900, 550);
         scene.getStylesheets().add(String.valueOf(Main.class.getResource("css/main.css")));
         stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/icon.png"))));

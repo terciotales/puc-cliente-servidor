@@ -16,10 +16,21 @@
     -fx-background-color: #EF9E34;
     -fx-text-fill: #F9F9F9;
     -fx-font-weight: bold!important;
+    -fx-font-size: 14px!important;
     -fx-border-radius: 3px;
 }
 
 .login-button:hover {
+    -fx-text-fill: #F9F9F9;
+    -fx-border-radius: 3px;
     -fx-font-weight: bold!important;
     -fx-background-color: #EF9E34;
+    -fx-font-size: 14px!important;
+}
+
+.login-error-message {
+    -fx-text-fill: #ED315C!important;
+    -fx-fill: #ED315C!important;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
 }

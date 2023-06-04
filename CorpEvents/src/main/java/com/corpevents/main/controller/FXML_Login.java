@@ -10,14 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class FXML_Login implements Initializable {
@@ -29,8 +25,12 @@ public class FXML_Login implements Initializable {
     @FXML
     private TextField username_field;
 
+    @FXML
+    private Text message_error;
+
     public void initialize(URL location, ResourceBundle resources) {
         usuario = Usuario.getInstance();
+        message_error.setVisible(false);
     }
 
     @FXML
@@ -38,9 +38,24 @@ public class FXML_Login implements Initializable {
         System.exit(0);
     }
 
+    /**
+     * Tenta fazer login com os dados inseridos nos campos de texto.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws Exception Exceção lançada caso não seja possível fazer login.
+     */
     @FXML
     void tryLogin(MouseEvent event) throws Exception {
         if (this.username_field.getText().isEmpty() || this.password_field.getText().isEmpty()) {
+            if (this.username_field.getText().isEmpty() && this.password_field.getText().isEmpty()) {
+                message_error.setText("* Preencha os campos de usuário e senha.");
+            } else if (this.username_field.getText().isEmpty()) {
+                message_error.setText("* Preencha o campo de usuário.");
+            } else {
+                message_error.setText("* Preencha o campo de senha.");
+            }
+
+            message_error.setVisible(true);
             usuario.setIsLogged(false);
             return;
         }
@@ -61,5 +76,9 @@ public class FXML_Login implements Initializable {
                 }
             }
         }
+
+        message_error.setText("* Usuário ou senha estão incorretos.");
+        message_error.setVisible(true);
+        usuario.setIsLogged(false);
     }
 }

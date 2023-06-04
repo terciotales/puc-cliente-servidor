@@ -124,4 +124,28 @@ public class CategoriaDAO extends DBConnection {
             return null;
         }
     }
+
+    public int count() {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT COUNT(*) FROM categorias";
+            this.preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            int count = 0;
+            while (resultSet.next()) {
+                count = resultSet.getInt("COUNT(*)");
+            }
+
+            connection.commit();
+            connection.close();
+
+            return count;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
 }
