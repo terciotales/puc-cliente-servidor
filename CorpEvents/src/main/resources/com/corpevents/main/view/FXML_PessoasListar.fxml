@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
@@ -26,22 +28,33 @@
                <children>
                   <HBox HBox.hgrow="ALWAYS">
                      <children>
+                        <FontAwesomeIconView fill="#f9f9f9" glyphName="SEARCH" size="20">
+                           <HBox.margin>
+                              <Insets right="8.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
                         <TextField fx:id="busca" maxWidth="250.0" onKeyTyped="#onSearch" prefHeight="30.0" prefWidth="250.0" promptText="Buscar pessoa" />
                      </children>
                   </HBox>
-                  <HBox alignment="TOP_RIGHT" spacing="10.0" stylesheets="@../css/pessoas.css" HBox.hgrow="ALWAYS">
-                     <children>
-                        <Button fx:id="button_edit" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onMouseClicked="#clickEdit" prefHeight="30.0" prefWidth="85.0" styleClass="action-pessoas-button" text="Editar">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button fx:id="button_delete" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onMouseClicked="#clickDelete" prefHeight="30.0" prefWidth="85.0" styleClass="action-pessoas-button" stylesheets="@../css/pessoas.css" text="Excluir">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
+                  <HBox alignment="TOP_RIGHT" spacing="8.0" stylesheets="@../css/pessoas.css" HBox.hgrow="ALWAYS">
+                      <children>
+                          <Button fx:id="button_edit" alignment="CENTER" contentDisplay="CENTER" disable="true" maxHeight="30.0" maxWidth="30.0" mnemonicParsing="false" onMouseClicked="#clickEdit" prefHeight="30.0" prefWidth="30.0" styleClass="action-eventos-button">
+                              <cursor>
+                                  <Cursor fx:constant="HAND" />
+                              </cursor>
+                              <graphic>
+                                  <FontAwesomeIconView fill="#f9f9f9" glyphName="EDIT" size="14" />
+                              </graphic>
+                          </Button>
+                          <Button fx:id="button_delete" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onMouseClicked="#clickDelete" prefHeight="30.0" prefWidth="30.0" styleClass="action-eventos-button" stylesheets="@../css/eventos.css">
+                              <cursor>
+                                  <Cursor fx:constant="HAND" />
+                              </cursor>
+                              <graphic>
+                                  <FontAwesomeIconView fill="#f9f9f9" glyphName="TRASH" size="15" />
+                              </graphic>
+                          </Button>
+                      </children>
                   </HBox>
                </children>
             </HBox>

@@ -42,7 +42,7 @@ public class FXML_PessoasListar implements Initializable {
     private TableColumn<TablePessoa, String> column_username;
 
     @FXML
-    private TableColumn<TablePessoa, Integer> column_role;
+    private TableColumn<TablePessoa, String> column_role;
 
     @FXML
     private Button button_delete;
@@ -61,7 +61,7 @@ public class FXML_PessoasListar implements Initializable {
         column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
 
         for (Pessoa pessoa : pessoas) {
-            tablePessoas.add(new TablePessoa(pessoa.getId(), pessoa.getNome(), pessoa.getUsername(), pessoa.getRole()));
+            tablePessoas.add(new TablePessoa(pessoa.getId(), pessoa.getNome(), pessoa.getUsername(), Usuario.getInstance().getRole(pessoa.getRole())));
         }
 
         table.setItems(tablePessoas);

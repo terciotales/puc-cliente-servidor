@@ -4,28 +4,21 @@ import com.corpevents.main.dao.CategoriaDAO;
 import com.corpevents.main.dao.EventoDAO;
 import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.model.Evento;
-import com.corpevents.main.model.Pessoa;
+import com.corpevents.main.util.DateFormatter;
 import com.corpevents.main.util.TableEvento;
 import com.corpevents.main.util.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FXML_EventosListar implements Initializable {
@@ -38,9 +31,6 @@ public class FXML_EventosListar implements Initializable {
 
     @FXML
     private TableView<TableEvento> table;
-
-    @FXML
-    private TableColumn<TableEvento, Integer> column_id;
 
     @FXML
     private TableColumn<TableEvento, Integer> column_title;
@@ -68,14 +58,13 @@ public class FXML_EventosListar implements Initializable {
         ArrayList<Evento> eventos = eventoDAO.selectAll();
         ObservableList<TableEvento> tableEventos = FXCollections.observableArrayList();
 
-        column_id.setCellValueFactory(new PropertyValueFactory<>("id"));
         column_title.setCellValueFactory(new PropertyValueFactory<>("title"));
         column_date.setCellValueFactory(new PropertyValueFactory<>("date"));
         column_author.setCellValueFactory(new PropertyValueFactory<>("author"));
         column_category.setCellValueFactory(new PropertyValueFactory<>("category"));
 
         for (Evento evento : eventos) {
-            tableEventos.add(new TableEvento(evento.getId(), evento.getTitle(), evento.getDate(), pessoaDAO.selectById(evento.getAuthor()).getNome(), categoriaDAO.selectById(evento.getCategory()).getNome()));
+            tableEventos.add(new TableEvento(evento.getTitle(), DateFormatter.dateFormatter(evento.getDate()), pessoaDAO.selectById(evento.getAuthor()).getNome(), categoriaDAO.selectById(evento.getCategory()).getNome()));
         }
 
         table.setItems(tableEventos);

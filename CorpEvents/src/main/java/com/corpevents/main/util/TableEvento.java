@@ -7,14 +7,12 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class TableEvento {
-    private SimpleIntegerProperty id;
     private SimpleStringProperty title;
     private SimpleStringProperty date;
     private SimpleStringProperty author;
     private SimpleStringProperty category;
 
-    public TableEvento(int id, String title, String date, String author, String category) {
-        this.id = new SimpleIntegerProperty(id);
+    public TableEvento(String title, String date, String author, String category) {
         this.title = new SimpleStringProperty(title);
         this.date = new SimpleStringProperty(date);
         this.author = new SimpleStringProperty(author);
@@ -22,18 +20,6 @@ public class TableEvento {
     }
 
     public TableEvento() {
-    }
-
-    public int getId() {
-        return id.get();
-    }
-
-    public SimpleIntegerProperty idProperty() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id.set(id);
     }
 
     public String getTitle() {

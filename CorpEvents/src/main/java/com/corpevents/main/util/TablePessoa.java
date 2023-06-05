@@ -7,13 +7,13 @@ public class TablePessoa {
     private SimpleIntegerProperty id;
     private SimpleStringProperty nome;
     private SimpleStringProperty username;
-    private SimpleIntegerProperty role;
+    private SimpleStringProperty role;
 
-    public TablePessoa(int id, String nome, String username, int role) {
+    public TablePessoa(int id, String nome, String username, String role) {
         this.id = new SimpleIntegerProperty(id);
         this.nome = new SimpleStringProperty(nome);
         this.username = new SimpleStringProperty(username);
-        this.role = new SimpleIntegerProperty(role);
+        this.role = new SimpleStringProperty(role);
     }
 
     public TablePessoa() {
@@ -55,15 +55,15 @@ public class TablePessoa {
         this.username.set(username);
     }
 
-    public int getRole() {
+    public String getRole() {
         return role.get();
     }
 
-    public SimpleIntegerProperty roleProperty() {
+    public SimpleStringProperty roleProperty() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(String role) {
         this.role.set(role);
     }
 }

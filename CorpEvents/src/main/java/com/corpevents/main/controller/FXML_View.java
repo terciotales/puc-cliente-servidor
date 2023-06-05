@@ -48,7 +48,7 @@ public class FXML_View implements Initializable {
 
             if (!Usuario.getInstance().isAdministrador()) {
                 buttons.getChildren().remove(2);
-                buttons.getChildren().remove(4);
+                buttons.getChildren().remove(3);
             }
         } catch (Exception e) {
             e.printStackTrace();

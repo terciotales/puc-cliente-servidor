@@ -2,6 +2,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -58,15 +59,15 @@
             </VBox>
             <HBox layoutX="10.0" layoutY="270.0" maxHeight="205.0" maxWidth="300.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="300.0" styleClass="box-container">
                <children>
-                  <VBox minWidth="300.0">
+                  <VBox fx:id="last_container" minWidth="300.0" spacing="5.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-letter" text="Eventos anteriores" />
                         <Separator maxHeight="5.0" minHeight="5.0" minWidth="5.0" prefHeight="5.0" prefWidth="200.0">
                            <VBox.margin>
-                              <Insets bottom="5.0" top="5.0" />
+                              <Insets />
                            </VBox.margin>
                         </Separator>
-                        <Text fx:id="eventos_anteriores" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-letter" text="Nenhum evento encontrado." />
+                        <Label fx:id="eventos_anteriores" styleClass="small-letter" text="Nenhum evento encontrado." />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -88,15 +89,15 @@
             </HBox>
             <HBox layoutX="320.0" layoutY="270.0" maxHeight="205.0" maxWidth="370.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="370.0" styleClass="box-container">
                <children>
-                  <VBox minWidth="370.0">
+                  <VBox fx:id="next_container" minWidth="370.0" spacing="5.0">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-letter" text="Próximos eventos" />
                         <Separator maxHeight="5.0" minHeight="5.0" minWidth="5.0" prefHeight="5.0" prefWidth="200.0">
                            <VBox.margin>
-                              <Insets bottom="5.0" top="5.0" />
+                              <Insets />
                            </VBox.margin>
                         </Separator>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="small-letter" text="Nenhum evento encontrado." />
+                        <Label fx:id="proximos_eventos" styleClass="small-letter" text="Nenhum evento encontrado." />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

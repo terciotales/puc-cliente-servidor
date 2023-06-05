@@ -27,6 +27,26 @@ public class Usuario {
         return pessoa.getRole() == 2;
     }
 
+    public String getRole() {
+        if (isAdministrador()) {
+            return "Administrador";
+        } else if (isPadrao()) {
+            return "Padrão";
+        } else {
+            return "Desconhecido";
+        }
+    }
+
+    public String getRole(int role) {
+        if (role == 1) {
+            return "Administrador";
+        } else if (role == 2) {
+            return "Padrão";
+        } else {
+            return "Desconhecido";
+        }
+    }
+
     public Pessoa getPessoa() {
         return pessoa;
     }

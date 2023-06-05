@@ -3,7 +3,7 @@ package com.corpevents.main.util;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class Date {
+public class DateFormatter {
     public static String dateFormatter(String inputDate) {
         String inputFormat = "yyyy-MM-dd HH:mm:ss";
         String outputFormat = "dd/MM/yyyy";

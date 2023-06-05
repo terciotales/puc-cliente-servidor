@@ -1,11 +1,14 @@
 package com.corpevents.main.controller;
+
 import com.corpevents.main.dao.CategoriaDAO;
 import com.corpevents.main.dao.EventoDAO;
 import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.model.Evento;
-import com.corpevents.main.util.Date;
+import com.corpevents.main.util.DateFormatter;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -18,7 +21,7 @@ public class FXML_Dashboard implements Initializable {
     private Text categorias;
 
     @FXML
-    private Text eventos_anteriores;
+    private Label eventos_anteriores;
 
     @FXML
     private Text eventos_participando;
@@ -30,7 +33,13 @@ public class FXML_Dashboard implements Initializable {
     private Text pessoas;
 
     @FXML
-    private Text proximos_eventos;
+    private Label proximos_eventos;
+
+    @FXML
+    private VBox last_container;
+
+    @FXML
+    private VBox next_container;
 
     public void initialize(URL location, ResourceBundle resources) {
         try {
@@ -48,30 +57,25 @@ public class FXML_Dashboard implements Initializable {
         this.eventos_totais.setText(String.valueOf(eventoDAO.count()));
 
         ArrayList<Evento> proximos = eventoDAO.selectNext();
-        StringBuilder proximos_eventos = new StringBuilder();
 
-        for (Evento evento : proximos) {
-            proximos_eventos.append(Date.dateFormatter(evento.getDate())).append(" - ").append(evento.getTitle()).append("\n");
+        if (proximos.size() != 0) {
+            System.out.println(proximos.size());
+            this.next_container.getChildren().remove(2);
+            for (Evento evento : proximos) {
+                Label label = new Label(DateFormatter.dateFormatter(evento.getDate()) + " - " + evento.getTitle() + "\n");
+                this.next_container.getChildren().add(label);
+            }
         }
-
-        if (proximos.size() == 0) {
-            proximos_eventos.append("Nenhum evento econtrado.");
-        }
-
-        this.proximos_eventos.setText(proximos_eventos.toString());
 
         ArrayList<Evento> anteriores = eventoDAO.selectLast();
-        StringBuilder eventos_anteriores = new StringBuilder();
 
-        for (Evento evento : anteriores) {
-            eventos_anteriores.append(Date.dateFormatter(evento.getDate())).append(" - ").append(evento.getTitle()).append("\n");
+        if (anteriores.size() != 0) {
+            this.last_container.getChildren().remove(2);
+            for (Evento evento : anteriores) {
+                Label label = new Label(DateFormatter.dateFormatter(evento.getDate()) + " - " + evento.getTitle() + "\n");
+                this.last_container.getChildren().add(label);
+            }
         }
-
-        if (anteriores.size() == 0) {
-            eventos_anteriores.append("Nenhum evento encontrado.");
-        }
-
-        this.eventos_anteriores.setText(eventos_anteriores.toString());
 
         this.pessoas.setText(String.valueOf(pessoaDAO.count()));
 

@@ -119,7 +119,7 @@ public class EventoDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM eventos WHERE date > NOW() ORDER BY date ASC LIMIT 1";
+            String sql = "SELECT * FROM eventos WHERE date >= NOW() ORDER BY date ASC LIMIT 10";
             this.preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 
@@ -151,7 +151,7 @@ public class EventoDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM eventos WHERE date < NOW() ORDER BY date DESC LIMIT 1";
+            String sql = "SELECT * FROM eventos WHERE date < NOW() ORDER BY date DESC LIMIT 10";
             this.preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 
