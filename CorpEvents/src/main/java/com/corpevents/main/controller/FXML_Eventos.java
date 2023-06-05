@@ -1,6 +1,7 @@
 package com.corpevents.main.controller;
 
 import com.corpevents.main.Main;
+import com.corpevents.main.util.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,6 +30,10 @@ public class FXML_Eventos implements Initializable {
         try {
             this.loadPage();
             this.setActiveButton();
+
+            if (!Usuario.getInstance().isAdministrador()) {
+                buttons.getChildren().get(1).setVisible(false);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

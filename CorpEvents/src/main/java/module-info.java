@@ -11,4 +11,6 @@ module com.corpevents.corpevents {
     exports com.corpevents.main.controller;
     opens com.corpevents.main.util to javafx.fxml;
     exports com.corpevents.main.util;
+    opens com.corpevents.main.model to javafx.fxml;
+    exports com.corpevents.main.model;
 }

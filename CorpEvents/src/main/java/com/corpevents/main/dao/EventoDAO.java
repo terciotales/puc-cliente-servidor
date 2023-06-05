@@ -21,8 +21,8 @@ public class EventoDAO extends DBConnection {
             this.preparedStatement.setString(1, evento.getTitle());
             this.preparedStatement.setString(2, evento.getDescription());
             this.preparedStatement.setString(3, evento.getDate());
-            this.preparedStatement.setString(4, evento.getAuthor());
-            this.preparedStatement.setString(5, evento.getCategory());
+            this.preparedStatement.setInt(4, evento.getAuthor());
+            this.preparedStatement.setInt(5, evento.getCategory());
             this.preparedStatement.setString(6, evento.getLocal());
             this.preparedStatement.executeUpdate();
 
@@ -46,8 +46,8 @@ public class EventoDAO extends DBConnection {
             this.preparedStatement.setString(1, evento.getTitle());
             this.preparedStatement.setString(2, evento.getDescription());
             this.preparedStatement.setString(3, evento.getDate());
-            this.preparedStatement.setString(4, evento.getAuthor());
-            this.preparedStatement.setString(5, evento.getCategory());
+            this.preparedStatement.setInt(4, evento.getAuthor());
+            this.preparedStatement.setInt(5, evento.getCategory());
             this.preparedStatement.setString(6, evento.getLocal());
             this.preparedStatement.setInt(7, evento.getId());
             this.preparedStatement.executeUpdate();
@@ -98,8 +98,8 @@ public class EventoDAO extends DBConnection {
                 evento.setTitle(resultSet.getString("title"));
                 evento.setDescription(resultSet.getString("description"));
                 evento.setDate(resultSet.getString("date"));
-                evento.setAuthor(resultSet.getString("author"));
-                evento.setCategory(resultSet.getString("category"));
+                evento.setAuthor(resultSet.getInt("author"));
+                evento.setCategory(resultSet.getInt("category"));
                 evento.setLocal(resultSet.getString("local"));
                 eventos.add(evento);
             }

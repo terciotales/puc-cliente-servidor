@@ -3,7 +3,7 @@
 }
 
 .menu-title {
-    -fx-background-color: #FF5722;
+    -fx-background-color: #EF9E34;
     -fx-font-size: 16px;
     -fx-font-weight: bold;
 }
@@ -11,6 +11,10 @@
 .nav-menu {
     -fx-background-color: transparent;
     -fx-border-radius: 0;
+    -fx-font-weight: bold;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-width: 3;
+    -fx-border-color: transparent;
 }
 
 .nav-menu:hover {
@@ -19,8 +23,10 @@
 }
 
 .nav-menu.active {
-    -fx-background-color: #FF5722;
-    -fx-font-weight: bold;
+    -fx-background-color: #333333;
+    -fx-border-style: hidden hidden hidden solid;
+    -fx-border-width: 3;
+    -fx-border-color: #EF9E34;
 }
 
 .close-button {
@@ -31,5 +37,20 @@
 }
 
 .close-button:hover {
-    -fx-background-color: #FF5722;
+    -fx-background-color: #EF9E34;
+}
+
+.greetings-container {
+    -fx-border-style: solid hidden hidden hidden;
+    -fx-border-width: 3;
+    -fx-border-color: #262626;
+}
+
+.greetings {
+    -fx-font-size: 12px;
+}
+
+.user {
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
 }

@@ -5,11 +5,11 @@ public class Evento {
     private String title;
     private String description;
     private String date;
-    private String author;
-    private String category;
+    private int author;
+    private int category;
     private String local;
 
-    public Evento(int id, String title, String description, String date, String author, String category, String local) {
+    public Evento(int id, String title, String description, String date, int author, int category, String local) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -60,20 +60,20 @@ public class Evento {
     }
 
 
-    public String getAuthor() {
+    public int getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(int author) {
         this.author = author;
     }
 
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 

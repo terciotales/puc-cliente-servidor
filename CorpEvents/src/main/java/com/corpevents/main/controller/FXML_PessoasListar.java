@@ -1,58 +1,48 @@
 package com.corpevents.main.controller;
 
-import com.corpevents.main.dao.CategoriaDAO;
-import com.corpevents.main.dao.EventoDAO;
 import com.corpevents.main.dao.PessoaDAO;
-import com.corpevents.main.model.Evento;
 import com.corpevents.main.model.Pessoa;
-import com.corpevents.main.util.TableEvento;
+import com.corpevents.main.util.TablePessoa;
 import com.corpevents.main.util.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class FXML_EventosListar implements Initializable {
+public class FXML_PessoasListar implements Initializable {
 
     @FXML
-    private AnchorPane listar_eventos_root;
+    private AnchorPane listar_pessoas_root;
 
     @FXML
     private TextField busca;
 
     @FXML
-    private TableView<TableEvento> table;
+    private TableView<TablePessoa> table;
 
     @FXML
-    private TableColumn<TableEvento, Integer> column_id;
+    private TableColumn<TablePessoa, Integer> column_id;
 
     @FXML
-    private TableColumn<TableEvento, Integer> column_title;
+    private TableColumn<TablePessoa, String> column_nome;
 
     @FXML
-    private TableColumn<TableEvento, String> column_date;
+    private TableColumn<TablePessoa, String> column_username;
 
     @FXML
-    private TableColumn<TableEvento, String> column_author;
-
-    @FXML
-    private TableColumn<TableEvento, Integer> column_category;
+    private TableColumn<TablePessoa, Integer> column_role;
 
     @FXML
     private Button button_delete;
@@ -61,24 +51,20 @@ public class FXML_EventosListar implements Initializable {
     private Button button_edit;
 
     public void initialize(URL location, ResourceBundle resources) {
-        EventoDAO eventoDAO = new EventoDAO();
-        CategoriaDAO categoriaDAO = new CategoriaDAO();
         PessoaDAO pessoaDAO = new PessoaDAO();
-
-        ArrayList<Evento> eventos = eventoDAO.selectAll();
-        ObservableList<TableEvento> tableEventos = FXCollections.observableArrayList();
+        ArrayList<Pessoa> pessoas = pessoaDAO.selectAll();
+        ObservableList<TablePessoa> tablePessoas = FXCollections.observableArrayList();
 
         column_id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        column_title.setCellValueFactory(new PropertyValueFactory<>("title"));
-        column_date.setCellValueFactory(new PropertyValueFactory<>("date"));
-        column_author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        column_category.setCellValueFactory(new PropertyValueFactory<>("category"));
+        column_nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        column_username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
 
-        for (Evento evento : eventos) {
-            tableEventos.add(new TableEvento(evento.getId(), evento.getTitle(), evento.getDate(), pessoaDAO.selectById(evento.getAuthor()).getNome(), categoriaDAO.selectById(evento.getCategory()).getNome()));
+        for (Pessoa pessoa : pessoas) {
+            tablePessoas.add(new TablePessoa(pessoa.getId(), pessoa.getNome(), pessoa.getUsername(), pessoa.getRole()));
         }
 
-        table.setItems(tableEventos);
+        table.setItems(tablePessoas);
 
         tableSelectionListener();
 

@@ -1,4 +1,4 @@
-.root-eventos {
+.root-pessoas {
     -fx-background-color: #262626;
     -fx-base: #262626;
     -fx-control-inner-background: derive(-fx-base, 35%);
@@ -7,12 +7,12 @@
     -fx-text-fill: #F9F9F9;
 }
 
-.root-eventos-listar, .root-eventos-adicionar, .root-eventos-editar {
+.root-pessoas-listar, .root-pessoas-adicionar, .root-pessoas-editar {
     -fx-background-color: #151515;
     -fx-fill: #EF9E34!important;
 }
 
-.action-eventos-button {
+.action-pessoas-button {
     -fx-background-color: #262626;
     -fx-text-fill: #F9F9F9;
     -fx-font-weight: bold;
@@ -21,26 +21,26 @@
     -fx-border-radius: 3px;
 }
 
-.action-eventos-button:hover {
+.action-pessoas-button:hover {
     -fx-background-color: #F9F9F9;
     -fx-text-fill: #262626;
 }
 
-.table-eventos {
+.table-pessoas {
     -fx-background-color: #262626;
     -fx-text-fill: #F9F9F9;
 }
 
-.table-eventos .column-header,
-.table-eventos .column-header .filler,
-.table-eventos .column-header-background .filler {
+.table-pessoas .column-header,
+.table-pessoas .column-header .filler,
+.table-pessoas .column-header-background .filler {
     -fx-background-color: #323232;
     -fx-text-fill: #F9F9F9;
     -fx-border-radius: 8px;
     -fx-pref-height: 40px;
 }
 
-.table-eventos .column-header .label {
+.table-pessoas .column-header .label {
     -fx-text-alignment: left;
     -fx-alignment: CENTER_LEFT;
     -fx-padding: 5px 0 5px 10px;

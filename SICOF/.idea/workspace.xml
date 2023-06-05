@@ -5,26 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/connection/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Evento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TableEvento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/eventos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/left_menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/top_menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Eventos.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Categorias.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_CategoriasListar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Pessoas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_PessoasListar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/CategoriaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/PessoaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/Encryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/Greetings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TableCategoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TablePessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/categorias.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/pessoas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Categorias.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_CategoriasListar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Pessoas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_PessoasListar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Relatorios.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Evento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/eventos.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/eventos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/left_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/left_menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo-light.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo-light.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_View.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +95,7 @@
       <workItem from="1685483498692" duration="1835000" />
       <workItem from="1685487324473" duration="1689000" />
       <workItem from="1685978697847" duration="646000" />
+      <workItem from="1686004994206" duration="2610000" />
     </task>
     <servers />
   </component>

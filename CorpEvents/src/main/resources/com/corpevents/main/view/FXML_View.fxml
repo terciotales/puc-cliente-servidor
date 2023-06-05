@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="550.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" styleClass="root" stylesheets="@../../main/css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_View">
    <children>
@@ -25,7 +26,7 @@
                         <Label fx:id="page_title" layoutY="1.0" styleClass="title" text="Eventos" />
                      </children>
                   </Group>
-                  <ImageView fitHeight="30.0" fitWidth="150.0" layoutX="505.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="150.0" layoutX="535.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/logo-light.png" />
                      </image>
@@ -66,7 +67,7 @@
                            <graphic>
                               <FontAwesomeIconView fill="#f9f9f9" glyphName="CALENDAR_ALT" />
                            </graphic></Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Pessoas">
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Pessoas">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -76,6 +77,17 @@
                            <graphic>
                               <FontAwesomeIconView fill="#f9f9f9" glyphName="GROUP" />
                            </graphic></Button>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Categorias">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f9f9f9" glyphName="TAGS" />
+                           </graphic>
+                        </Button>
                         <Button alignment="BASELINE_LEFT" graphicTextGap="12.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#setPage" prefHeight="35.0" prefWidth="200.0" styleClass="nav-menu" text="Relatórios">
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -90,13 +102,46 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="30.0" prefWidth="180.0" styleClass="close-button" text="Sair">
+                        <VBox prefHeight="271.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" styleClass="greetings-container" stylesheets="@../css/left_menu.css" translateY="-20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Text fx:id="greetings" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="greetings" text="Olá,">
+                                       <VBox.margin>
+                                          <Insets bottom="4.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="user" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user" text="Usuário" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="16.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="18.0" right="18.0" />
+                           </padding>
+                        </VBox>
+                        <Button graphicTextGap="8.0" mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="30.0" prefWidth="180.0" styleClass="close-button" text="Sair">
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f9f9f9" glyphName="ARROW_CIRCLE_ALT_LEFT" size="14">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
                         </Button>
                      </children>
                   </VBox>

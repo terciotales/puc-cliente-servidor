@@ -22,9 +22,9 @@
 }
 
 .nav-menu-content:hover, .nav-menu-content.active {
-    -fx-fill: #FF5722!important;
-    -fx-text-fill: #FF5722!important;
-    -fx-border-color: #FF5722!important;
+    -fx-fill: #EF9E34!important;
+    -fx-text-fill: #EF9E34!important;
+    -fx-border-color: #EF9E34!important;
     -fx-cursor: hand;
 }
 

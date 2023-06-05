@@ -1,0 +1,25 @@
+.copyright {
+    -fx-font-size: 11px;
+}
+
+.form-title {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.login-button {
+    -fx-background-color: #EF9E34;
+    -fx-text-fill: #F9F9F9;
+    -fx-font-weight: bold!important;
+    -fx-border-radius: 3px;
+}
+
+.login-button:hover {
+    -fx-font-weight: bold!important;
+    -fx-background-color: #EF9E34;
+}
