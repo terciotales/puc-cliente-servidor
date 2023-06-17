@@ -11,12 +11,12 @@
          <children>
             <HBox fx:id="buttons" minWidth="250.0" prefHeight="100.0" prefWidth="250.0" spacing="8.0">
                <children>
-                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Listar">
+                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Simples">
                      <padding>
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Button>
-                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Adicionar">
+                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Avançado">
                      <padding>
                         <Insets left="15.0" right="15.0" />
                      </padding>

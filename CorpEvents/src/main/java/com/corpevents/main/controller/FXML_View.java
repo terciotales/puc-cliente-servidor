@@ -24,6 +24,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
+import static com.corpevents.main.util.TextFieldUtils.escapeSpecialCharacters;
+import static com.corpevents.main.util.TextFieldUtils.removeSpecialCharacters;
+
 public class FXML_View implements Initializable {
     private String page = "Dashboard";
 
@@ -105,7 +108,7 @@ public class FXML_View implements Initializable {
         Parent root = null;
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_" + this.page + ".fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_" + escapeSpecialCharacters(this.page) + ".fxml"));
             root = fxmlLoader.load();
         } catch (IOException exception) {
             Logger.getLogger(FXML_View.class.getName()).log(java.util.logging.Level.SEVERE, null, exception);

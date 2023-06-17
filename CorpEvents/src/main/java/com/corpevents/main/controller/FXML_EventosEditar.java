@@ -92,22 +92,21 @@ public class FXML_EventosEditar implements Initializable {
         this.minutos.setText(twoDigits(calendar.get(Calendar.MINUTE)));
         this.category.setValue(categoriaDAO.selectById(evento.getCategory()));
         this.list_pessoas.getItems().addAll(eventoPessoaDAO.selectByEvento(evento.getId()));
-    }
 
-    public void initialize(URL location, ResourceBundle resources) {
         PessoaDAO pessoaDAO = new PessoaDAO();
         ArrayList<Pessoa> pessoas = new ArrayList<>();
 
         pessoaDAO.selectAll().forEach(pessoa -> {
-            if (pessoa.getId() != Usuario.getInstance().getPessoa().getId()) {
+            if (pessoa.getId() != this.evento.getAuthor()) {
                 pessoas.add(pessoa);
             }
         });
 
         ObservableList<Pessoa> observableList = FXCollections.observableArrayList(pessoas);
         this.pessoa.setItems(observableList);
+    }
 
-
+    public void initialize(URL location, ResourceBundle resources) {
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         ArrayList<Categoria> categorias = categoriaDAO.selectAll();
         ObservableList<Categoria> observableList2 = FXCollections.observableArrayList(categorias);

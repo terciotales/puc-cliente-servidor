@@ -2,9 +2,11 @@ package com.corpevents.main.controller;
 
 import com.corpevents.main.dao.CategoriaDAO;
 import com.corpevents.main.dao.EventoDAO;
+import com.corpevents.main.dao.EventoPessoaDAO;
 import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.model.Evento;
 import com.corpevents.main.util.DateFormatter;
+import com.corpevents.main.util.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -53,8 +55,11 @@ public class FXML_Dashboard implements Initializable {
         EventoDAO eventoDAO = new EventoDAO();
         PessoaDAO pessoaDAO = new PessoaDAO();
         CategoriaDAO categoriaDAO = new CategoriaDAO();
+        EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
 
         this.eventos_totais.setText(String.valueOf(eventoDAO.count()));
+
+        this.eventos_participando.setText(String.valueOf(eventoPessoaDAO.selectByPessoa(Usuario.getInstance().getPessoa().getId()).size()));
 
         ArrayList<Evento> proximos = eventoDAO.selectNext();
 

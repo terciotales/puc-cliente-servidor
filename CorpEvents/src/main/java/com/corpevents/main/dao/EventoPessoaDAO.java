@@ -1,6 +1,7 @@
 package com.corpevents.main.dao;
 
 import com.corpevents.main.connection.DBConnection;
+import com.corpevents.main.model.Evento;
 import com.corpevents.main.model.Pessoa;
 
 import java.sql.Connection;
@@ -114,6 +115,33 @@ public class EventoPessoaDAO extends DBConnection {
             connection.close();
 
             return pessoas;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ArrayList<Evento> selectByPessoa(int pessoaId) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos_pessoas WHERE usuario_id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, pessoaId);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            ArrayList<Evento> eventos = new ArrayList<>();
+            EventoDAO eventoDAO = new EventoDAO();
+            while (resultSet.next()) {
+                Evento evento = eventoDAO.selectById(resultSet.getInt("evento_id"));
+                eventos.add(evento);
+            }
+
+            connection.commit();
+            connection.close();
+
+            return eventos;
         } catch (Exception e) {
             e.printStackTrace();
             return null;

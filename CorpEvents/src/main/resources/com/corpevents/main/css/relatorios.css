@@ -1,0 +1,86 @@
+.root-relatorios {
+    -fx-background-color: #262626;
+    -fx-base: #262626;
+    -fx-control-inner-background: derive(-fx-base, 35%);
+    -fx-control-inner-background-alt: -fx-control-inner-background;
+    -fx-font-family: Arial;
+    -fx-text-fill: #F9F9F9;
+}
+
+.root-relatorios-listar, .root-relatorios-adicionar, .root-relatorios-editar {
+    -fx-background-color: #151515;
+    -fx-fill: #EF9E34!important;
+}
+
+.action-relatorios-button {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3px;
+}
+
+.action-relatorios-button:hover {
+    -fx-background-color: #323232;
+}
+
+.table-relatorios {
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-relatorios .column-header,
+.table-relatorios .column-header .filler,
+.table-relatorios .column-header-background .filler {
+    -fx-background-color: #323232;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+    -fx-border-radius: 8px;
+    -fx-pref-height: 40px;
+}
+
+.table-relatorios .column-header .label {
+    -fx-text-alignment: left;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5px 0 5px 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 3 0 3 10px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: transparent;
+    -fx-min-height: 40px;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-row-cell {
+    -fx-background-insets: 0, 0 0 1.5 0;
+    -fx-padding: 0.0em;
+    -fx-font-size: 11px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #262626;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-row-cell:selected, .table-row-cell:selected:hover {
+    -fx-background-color: #615647;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #333333;
+    -fx-text-fill: #F9F9F9!important;
+    -fx-fill: #F9F9F9!important;
+}

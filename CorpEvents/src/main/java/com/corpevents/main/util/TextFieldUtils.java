@@ -2,6 +2,8 @@ package com.corpevents.main.util;
 
 import javafx.scene.control.TextField;
 
+import java.text.Normalizer;
+
 public class TextFieldUtils {
     public static void numberTextField(TextField textField, int limit) {
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -22,5 +24,19 @@ public class TextFieldUtils {
                 textField.setText(String.valueOf(limit));
             }
         });
+    }
+
+    public static String removeSpecialCharacters(String s) {
+        return s.replaceAll("[^a-zA-Z0-9]", "");
+    }
+
+    public static String escapeSpecialCharacters(String s) {
+        // Remove os acentos
+        String textoSemAcentos = Normalizer.normalize(s, Normalizer.Form.NFD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+
+        // Substitui o "ç" por "c"
+
+        return textoSemAcentos.replaceAll("[çÇ]", "c");
     }
 }

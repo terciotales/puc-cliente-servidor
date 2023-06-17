@@ -56,8 +56,6 @@ public class FXML_Evento {
         }
 
         this.people.setText(peopleText.toString());
-        this.people.setMinHeight((18 * pessoas.size()) + 10);
-
-
+        this.people.setMinHeight((18 * pessoas.size()) + 12);
     }
 }
