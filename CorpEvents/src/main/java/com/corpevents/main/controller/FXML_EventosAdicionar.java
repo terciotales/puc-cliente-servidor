@@ -151,7 +151,19 @@ public class FXML_EventosAdicionar implements Initializable {
         evento.setAuthor(Usuario.getInstance().getPessoa().getId());
         this.list_pessoas.getItems().forEach(evento::addPessoa);
 
-        eventoDAO.insert(evento);
+        Alert alert;
+        if (eventoDAO.insert(evento)) {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Sucesso");
+            alert.setHeaderText("Evento adicionado com sucesso!");
+            alert.showAndWait();
+            clearFields();
+        } else {
+            alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Erro ao adicionar evento!");
+            alert.showAndWait();
+        }
     }
 
     String calendarToString(Calendar calendar) {
@@ -224,6 +236,17 @@ public class FXML_EventosAdicionar implements Initializable {
         this.error_message.setVisible(!valid);
 
         return valid;
+    }
+
+    void clearFields() {
+        this.title.setText("");
+        this.description.setText("");
+        this.category.setValue(null);
+        this.list_pessoas.getItems().clear();
+        this.horas.setText("");
+        this.minutos.setText("");
+        this.date.setValue(null);
+        this.local.setText("");
     }
 
     void numberTextField(TextField textField) {
