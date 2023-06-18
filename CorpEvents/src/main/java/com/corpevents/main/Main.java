@@ -1,15 +1,17 @@
 package com.corpevents.main;
 
+import com.corpevents.main.dao.PessoaDAO;
+import com.corpevents.main.model.Pessoa;
 import com.corpevents.main.util.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.Objects;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
     private static Stage mainStage;
@@ -17,19 +19,28 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         String resource = "view/FXML_Login.fxml";
+        stage.initStyle(StageStyle.UNDECORATED);
+
+        PessoaDAO pessoaDAO = new PessoaDAO();
+        Pessoa pessoa = pessoaDAO.selectById(1);
+
+        Usuario.getInstance().setIsLogged(true);
+        Usuario.getInstance().setPessoa(pessoa);
 
         if (Usuario.getInstance().isLogged()) {
-            resource = "view/FXML_Dashboard.fxml";
+            resource = "view/FXML_View.fxml";
         }
 
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(resource));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 550);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 585);
         scene.getStylesheets().add(String.valueOf(Main.class.getResource("css/main.css")));
         stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/icon.png"))));
         stage.setTitle("CorpEvents - Gerenciamento de Eventos Corporativos");
         stage.setResizable(false);
+        scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }
 
@@ -43,7 +54,12 @@ public class Main extends Application {
         }
 
         Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("view/" + fxml))));
+        scene.setFill(Color.TRANSPARENT);
         mainStage.setScene(scene);
         mainStage.show();
+    }
+
+    public static Stage getMainStage() {
+        return mainStage;
     }
 }

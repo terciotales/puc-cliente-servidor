@@ -1,5 +1,7 @@
 package com.corpevents.main.model;
 
+import java.util.ArrayList;
+
 public class Evento {
     private int id;
     private String title;
@@ -8,8 +10,9 @@ public class Evento {
     private int author;
     private int category;
     private String local;
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();
 
-    public Evento(int id, String title, String description, String date, int author, int category, String local) {
+    public Evento(int id, String title, String description, String date, int author, int category, String local, ArrayList<Pessoa> pessoas) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -17,6 +20,7 @@ public class Evento {
         this.author = author;
         this.category = category;
         this.local = local;
+        this.pessoas = pessoas;
     }
 
     public Evento() {
@@ -84,6 +88,18 @@ public class Evento {
 
     public void setLocal(String local) {
         this.local = local;
+    }
+
+    public ArrayList<Pessoa> getPessoas() {
+        return pessoas;
+    }
+
+    public void setPessoas(ArrayList<Pessoa> pessoas) {
+        this.pessoas = pessoas;
+    }
+
+    public void addPessoa(Pessoa pessoa) {
+        this.pessoas.add(pessoa);
     }
 
     @Override

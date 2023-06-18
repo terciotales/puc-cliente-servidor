@@ -60,10 +60,10 @@
             </HBox>
             <TableView fx:id="table" maxHeight="385.0" maxWidth="680.0" prefHeight="385.0" prefWidth="650.0" styleClass="table-eventos" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP">
               <columns>
-                <TableColumn fx:id="column_title" maxWidth="284.80005645751953" minWidth="161.60004425048828" prefWidth="250.39996910095215" resizable="false" text="Título" />
-                  <TableColumn fx:id="column_category" maxWidth="164.00003051757812" minWidth="95.20001220703125" prefWidth="148.800048828125" text="Categoria" />
-                  <TableColumn fx:id="column_author" maxWidth="192.0" minWidth="107.0" prefWidth="138.39993286132812" text="Autor" />
-                  <TableColumn fx:id="column_date" maxWidth="239.19998168945312" minWidth="72.0" prefWidth="96.0001220703125" text="Data" />
+                <TableColumn fx:id="column_title" maxWidth="284.80005645751953" minWidth="161.60004425048828" prefWidth="235.0" resizable="false" text="Título" />
+                  <TableColumn fx:id="column_category" maxWidth="164.00003051757812" minWidth="95.20001220703125" prefWidth="141.0" text="Categoria" />
+                  <TableColumn fx:id="column_author" maxWidth="192.0" minWidth="107.0" prefWidth="124.0" text="Autor" />
+                  <TableColumn fx:id="column_date" maxWidth="239.19998168945312" minWidth="72.0" prefWidth="136.0" text="Data" />
                   <TableColumn fx:id="column_people" maxWidth="239.19998168945312" minWidth="34.400146484375" prefWidth="41.60009765625">
                      <graphic>
                         <FontAwesomeIconView fill="#f9f9f9" glyphName="GROUP" size="14" />

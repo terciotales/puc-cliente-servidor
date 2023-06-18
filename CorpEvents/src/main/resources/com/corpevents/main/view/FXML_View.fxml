@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
@@ -10,16 +11,58 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="550.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" styleClass="root" stylesheets="@../../main/css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_View">
+<AnchorPane maxHeight="550.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="900.0" styleClass="root" stylesheets="@../../main/css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_View">
    <children>
-      <BorderPane fx:id="border_pane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="900.0" styleClass="top-bar" AnchorPane.bottomAnchor="547.8" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../images/icon.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox fx:id="dragArea" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="30.0" maxWidth="35.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#minimizeApplication" prefHeight="30.0" styleClass="top-bar-button" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" selectionStart="0" size="16" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="840.0" layoutY="10.0" maxHeight="30.0" maxWidth="35.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="30.0" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="18" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="top-bar-button" />
+                        <String fx:value="close" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children></HBox>
+      <BorderPane fx:id="border_pane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
          <top>
-            <Pane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="700.0" styleClass="top-menu" BorderPane.alignment="CENTER_RIGHT">
+            <Pane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="698.0" styleClass="top-menu" BorderPane.alignment="CENTER_RIGHT">
                <children>
                   <Group layoutX="15.0" layoutY="10.0">
                      <children>
@@ -35,10 +78,13 @@
                <padding>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </padding>
+               <BorderPane.margin>
+                  <Insets right="2.0" />
+               </BorderPane.margin>
             </Pane>
          </top>
          <left>
-            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="200.0" spacing="20.0" styleClass="left-menu" translateY="-45.0" BorderPane.alignment="CENTER">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="200.0" spacing="20.0" styleClass="left-menu" translateY="-45.0" BorderPane.alignment="CENTER">
                <children>
                   <Group layoutY="15.0" styleClass="menu-title">
                      <children>

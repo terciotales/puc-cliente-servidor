@@ -74,7 +74,6 @@ public class FXML_FilmesListar implements Initializable {
         }
 
         table.setItems(tableFilmes);
-
         tableSelectionListener();
     }
 

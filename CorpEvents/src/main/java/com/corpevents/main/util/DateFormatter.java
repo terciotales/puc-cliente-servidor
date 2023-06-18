@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 public class DateFormatter {
     public static String dateFormatter(String inputDate) {
         String inputFormat = "yyyy-MM-dd HH:mm:ss";
-        String outputFormat = "dd/MM/yyyy";
+        String outputFormat = "dd/MM/yyyy 'às' HH:mm";
 
         SimpleDateFormat inputDateFormat = new SimpleDateFormat(inputFormat);
         SimpleDateFormat outputDateFormat = new SimpleDateFormat(outputFormat);

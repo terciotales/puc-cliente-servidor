@@ -10,6 +10,7 @@
 .box-container {
     -fx-background-color: #262626;
     -fx-border-radius: 8px!important;
+    -fx-background-radius: 8px!important;
 }
 
 .big-letter {

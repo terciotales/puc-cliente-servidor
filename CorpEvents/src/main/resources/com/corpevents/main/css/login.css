@@ -1,3 +1,8 @@
+.left-menu {
+    -fx-background-radius: 0 0 0 8px!important;
+    -fx-border-radius: 0 0 0 8px!important;
+}
+
 .copyright {
     -fx-font-size: 11px;
 }

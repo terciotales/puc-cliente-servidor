@@ -6,6 +6,7 @@ import com.corpevents.main.model.Evento;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class EventoDAO extends DBConnection {
@@ -17,17 +18,42 @@ public class EventoDAO extends DBConnection {
             connection.setAutoCommit(false);
 
             String sql = "INSERT INTO eventos (title, description, date, author, category, local) VALUES (?, ?, ?, ?, ?, ?)";
-            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             this.preparedStatement.setString(1, evento.getTitle());
             this.preparedStatement.setString(2, evento.getDescription());
             this.preparedStatement.setString(3, evento.getDate());
             this.preparedStatement.setInt(4, evento.getAuthor());
             this.preparedStatement.setInt(5, evento.getCategory());
             this.preparedStatement.setString(6, evento.getLocal());
-            this.preparedStatement.executeUpdate();
+            int affectedRows = this.preparedStatement.executeUpdate();
+
+            if (affectedRows == 0) {
+                throw new SQLException("Erro ao inserir evento.");
+            }
+
+            try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    evento.setId(generatedKeys.getInt(1));
+                } else {
+                    throw new SQLException("Erro ao inserir evento.");
+                }
+            }
 
             connection.commit();
             connection.close();
+
+            if (!evento.getPessoas().isEmpty()) {
+                EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+
+                evento.getPessoas().forEach(pessoa -> {
+                    try {
+                        eventoPessoaDAO.insert(evento.getId(), pessoa.getId());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+
 
             return true;
         } catch (Exception e) {

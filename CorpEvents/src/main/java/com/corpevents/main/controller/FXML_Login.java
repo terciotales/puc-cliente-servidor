@@ -5,13 +5,18 @@ import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.model.Pessoa;
 import com.corpevents.main.util.Encryption;
 import com.corpevents.main.util.Usuario;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -28,14 +33,51 @@ public class FXML_Login implements Initializable {
     @FXML
     private Text message_error;
 
+    @FXML
+    private HBox dragArea;
+
+    private static double xOffset = 0;
+    private static double yOffset = 0;
+
     public void initialize(URL location, ResourceBundle resources) {
         usuario = Usuario.getInstance();
         message_error.setVisible(false);
+
+        dragArea.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = Main.getMainStage().getX() - event.getScreenX();
+                yOffset = Main.getMainStage().getY() - event.getScreenY();
+            }
+        });
+
+        dragArea.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Main.getMainStage().setX(event.getScreenX() + xOffset);
+                Main.getMainStage().setY(event.getScreenY() + yOffset);
+            }
+        });
     }
 
+    /**
+     * Fecha a aplicação.
+     *
+     * @param event Evento de clique do mouse.
+     */
     @FXML
     void closeApplication(MouseEvent event) {
+        Platform.exit();
         System.exit(0);
+    }
+
+    /**
+     * Minimiza a aplicação.
+     * @param event Evento de clique do mouse.
+     */
+    @FXML
+    void minimizeApplication(MouseEvent event) {
+        ((Stage) Main.getMainStage().getScene().getWindow()).setIconified(true);
     }
 
     /**

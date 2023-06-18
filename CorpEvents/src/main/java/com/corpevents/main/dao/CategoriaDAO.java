@@ -125,6 +125,32 @@ public class CategoriaDAO extends DBConnection {
         }
     }
 
+    public Categoria selectByName(String name) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM categorias WHERE name = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setString(1, name);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            Categoria categoria = new Categoria();
+            while (resultSet.next()) {
+                categoria.setId(resultSet.getInt("id"));
+                categoria.setNome(resultSet.getString("name"));
+            }
+
+            connection.commit();
+            connection.close();
+
+            return categoria;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public int count() {
         try {
             Connection connection = this.getConnection();
