@@ -39,7 +39,7 @@
 
 .field-title {
     -fx-font-weight: bold;
-    -fx-font-size: 12px;
+    -fx-font-size: 11px;
 }
 
 .action-button {
@@ -55,7 +55,7 @@ Text {
 TextField, TextArea, ComboBox, DatePicker, PasswordField, CheckBox, RadioButton, ToggleButton, Button, ListView, TableView, TableColumn, TitledPane, Accordion, Pagination, ProgressIndicator, ProgressBar, Slider, ScrollBar, ScrollPane, TabPane, Tab, SplitPane, Separator, MenuBar, Menu, MenuItem, ContextMenu, ColorPicker, ChoiceBox, Spinner, Hyperlink, Label, Tooltip, TreeView, TreeTableView, TreeItem, AnchorPane, BorderPane, GridPane {
     -fx-text-fill: #F9F9F9!important;
     -fx-fill: #F9F9F9!important;
-    -fx-prompt-text-fill: #F9F9F9!important;
+    -fx-prompt-text-fill: #989898!important;
 
 }
 

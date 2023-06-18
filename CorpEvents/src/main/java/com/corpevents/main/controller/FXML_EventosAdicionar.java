@@ -25,6 +25,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import static com.corpevents.main.util.TextFieldUtils.numberTextField;
+
 public class FXML_EventosAdicionar implements Initializable {
 
     @FXML
@@ -88,8 +90,8 @@ public class FXML_EventosAdicionar implements Initializable {
             remove_pessoa.setDisable(newValue == null);
         });
 
-        numberTextField(this.horas);
-        numberTextField(this.minutos);
+        numberTextField(this.horas, 23);
+        numberTextField(this.minutos, 59);
 
         this.error_message.setVisible(false);
     }
@@ -247,30 +249,5 @@ public class FXML_EventosAdicionar implements Initializable {
         this.minutos.setText("");
         this.date.setValue(null);
         this.local.setText("");
-    }
-
-    void numberTextField(TextField textField) {
-        textField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue.length() == 0 || newValue.equals("0")) {
-                return;
-            }
-
-            if (!newValue.matches("\\d*")) {
-                textField.setText(newValue.replaceAll("[^\\d]", ""));
-                return;
-            }
-
-            if (textField.getText().length() > 2) {
-                textField.setText(textField.getText().substring(0, 2));
-            }
-
-            if (textField == this.horas && Integer.parseInt(textField.getText()) > 23) {
-                textField.setText("23");
-            }
-
-            if (textField == this.minutos && Integer.parseInt(textField.getText()) > 59) {
-                textField.setText("59");
-            }
-        });
     }
 }

@@ -90,7 +90,7 @@ public class FXML_FilmesListar implements Initializable {
     }
 
     public void clickEdit(MouseEvent mouseEvent) {
-        Filme filme;
+         Filme filme;
         FilmeDAO filmeDAO = new FilmeDAO();
         filme = filmeDAO.getById(table.getSelectionModel().getSelectedItem().getId());
 

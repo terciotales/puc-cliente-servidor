@@ -67,7 +67,7 @@ public class EventoDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "UPDATE events SET title = ?, description = ?, date = ?, author = ?, category = ?, local = ? WHERE id = ?";
+            String sql = "UPDATE eventos SET title = ?, description = ?, date = ?, author = ?, category = ?, local = ? WHERE id = ?";
             this.preparedStatement = connection.prepareStatement(sql);
             this.preparedStatement.setString(1, evento.getTitle());
             this.preparedStatement.setString(2, evento.getDescription());
@@ -81,6 +81,31 @@ public class EventoDAO extends DBConnection {
             connection.commit();
             connection.close();
 
+            EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+            PessoaDAO pessoaDAO = new PessoaDAO();
+
+            eventoPessoaDAO.selectByEvento(evento.getId()).forEach(eventoPessoa -> {
+                if (!evento.getPessoas().contains(pessoaDAO.selectById(eventoPessoa.getId()))) {
+                    try {
+                        eventoPessoaDAO.delete(evento.getId(), eventoPessoa.getId());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            if (!evento.getPessoas().isEmpty()) {
+                evento.getPessoas().forEach(pessoa -> {
+                    if (!eventoPessoaDAO.exists(evento.getId(), pessoa.getId())) {
+                        try {
+                            eventoPessoaDAO.insert(evento.getId(), pessoa.getId());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -90,10 +115,13 @@ public class EventoDAO extends DBConnection {
 
     public boolean delete(Evento evento) {
         try {
+            EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+            eventoPessoaDAO.deleteByEvento(evento.getId());
+
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "DELETE FROM events WHERE id = ?";
+            String sql = "DELETE FROM eventos WHERE id = ?";
             this.preparedStatement = connection.prepareStatement(sql);
             this.preparedStatement.setInt(1, evento.getId());
             this.preparedStatement.executeUpdate();
@@ -225,6 +253,37 @@ public class EventoDAO extends DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
+        }
+    }
+
+    public Evento selectById(int id) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos WHERE id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, id);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            Evento evento = new Evento();
+            while (resultSet.next()) {
+                evento.setId(resultSet.getInt("id"));
+                evento.setTitle(resultSet.getString("title"));
+                evento.setDescription(resultSet.getString("description"));
+                evento.setDate(resultSet.getString("date"));
+                evento.setAuthor(resultSet.getInt("author"));
+                evento.setCategory(resultSet.getInt("category"));
+                evento.setLocal(resultSet.getString("local"));
+            }
+
+            connection.commit();
+            connection.close();
+
+            return evento;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

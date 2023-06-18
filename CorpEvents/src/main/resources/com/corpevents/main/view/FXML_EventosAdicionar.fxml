@@ -29,14 +29,14 @@
             <Button fx:id="add_pessoa" layoutX="15.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#addPessoa" prefHeight="25.0" prefWidth="142.0" text="Adicionar" />
             <Button layoutX="546.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" text="Adicionar" />
             <Text layoutX="15.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Descrição do evento" />
-            <TextArea fx:id="description" layoutX="15.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Descrição" />
+            <TextArea fx:id="description" layoutX="15.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Descrição" wrapText="true" />
             <TextField fx:id="horas" alignment="CENTER" layoutX="537.0" layoutY="227.0" prefHeight="30.0" prefWidth="55.0" promptText="h" />
             <TextField fx:id="minutos" alignment="CENTER" layoutX="609.0" layoutY="226.0" prefHeight="30.0" prefWidth="55.0" promptText="m" />
             <Text layoutX="510.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="às" wrappingWidth="32.66015625" />
             <Text layoutX="599.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text=":" wrappingWidth="32.66015625" />
             <Text fx:id="error_message" layoutX="17.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
             <Text layoutX="355.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Local do evento" />
-            <TextArea fx:id="local" layoutX="355.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Local" />
+            <TextArea fx:id="local" layoutX="355.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Local" wrapText="true" />
          </children>
       </Pane>
    </children>
