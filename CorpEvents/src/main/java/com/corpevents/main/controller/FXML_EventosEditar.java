@@ -179,7 +179,7 @@ public class FXML_EventosEditar implements Initializable {
         this.evento.setLocal(this.local.getText());
         this.evento.setCategory(this.category.getValue().getId());
         this.evento.setDate(calendarToString(calendar));
-        this.evento.setAuthor(Usuario.getInstance().getPessoa().getId());
+        this.evento.setAuthor(this.evento.getAuthor());
         this.evento.setPessoas(new ArrayList<>());
         this.list_pessoas.getItems().forEach(evento::addPessoa);
 

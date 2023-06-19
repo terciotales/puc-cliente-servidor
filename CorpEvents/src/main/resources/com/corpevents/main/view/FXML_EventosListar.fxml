@@ -58,7 +58,7 @@
                   </HBox>
                </children>
             </HBox>
-            <TableView fx:id="table" maxHeight="385.0" maxWidth="680.0" prefHeight="385.0" prefWidth="650.0" styleClass="table-eventos" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <TableView fx:id="table" maxHeight="385.0" maxWidth="680.0" onMouseClicked="#onMouseClicked" prefHeight="385.0" prefWidth="650.0" styleClass="table-eventos" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP">
               <columns>
                 <TableColumn fx:id="column_title" maxWidth="284.80005645751953" minWidth="161.60004425048828" prefWidth="235.0" resizable="false" text="Título" />
                   <TableColumn fx:id="column_category" maxWidth="164.00003051757812" minWidth="95.20001220703125" prefWidth="141.0" text="Categoria" />

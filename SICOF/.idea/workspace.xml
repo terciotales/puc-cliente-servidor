@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TextFieldUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosEditar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosAdicionar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/evento.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Evento.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoPessoaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoPessoaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/DateFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TableEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TableEvento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sicof/controller/FXML_FilmesListar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <workItem from="1686150205305" duration="346000" />
       <workItem from="1686677816397" duration="351000" />
       <workItem from="1686644255194" duration="935000" />
-      <workItem from="1687119013352" duration="6993000" />
+      <workItem from="1687119013352" duration="8236000" />
     </task>
     <servers />
   </component>

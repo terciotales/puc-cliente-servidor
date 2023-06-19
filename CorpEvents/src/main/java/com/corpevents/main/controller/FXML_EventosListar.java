@@ -16,13 +16,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -101,6 +106,33 @@ public class FXML_EventosListar implements Initializable {
                 button_edit.setDisable(true);
             }
         });
+    }
+
+    @FXML
+    void onMouseClicked(MouseEvent event) {
+        if (event.getClickCount() == 2) {
+            Evento evento;
+            EventoDAO eventoDAO = new EventoDAO();
+            evento = eventoDAO.selectById(table.getSelectionModel().getSelectedItem().getId());
+
+            if (evento != null) {
+                Parent root = null;
+                try {
+                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("view/FXML_Evento.fxml"));
+                    Scene scene = new Scene(loader.load(), 400, 600);
+                    FXML_Evento controller = loader.getController();
+                    controller.setEvento(evento);
+                    Stage stage = new Stage();
+                    stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/icon.png"))));
+                    stage.setTitle("CorpEvents - Gerenciamento de Eventos Corporativos");
+                    stage.setResizable(false);
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public void clickEdit(MouseEvent mouseEvent) {

@@ -59,7 +59,6 @@ public class FXML_Dashboard implements Initializable {
         ArrayList<Evento> proximos = eventoDAO.selectNext();
 
         if (proximos.size() != 0) {
-            System.out.println(proximos.size());
             this.next_container.getChildren().remove(2);
             for (Evento evento : proximos) {
                 Label label = new Label(DateFormatter.dateFormatter(evento.getDate()) + " - " + evento.getTitle() + "\n");
