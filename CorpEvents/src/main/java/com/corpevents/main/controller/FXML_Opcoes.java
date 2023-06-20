@@ -19,8 +19,8 @@ import java.util.logging.Logger;
 
 import static com.corpevents.main.util.TextFieldUtils.escapeSpecialCharacters;
 
-public class FXML_Relatorios implements Initializable {
-    private String page = "Simples";
+public class FXML_Opcoes implements Initializable {
+    private String page = "Editar";
 
     @FXML
     private BorderPane border_pane;
@@ -32,10 +32,6 @@ public class FXML_Relatorios implements Initializable {
         try {
             this.loadPage();
             this.setActiveButton();
-
-            if (!Usuario.getInstance().isAdministrador()) {
-                buttons.getChildren().get(1).setVisible(false);
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -64,7 +60,7 @@ public class FXML_Relatorios implements Initializable {
         Parent root = null;
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_Relatorios" + escapeSpecialCharacters(this.page) + ".fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("view/FXML_Opcoes" + escapeSpecialCharacters(this.page) + ".fxml"));
             root = fxmlLoader.load();
         } catch (IOException exception) {
             Logger.getLogger(FXML_View.class.getName()).log(java.util.logging.Level.SEVERE, null, exception);
