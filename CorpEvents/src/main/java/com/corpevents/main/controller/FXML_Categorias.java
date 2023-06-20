@@ -52,11 +52,11 @@ public class FXML_Categorias implements Initializable {
     private void setActiveButton() {
         this.buttons.getChildren().forEach(button -> {
             if (Objects.equals(((Button) button).getText(), this.page)) {
-                if (!((Button) button).getStyleClass().contains("active")) {
-                    ((Button) button).getStyleClass().add("active");
+                if (!button.getStyleClass().contains("active")) {
+                    button.getStyleClass().add("active");
                 }
             } else {
-                ((Button) button).getStyleClass().remove("active");
+                button.getStyleClass().remove("active");
             }
         });
     }

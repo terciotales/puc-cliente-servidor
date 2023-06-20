@@ -1,7 +1,5 @@
 package com.corpevents.main;
 
-import com.corpevents.main.dao.PessoaDAO;
-import com.corpevents.main.model.Pessoa;
 import com.corpevents.main.util.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,9 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.util.Objects;
-import javafx.stage.StageStyle;
 
 /**
  * Classe principal do sistema

@@ -45,11 +45,11 @@ public class FXML_Opcoes implements Initializable {
     private void setActiveButton() {
         this.buttons.getChildren().forEach(button -> {
             if (Objects.equals(((Button) button).getText(), this.page)) {
-                if (!((Button) button).getStyleClass().contains("active")) {
-                    ((Button) button).getStyleClass().add("active");
+                if (!button.getStyleClass().contains("active")) {
+                    button.getStyleClass().add("active");
                 }
             } else {
-                ((Button) button).getStyleClass().remove("active");
+                button.getStyleClass().remove("active");
             }
         });
     }
@@ -66,7 +66,7 @@ public class FXML_Opcoes implements Initializable {
 
         border_pane.setCenter(root);
         border_pane.setMaxWidth(698);
-        border_pane.setMargin(root, new javafx.geometry.Insets(0, 2, 0, 0));
+        BorderPane.setMargin(root, new javafx.geometry.Insets(0, 2, 0, 0));
 
     }
 
