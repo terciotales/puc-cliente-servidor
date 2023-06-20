@@ -336,4 +336,54 @@ public class EventoDAO extends DBConnection {
             return null;
         }
     }
+
+    public boolean hasRelatedUser(int id) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos WHERE author = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, id);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            boolean hasRelatedUser = false;
+            while (resultSet.next()) {
+                hasRelatedUser = true;
+            }
+
+            connection.commit();
+            connection.close();
+
+            return hasRelatedUser;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean hasRelatedCategory(int id) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos WHERE category = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, id);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            boolean hasRelatedCategory = false;
+            while (resultSet.next()) {
+                hasRelatedCategory = true;
+            }
+
+            connection.commit();
+            connection.close();
+
+            return hasRelatedCategory;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

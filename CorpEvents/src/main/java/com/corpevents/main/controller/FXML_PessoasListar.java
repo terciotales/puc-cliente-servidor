@@ -1,7 +1,7 @@
 package com.corpevents.main.controller;
 
 import com.corpevents.main.Main;
-import com.corpevents.main.dao.PessoaDAO;
+import com.corpevents.main.dao.*;
 import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.dao.PessoaDAO;
 import com.corpevents.main.model.Pessoa;
@@ -160,6 +160,9 @@ public class FXML_PessoasListar implements Initializable {
 
     public void clickDelete(MouseEvent mouseEvent) {
         PessoaDAO pessoaDAO = new PessoaDAO();
+        EventoDAO eventoDAO = new EventoDAO();
+        EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+
         TablePessoa tablePessoa = table.getSelectionModel().getSelectedItem();
         Pessoa pessoa = pessoaDAO.selectById(tablePessoa.getId());
 
@@ -175,8 +178,24 @@ public class FXML_PessoasListar implements Initializable {
 
         alert.showAndWait().ifPresent(type -> {
             if (type == buttonTypeYes) {
-                pessoaDAO.delete(pessoa);
-                table.getItems().remove(tablePessoa);
+                if (pessoa.getId() == Usuario.getInstance().getPessoa().getId()) {
+                    Alert alertError = new Alert(Alert.AlertType.ERROR);
+                    alertError.setTitle("Erro");
+                    alertError.setHeaderText("Não foi possível excluir o usuário " + pessoa.getNome());
+                    alertError.setContentText("Você não pode excluir o usuário que está logado.");
+
+                    alertError.showAndWait();
+                } else if (!eventoPessoaDAO.pessoaHasRelatedEvento(pessoa.getId()) && !eventoDAO.hasRelatedUser(pessoa.getId())) {
+                    pessoaDAO.delete(pessoa);
+                    table.getItems().remove(tablePessoa);
+                } else {
+                    Alert alertError = new Alert(Alert.AlertType.ERROR);
+                    alertError.setTitle("Erro");
+                    alertError.setHeaderText("Não foi possível excluir o usuário " + pessoa.getNome());
+                    alertError.setContentText("O usuário está relacionado a um ou mais eventos.");
+
+                    alertError.showAndWait();
+                }
             }
         });
     }

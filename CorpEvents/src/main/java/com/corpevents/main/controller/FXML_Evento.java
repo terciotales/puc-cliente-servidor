@@ -39,6 +39,11 @@ public class FXML_Evento {
     @FXML
     private Label title;
 
+    /**
+     * Seta o evento
+     *
+     * @param evento
+     */
     public void setEvento(Evento evento) {
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         PessoaDAO pessoaDAO = new PessoaDAO();

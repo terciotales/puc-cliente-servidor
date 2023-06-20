@@ -173,4 +173,26 @@ public class EventoPessoaDAO extends DBConnection {
             return false;
         }
     }
+
+    public boolean pessoaHasRelatedEvento(int pessoaId) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos_pessoas WHERE usuario_id = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setInt(1, pessoaId);
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            boolean exists = resultSet.next();
+
+            connection.commit();
+            connection.close();
+
+            return exists;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
