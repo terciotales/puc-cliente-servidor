@@ -69,6 +69,7 @@ public class FXML_Relatorios implements Initializable {
         }
 
         border_pane.setCenter(root);
+        border_pane.setMaxWidth(698);
     }
 
     public void setPage(String page) {

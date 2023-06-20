@@ -5,6 +5,7 @@
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
+    -fx-alignment: TOP_CENTER!important;
 }
 
 .root-relatorios-listar, .root-relatorios-adicionar, .root-relatorios-editar {
@@ -83,4 +84,9 @@
     -fx-background-color: #333333;
     -fx-text-fill: #F9F9F9!important;
     -fx-fill: #F9F9F9!important;
+}
+
+.box-container {
+    -fx-border-width: 1px;
+    -fx-border-color: #333333;
 }

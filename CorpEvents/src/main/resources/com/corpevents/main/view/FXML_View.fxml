@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="550.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="900.0" styleClass="root" stylesheets="@../../main/css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_View">
    <children>
-      <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="900.0" styleClass="top-bar" AnchorPane.bottomAnchor="547.8" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <HBox alignment="CENTER_LEFT" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="900.0" styleClass="top-bar" AnchorPane.bottomAnchor="547.8" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
          <children>
             <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
@@ -213,7 +213,7 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="700.0" translateY="-20.0" BorderPane.alignment="CENTER" />
+            <AnchorPane fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="TOP_CENTER" />
          </center>
       </BorderPane>
    </children>

@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Relatorios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_RelatoriosSimples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/relatorios.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_RelatoriosSimples.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Evento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoPessoaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoPessoaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TextFieldUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/TextFieldUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_PessoasListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_PessoasListar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Relatorios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_Relatorios.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/relatorios.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/relatorios.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
