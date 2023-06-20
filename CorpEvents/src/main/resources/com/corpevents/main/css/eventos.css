@@ -5,11 +5,13 @@
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
+    -fx-background-radius: 0 0 8px 0!important;
 }
 
 .root-eventos-listar, .root-eventos-adicionar, .root-eventos-editar {
     -fx-background-color: #151515;
     -fx-fill: #EF9E34!important;
+    -fx-background-radius: 0 0 8px 0!important;
 }
 
 .action-eventos-button {

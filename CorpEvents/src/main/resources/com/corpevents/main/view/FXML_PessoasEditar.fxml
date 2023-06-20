@@ -9,28 +9,28 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" styleClass="root-pessoas-adicionar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_PessoasAdicionar">
-   <children>
-      <Pane maxHeight="1.7976931348623157E308" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-         <children>
-            <Text layoutX="15.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Adicionar pessoa" />
-            <Text layoutX="15.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nome" />
-            <TextField fx:id="name" layoutX="15.0" layoutY="89.0" prefHeight="30.0" prefWidth="650.0" promptText="Nome" />
-            <TextField fx:id="username" layoutX="14.0" layoutY="150.0" prefHeight="30.0" prefWidth="650.0" promptText="Usuário" />
-            <Text layoutX="15.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Função" />
-            <ComboBox fx:id="role" layoutX="15.0" layoutY="216.0" prefHeight="30.0" prefWidth="650.0" promptText="Selecione a função" />
-            <Button layoutX="546.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#savePessoa" prefHeight="25.0" prefWidth="120.0" text="Adicionar" />
-            <Text fx:id="error_message" layoutX="17.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
-            <Text layoutX="14.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nome de usuário" />
-            <Text layoutX="17.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Senha" />
-            <PasswordField fx:id="password" layoutX="17.0" layoutY="286.0" prefHeight="30.0" prefWidth="310.0" promptText="Nova senha" />
-            <Text layoutX="354.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Confirmação de senha" />
-            <PasswordField fx:id="check_password" layoutX="354.0" layoutY="285.0" prefHeight="30.0" prefWidth="310.0" promptText="Digite novamente a senha" />
-         </children>
-      </Pane>
-   </children>
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="698.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="698.0" styleClass="root-pessoas-adicionar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_PessoasEditar">
    <stylesheets>
       <URL value="@../css/pessoas.css" />
       <URL value="@../css/main.css" />
    </stylesheets>
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Editar pessoa" />
+            <Text layoutX="10.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nome" />
+            <TextField fx:id="name" layoutX="10.0" layoutY="89.0" prefHeight="30.0" prefWidth="656.0" promptText="Nome" />
+            <TextField fx:id="username" layoutX="10.0" layoutY="150.0" prefHeight="30.0" prefWidth="656.0" promptText="Usuário" />
+            <Text layoutX="10.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Função" />
+            <ComboBox fx:id="role" layoutX="10.0" layoutY="216.0" prefHeight="30.0" prefWidth="656.0" promptText="Selecione a função" />
+            <Button layoutX="546.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#savePessoa" prefHeight="25.0" prefWidth="120.0" text="Salvar" />
+            <Text fx:id="error_message" layoutX="10.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
+            <Text layoutX="10.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nome de usuário" />
+            <Text layoutX="10.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Senha atual" />
+            <PasswordField fx:id="old_password" layoutX="10.0" layoutY="286.0" prefHeight="30.0" prefWidth="310.0" promptText="Senha atual" />
+            <Text layoutX="356.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Nova senha" />
+            <PasswordField fx:id="new_password" layoutX="356.0" layoutY="285.0" prefHeight="30.0" prefWidth="310.0" promptText="Nova senha" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

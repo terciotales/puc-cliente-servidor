@@ -1,4 +1,4 @@
-.root-relatorios {
+.report-pane {
     -fx-background-color: #262626;
     -fx-base: #262626;
     -fx-control-inner-background: derive(-fx-base, 35%);
@@ -6,11 +6,13 @@
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
     -fx-alignment: TOP_CENTER!important;
+    -fx-background-radius: 8px!important;
 }
 
 .root-relatorios-listar, .root-relatorios-adicionar, .root-relatorios-editar {
     -fx-background-color: #151515;
     -fx-fill: #EF9E34!important;
+    -fx-background-radius: 0 0 8px 0!important;
 }
 
 .action-relatorios-button {

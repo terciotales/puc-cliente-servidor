@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="border_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="700.0" styleClass="root-dashboard" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_Dashboard">
+<BorderPane fx:id="border_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="698.0" styleClass="root-dashboard" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_Dashboard">
    <center>
-      <Pane BorderPane.alignment="CENTER">
+      <Pane maxHeight="503.0" maxWidth="698.0" prefHeight="503.0" prefWidth="698.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="130.0" maxWidth="300.0" minHeight="115.0" minWidth="300.0" prefHeight="120.0" prefWidth="300.0" spacing="10.0" styleClass="box-container">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="130.0" maxWidth="300.0" minHeight="130.0" minWidth="300.0" prefHeight="120.0" prefWidth="300.0" spacing="10.0" styleClass="box-container">
                <children>
                   <FontAwesomeIconView fill="#f9f9f9" glyphName="CALENDAR_ALT" size="70" />
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -29,7 +29,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <VBox alignment="CENTER" layoutX="320.0" layoutY="10.0" prefHeight="250.0" prefWidth="180.0" spacing="30.0" styleClass="box-container">
+            <VBox alignment="CENTER" layoutX="320.0" layoutY="10.0" prefHeight="270.0" prefWidth="180.0" spacing="30.0" styleClass="box-container">
                <children>
                   <VBox alignment="CENTER">
                      <children>
@@ -43,7 +43,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </VBox>
-            <VBox alignment="CENTER" layoutX="510.0" layoutY="10.0" prefHeight="250.0" prefWidth="180.0" spacing="30.0" styleClass="box-container">
+            <VBox alignment="CENTER" layoutX="510.0" layoutY="10.0" prefHeight="270.0" prefWidth="180.0" spacing="30.0" styleClass="box-container">
                <children>
                   <VBox alignment="CENTER">
                      <children>
@@ -57,7 +57,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </VBox>
-            <HBox layoutX="10.0" layoutY="270.0" maxHeight="205.0" maxWidth="300.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="300.0" styleClass="box-container">
+            <HBox layoutX="10.0" layoutY="290.0" maxHeight="205.0" maxWidth="300.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="300.0" styleClass="box-container">
                <children>
                   <VBox fx:id="last_container" minWidth="300.0" spacing="5.0">
                      <children>
@@ -75,7 +75,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="CENTER" layoutX="10.0" layoutY="140.0" maxHeight="130.0" maxWidth="300.0" minHeight="115.0" minWidth="200.0" prefHeight="120.0" prefWidth="300.0" spacing="10.0" styleClass="box-container">
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" maxHeight="130.0" maxWidth="300.0" minHeight="130.0" minWidth="200.0" prefHeight="120.0" prefWidth="300.0" spacing="10.0" styleClass="box-container">
                <children>
                   <FontAwesomeIconView fill="#f9f9f9" glyphName="CALENDAR_CHECK_ALT" size="70" />
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -87,7 +87,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox layoutX="320.0" layoutY="270.0" maxHeight="205.0" maxWidth="370.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="370.0" styleClass="box-container">
+            <HBox layoutX="320.0" layoutY="290.0" maxHeight="205.0" maxWidth="370.0" minHeight="130.0" minWidth="300.0" prefHeight="205.0" prefWidth="370.0" styleClass="box-container">
                <children>
                   <VBox fx:id="next_container" minWidth="370.0" spacing="5.0">
                      <children>

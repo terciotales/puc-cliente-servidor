@@ -163,4 +163,57 @@ public class PessoaDAO extends DBConnection {
             return 0;
         }
     }
+
+    public boolean checkUsername(String username) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM usuarios WHERE username = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setString(1, username);
+            ResultSet rs = this.preparedStatement.executeQuery();
+
+            boolean exists = false;
+
+            while (rs.next()) {
+                exists = true;
+            }
+
+            connection.commit();
+            connection.close();
+
+            return exists;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean checkPassword(String username, String password) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM usuarios WHERE username = ? AND password = ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setString(1, username);
+            this.preparedStatement.setString(2, password);
+            ResultSet rs = this.preparedStatement.executeQuery();
+
+            boolean exists = false;
+
+            while (rs.next()) {
+                exists = true;
+            }
+
+            connection.commit();
+            connection.close();
+
+            return exists;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

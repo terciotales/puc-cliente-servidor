@@ -5,6 +5,7 @@
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
+    -fx-background-radius: 0 0 8px 0!important;
 }
 
 .box-container {

@@ -8,14 +8,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="listar_relatorios_root" maxHeight="470.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="700.0" styleClass="root-relatorios-listar" stylesheets="@../css/relatorios.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_RelatoriosSimples">
+<AnchorPane fx:id="listar_relatorios_root" maxHeight="473.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="698.0" styleClass="root-relatorios-listar" stylesheets="@../css/relatorios.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_RelatoriosSimples">
    <children>
-      <Button mnemonicParsing="false" onMouseClicked="#gerarRelatorio" prefHeight="25.0" prefWidth="120.0" styleClass="action-relatorios-button" text="Gerar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Pane layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefWidth="200.0" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="413.0" prefHeight="430.0" prefWidth="678.0" styleClass="report-pane" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Text layoutX="15.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Gerar relatório simples" />
-            <Text layoutX="15.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Dados:" />
-            <VBox layoutX="14.0" layoutY="85.0" prefHeight="91.0" prefWidth="670.0" spacing="10.0" styleClass="box-container">
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Gerar relatório simples" />
+            <Text layoutX="10.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Dados:" />
+            <VBox layoutX="10.0" layoutY="80.0" prefHeight="91.0" prefWidth="656.0" spacing="15.0" styleClass="box-container">
                <children>
                   <CheckBox fx:id="check_eventos" mnemonicParsing="false" text="Eventos" />
                   <CheckBox fx:id="check_pessoas" layoutX="21.0" layoutY="21.0" mnemonicParsing="false" text="Pessoas" />
@@ -27,5 +26,6 @@
             </VBox>
          </children>
       </Pane>
+      <Button layoutX="568.0" layoutY="433.0" mnemonicParsing="false" onMouseClicked="#gerarRelatorio" prefHeight="25.0" prefWidth="120.0" styleClass="action-relatorios-button" text="Gerar" />
    </children>
 </AnchorPane>

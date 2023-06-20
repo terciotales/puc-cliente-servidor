@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="editar_evento_root" maxHeight="1.7976931348623157E308" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" styleClass="root-eventos-editar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_EventosEditar">
+<AnchorPane fx:id="editar_evento_root" maxHeight="1.7976931348623157E308" maxWidth="698.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="698.0" styleClass="root-eventos-editar" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_EventosEditar">
    <children>
       <Pane maxHeight="1.7976931348623157E308" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -24,20 +24,20 @@
             <DatePicker fx:id="date" editable="false" layoutX="355.0" layoutY="232.0" prefHeight="30.0" prefWidth="142.0" promptText="Selecione a data" />
             <Text layoutX="15.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Pessoas" />
             <ComboBox fx:id="pessoa" layoutX="15.0" layoutY="298.0" onAction="#onComboAction" prefHeight="30.0" prefWidth="310.0" promptText="Selecione uma pessoa" />
-            <ListView fx:id="list_pessoas" layoutX="355.0" layoutY="298.0" prefHeight="66.0" prefWidth="310.0" />
-            <Button fx:id="remove_pessoa" layoutX="183.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#removeActor" prefHeight="25.0" prefWidth="142.0" text="Remover" />
-            <Button fx:id="add_pessoa" layoutX="17.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#addPessoa" prefHeight="25.0" prefWidth="142.0" text="Adicionar" />
-            <Button layoutX="546.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" text="Salvar" />
+            <ListView fx:id="list_pessoas" layoutX="355.0" layoutY="298.0" prefHeight="90.0" prefWidth="310.0" />
+            <Button fx:id="remove_pessoa" layoutX="183.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#removeActor" prefHeight="25.0" prefWidth="142.0" text="Remover" />
+            <Button fx:id="add_pessoa" layoutX="17.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#addPessoa" prefHeight="25.0" prefWidth="142.0" text="Adicionar" />
+            <Button layoutX="546.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" text="Salvar" />
             <Text layoutX="15.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Descrição do evento" />
             <TextArea fx:id="description" layoutX="15.0" layoutY="133.0" prefHeight="66.0" prefWidth="310.0" promptText="Descrição" wrapText="true" />
             <TextField fx:id="horas" alignment="CENTER" layoutX="537.0" layoutY="233.0" prefHeight="30.0" prefWidth="55.0" promptText="h" />
             <TextField fx:id="minutos" alignment="CENTER" layoutX="609.0" layoutY="232.0" prefHeight="30.0" prefWidth="55.0" promptText="m" />
             <Text layoutX="510.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="às" wrappingWidth="32.66015625" />
             <Text layoutX="599.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text=":" wrappingWidth="32.66015625" />
-            <Text fx:id="error_message" layoutX="17.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
+            <Text fx:id="error_message" layoutX="18.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
             <Text layoutX="355.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Local do evento" />
             <TextArea fx:id="local" layoutX="355.0" layoutY="133.0" prefHeight="66.0" prefWidth="310.0" promptText="Local" wrapText="true" />
-            <Button layoutX="417.0" layoutY="398.0" mnemonicParsing="false" onAction="#cancelEdit" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" text="Cancelar" />
+            <Button layoutX="417.0" layoutY="416.0" mnemonicParsing="false" onAction="#cancelEdit" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" text="Cancelar" />
          </children>
       </Pane>
    </children>

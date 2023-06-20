@@ -18,10 +18,9 @@ import java.util.ResourceBundle;
 import static com.corpevents.main.util.Encryption.encryptPassword;
 
 
-public class FXML_PessoasAdicionar implements Initializable {
+public class FXML_PessoasEditar implements Initializable {
 
-    @FXML
-    private PasswordField check_password;
+    private Pessoa pessoa;
 
     @FXML
     private Text error_message;
@@ -30,7 +29,10 @@ public class FXML_PessoasAdicionar implements Initializable {
     private TextField name;
 
     @FXML
-    private PasswordField password;
+    private PasswordField old_password;
+
+    @FXML
+    private PasswordField new_password;
 
     @FXML
     private ComboBox<String> role;
@@ -40,7 +42,15 @@ public class FXML_PessoasAdicionar implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         role.getItems().addAll("Administrador", "Usuário padrão");
+        username.setDisable(true);
         error_message.setVisible(false);
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+        name.setText(pessoa.getNome());
+        username.setText(pessoa.getUsername());
+        role.getSelectionModel().select(pessoa.getRole() == 1 ? "Administrador" : "Usuário padrão");
     }
 
     @FXML
@@ -52,28 +62,28 @@ public class FXML_PessoasAdicionar implements Initializable {
         PessoaDAO pessoaDAO = new PessoaDAO();
         Pessoa pessoa = new Pessoa();
 
+        pessoa.setId(this.pessoa.getId());
         pessoa.setNome(name.getText());
-        pessoa.setUsername(username.getText());
-        pessoa.setPassword(encryptPassword(password.getText()));
+        pessoa.setUsername(this.pessoa.getUsername());
+        pessoa.setPassword(!new_password.getText().isEmpty() ? encryptPassword(new_password.getText()) : this.pessoa.getPassword());
         pessoa.setRole(Objects.equals(role.getSelectionModel().getSelectedItem(), "Administrador") ? 1 : 2);
 
         Alert alert;
-        if (pessoaDAO.insert(pessoa)) {
+        if (pessoaDAO.update(pessoa)) {
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Sucesso");
-            alert.setHeaderText("Usuário adicionado com sucesso!");
+            alert.setHeaderText("Usuário editado com sucesso!");
             alert.showAndWait();
-            clearFields();
         } else {
             alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro");
-            alert.setHeaderText("Ocorreu um erro ao adicionar o usuário");
+            alert.setHeaderText("Ocorreu um erro ao salvar o usuário");
             alert.showAndWait();
         }
     }
 
 
-    boolean checkFields() {
+    boolean checkFields() throws Exception {
         boolean valid = true;
         PessoaDAO pessoaDAO = new PessoaDAO();
 
@@ -83,32 +93,29 @@ public class FXML_PessoasAdicionar implements Initializable {
         } else if (username.getText().isEmpty()) {
             error_message.setText("O campo usuário é obrigatório");
             valid = false;
-        } else if (password.getText().isEmpty()) {
-            error_message.setText("O campo senha é obrigatório");
-            valid = false;
-        } else if (check_password.getText().isEmpty()) {
-            error_message.setText("O campo confirmação de senha é obrigatório");
-            valid = false;
-        } else if (!password.getText().equals(check_password.getText())) {
-            error_message.setText("As senhas não coincidem");
-            valid = false;
         } else if (role.getSelectionModel().isEmpty()) {
-            error_message.setText("O campo perfil é obrigatório");
+            error_message.setText("O campo função é obrigatório");
             valid = false;
-        } else if (pessoaDAO.checkUsername(username.getText())) {
-            error_message.setText("O usuário já existe");
-            valid = false;
+        } else if (!old_password.getText().isEmpty() || !new_password.getText().isEmpty()) {
+            if (new_password.getText().isEmpty()) {
+                error_message.setText("O campo nova senha é obrigatório");
+                valid = false;
+            } else if (new_password.getText().length() < 5) {
+                error_message.setText("A nova senha deve ter no mínimo 5 caracteres");
+                valid = false;
+            } else if (old_password.getText().isEmpty()) {
+                error_message.setText("O campo senha atual é obrigatório");
+                valid = false;
+            } else if (pessoaDAO.checkPassword(this.pessoa.getUsername(), encryptPassword(new_password.getText()))) {
+                error_message.setText("A nova senha deve ser diferente da senha atual");
+                valid = false;
+            } else if (!pessoaDAO.checkPassword(this.pessoa.getUsername(), encryptPassword(old_password.getText()))) {
+                error_message.setText("A senha atual está incorreta");
+                valid = false;
+            }
         }
 
         error_message.setVisible(!valid);
         return valid;
-    }
-
-    void clearFields() {
-        name.setText("");
-        username.setText("");
-        password.setText("");
-        check_password.setText("");
-        role.getSelectionModel().clearSelection();
     }
 }

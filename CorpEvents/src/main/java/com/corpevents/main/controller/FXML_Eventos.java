@@ -69,6 +69,8 @@ public class FXML_Eventos implements Initializable {
         }
 
         border_pane.setCenter(root);
+        border_pane.setMargin(root, new javafx.geometry.Insets(0, 2, 0, 0));
+        root.maxWidth(698);
     }
 
     public void setPage(String page) {
