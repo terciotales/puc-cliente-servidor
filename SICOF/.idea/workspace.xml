@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_RelatoriosAvancado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_RelatoriosAvancado.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/RelatoriosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Relatorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/reports/Basic_Report.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_RelatoriosSimples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_RelatoriosSimples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosEditar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosEditar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -72,7 +86,7 @@
       <workItem from="1687119013352" duration="8236000" />
       <workItem from="1687197714903" duration="1201000" />
       <workItem from="1687223849232" duration="752000" />
-      <workItem from="1687214915094" duration="4548000" />
+      <workItem from="1687214915094" duration="6406000" />
     </task>
     <servers />
   </component>

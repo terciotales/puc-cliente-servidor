@@ -3,6 +3,7 @@ module com.corpevents.corpevents {
     requires javafx.fxml;
     requires java.logging;
     requires java.sql;
+    requires jasperreports;
 
 
     opens com.corpevents.main to javafx.fxml;

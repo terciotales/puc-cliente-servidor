@@ -15,28 +15,28 @@
    <children>
       <Pane maxHeight="1.7976931348623157E308" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Adicionar evento" />
-            <Text layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Título do evento" />
             <TextField fx:id="title" layoutX="10.0" layoutY="71.0" prefHeight="30.0" prefWidth="656.0" promptText="Título" />
-            <Text layoutX="10.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Categoria" />
-            <ComboBox fx:id="category" layoutX="10.0" layoutY="226.0" prefHeight="30.0" prefWidth="310.0" promptText="Selecione a categoria" />
-            <Text layoutX="356.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Data do evento" />
-            <DatePicker fx:id="date" editable="false" layoutX="356.0" layoutY="226.0" prefHeight="30.0" prefWidth="142.0" promptText="Selecione a data" />
-            <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Pessoas" />
-            <ComboBox fx:id="pessoa" layoutX="10.0" layoutY="290.0" onAction="#onComboAction" prefHeight="30.0" prefWidth="310.0" promptText="Selecione uma pessoa" />
-            <ListView fx:id="list_pessoas" layoutX="355.0" layoutY="290.0" prefHeight="97.0" prefWidth="310.0" />
-            <Button fx:id="remove_pessoa" layoutX="183.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#removeActor" prefHeight="25.0" prefWidth="142.0" styleClass="action-eventos-button" text="Remover" />
-            <Button fx:id="add_pessoa" layoutX="10.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#addPessoa" prefHeight="25.0" prefWidth="142.0" styleClass="action-eventos-button" text="Adicionar" />
-            <Button layoutX="546.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" styleClass="action-eventos-button" text="Adicionar" />
-            <Text layoutX="15.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Descrição do evento" />
             <TextArea fx:id="description" layoutX="10.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Descrição" wrapText="true" />
+            <TextArea fx:id="local" layoutX="355.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Local" wrapText="true" />
+            <ComboBox fx:id="category" layoutX="10.0" layoutY="226.0" prefHeight="30.0" prefWidth="310.0" promptText="Selecione a categoria" />
+            <DatePicker fx:id="date" editable="false" layoutX="356.0" layoutY="226.0" prefHeight="30.0" prefWidth="142.0" promptText="Selecione a data" />
             <TextField fx:id="horas" alignment="CENTER" layoutX="537.0" layoutY="227.0" prefHeight="30.0" prefWidth="55.0" promptText="h" />
             <TextField fx:id="minutos" alignment="CENTER" layoutX="609.0" layoutY="226.0" prefHeight="30.0" prefWidth="55.0" promptText="m" />
+            <ComboBox fx:id="pessoa" layoutX="10.0" layoutY="290.0" onAction="#onComboAction" prefHeight="30.0" prefWidth="310.0" promptText="Selecione uma pessoa" />
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Adicionar evento" />
+            <Text layoutX="10.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Título do evento" />
+            <Text layoutX="10.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Categoria" />
+            <Text layoutX="356.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Data do evento" />
+            <Text layoutX="10.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Pessoas" />
+            <ListView fx:id="list_pessoas" layoutX="355.0" layoutY="290.0" prefHeight="97.0" prefWidth="310.0" />
+            <Button fx:id="remove_pessoa" layoutX="177.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#removeActor" prefHeight="25.0" prefWidth="142.0" styleClass="action-eventos-button" text="Remover" />
+            <Button fx:id="add_pessoa" layoutX="10.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#addPessoa" prefHeight="25.0" prefWidth="142.0" styleClass="action-eventos-button" text="Adicionar" />
+            <Button layoutX="546.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#saveEvento" prefHeight="25.0" prefWidth="120.0" styleClass="action-eventos-button" text="Adicionar" />
+            <Text layoutX="10.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Descrição do evento" />
             <Text layoutX="510.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="às" wrappingWidth="32.66015625" />
-            <Text layoutX="599.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text=":" wrappingWidth="32.66015625" />
+            <Text layoutX="599.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text=":" wrappingWidth="3.66015625" />
             <Text fx:id="error_message" layoutX="10.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="error-message" text="Revise os campos destacados." />
             <Text layoutX="355.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Local do evento" />
-            <TextArea fx:id="local" layoutX="355.0" layoutY="130.0" prefHeight="66.0" prefWidth="310.0" promptText="Local" wrapText="true" />
          </children>
       </Pane>
    </children>
