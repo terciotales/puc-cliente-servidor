@@ -1,5 +1,8 @@
 package com.corpevents.main.model;
 
+/**
+ * Classe modelo da tabela pessoas
+ */
 public class Pessoa {
     private int id;
     private String nome;

@@ -21,6 +21,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de login
+ */
 public class FXML_Login implements Initializable {
     private Usuario usuario;
 

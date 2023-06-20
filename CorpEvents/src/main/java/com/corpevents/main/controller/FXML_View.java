@@ -27,6 +27,9 @@ import java.util.logging.Logger;
 import static com.corpevents.main.util.TextFieldUtils.escapeSpecialCharacters;
 import static com.corpevents.main.util.TextFieldUtils.removeSpecialCharacters;
 
+/**
+ * Classe controladora da tela principal
+ */
 public class FXML_View implements Initializable {
     private String page = "Dashboard";
 

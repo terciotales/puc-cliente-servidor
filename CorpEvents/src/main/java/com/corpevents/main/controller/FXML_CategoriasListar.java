@@ -21,6 +21,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da página de listagem de categorias
+ */
 public class FXML_CategoriasListar implements Initializable {
 
     @FXML

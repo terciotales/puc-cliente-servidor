@@ -6,6 +6,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ * Classe utilitária para formatar datas
+ */
 public class DateFormatter {
     public static String dateFormatter(String inputDate) {
         String inputFormat = "yyyy-MM-dd HH:mm:ss";

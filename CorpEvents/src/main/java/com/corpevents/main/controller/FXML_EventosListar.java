@@ -34,6 +34,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de listagem de eventos
+ */
 public class FXML_EventosListar implements Initializable {
 
     @FXML

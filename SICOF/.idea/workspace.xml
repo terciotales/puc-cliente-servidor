@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="709263c6-51cb-4369-9d6f-d53c896b31f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosFiltros.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/css/filtrar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosFiltros.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/bundle/en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/bundle/es.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/bundle/pt.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/connection/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Categorias.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Categorias.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_CategoriasListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_CategoriasListar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Eventos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosAdicionar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosAdicionar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosEditar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosFiltros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosFiltros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_EventosListar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/dao/EventoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Relatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/model/Relatorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosListar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Opcoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/controller/FXML_Opcoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/java/com/corpevents/main/util/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_EventosAdicionar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_RelatoriosSimples.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CorpEvents/src/main/resources/com/corpevents/main/view/FXML_RelatoriosSimples.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +98,8 @@
       <workItem from="1687214915094" duration="6436000" />
       <workItem from="1687258563562" duration="405000" />
       <workItem from="1687283532996" duration="1515000" />
+      <workItem from="1687306279899" duration="597000" />
+      <workItem from="1687298096230" duration="634000" />
     </task>
     <servers />
   </component>

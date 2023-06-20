@@ -16,11 +16,6 @@
                         <Insets left="15.0" right="15.0" />
                      </padding>
                   </Button>
-                  <Button minHeight="30.0" mnemonicParsing="false" onMouseClicked="#setPage" styleClass="nav-menu-content" text="Avançado">
-                     <padding>
-                        <Insets left="15.0" right="15.0" />
-                     </padding>
-                  </Button>
                </children>
             </HBox>
          </children>

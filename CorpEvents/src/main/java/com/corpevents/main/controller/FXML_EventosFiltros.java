@@ -16,6 +16,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de filtros de eventos
+ */
 public class FXML_EventosFiltros implements Initializable {
     @FXML
     private ComboBox<Pessoa> filter_author;

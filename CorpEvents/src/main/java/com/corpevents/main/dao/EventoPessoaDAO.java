@@ -9,6 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+/**
+ * Classe DAO da tabela eventos_pessoas
+ */
 public class EventoPessoaDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
 

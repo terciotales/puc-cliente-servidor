@@ -2,6 +2,9 @@ package com.corpevents.main.model;
 
 import java.util.ArrayList;
 
+/**
+ * Classe modelo da tabela eventos
+ */
 public class Evento {
     private int id;
     private String title;

@@ -8,6 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+/**
+ * Classe DAO da tabela usuarios
+ */
 public class PessoaDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
 
@@ -214,6 +217,38 @@ public class PessoaDAO extends DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public ArrayList<Pessoa> search(String search) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM usuarios WHERE name LIKE ?";
+            this.preparedStatement = connection.prepareStatement(sql);
+            this.preparedStatement.setString(1, "%" + search + "%");
+            ResultSet rs = this.preparedStatement.executeQuery();
+
+            ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+
+            while (rs.next()) {
+                Pessoa pessoa = new Pessoa();
+                pessoa.setId(rs.getInt("id"));
+                pessoa.setNome(rs.getString("name"));
+                pessoa.setUsername(rs.getString("username"));
+                pessoa.setPassword(rs.getString("password"));
+                pessoa.setRole(rs.getInt("role"));
+                pessoas.add(pessoa);
+            }
+
+            connection.commit();
+            connection.close();
+
+            return pessoas;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }

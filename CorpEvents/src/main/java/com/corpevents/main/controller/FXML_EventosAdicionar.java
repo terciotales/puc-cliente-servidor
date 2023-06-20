@@ -27,6 +27,9 @@ import java.util.ResourceBundle;
 
 import static com.corpevents.main.util.TextFieldUtils.numberTextField;
 
+/**
+ * Classe controladora da tela de adicionar eventos
+ */
 public class FXML_EventosAdicionar implements Initializable {
 
     @FXML

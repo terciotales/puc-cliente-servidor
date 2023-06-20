@@ -17,7 +17,9 @@ import java.util.ResourceBundle;
 
 import static com.corpevents.main.util.Encryption.encryptPassword;
 
-
+/**
+ * Classe controladora da tela de adicionar pessoas
+ */
 public class FXML_PessoasAdicionar implements Initializable {
 
     @FXML

@@ -1,5 +1,8 @@
 package com.corpevents.main.util;
 
+/**
+ * Classe utilitária para retornar uma saudação de acordo com o horário
+ */
 public class Greetings {
     public static String getGreeting() {
         String greeting = "";

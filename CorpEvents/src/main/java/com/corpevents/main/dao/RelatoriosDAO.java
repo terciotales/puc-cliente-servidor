@@ -6,6 +6,9 @@ import java.io.InputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * Classe DAO da tabela relatorios
+ */
 public class RelatoriosDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
 

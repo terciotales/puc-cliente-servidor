@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.util.Objects;
 import javafx.stage.StageStyle;
 
+/**
+ * Classe principal do sistema
+ */
 public class Main extends Application {
     private static Stage mainStage;
 

@@ -19,6 +19,9 @@ import java.util.logging.Logger;
 
 import static com.corpevents.main.util.TextFieldUtils.escapeSpecialCharacters;
 
+/**
+ * Classe controladora da tela de opções
+ */
 public class FXML_Opcoes implements Initializable {
     private String page = "Editar";
 
@@ -29,12 +32,7 @@ public class FXML_Opcoes implements Initializable {
     private HBox buttons;
 
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            this.loadPage();
-            this.setActiveButton();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     @FXML

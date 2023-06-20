@@ -13,6 +13,9 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.util.Map;
 
+/**
+ * Classe abstrata de relatórios
+ */
 public abstract class Relatorio {
     private static JasperReport jasperReport;
     private static JasperPrint jasperPrint;

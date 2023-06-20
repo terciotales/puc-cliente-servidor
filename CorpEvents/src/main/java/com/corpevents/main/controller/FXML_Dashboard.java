@@ -18,6 +18,9 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da página de dashboard
+ */
 public class FXML_Dashboard implements Initializable {
     @FXML
     private Text categorias;

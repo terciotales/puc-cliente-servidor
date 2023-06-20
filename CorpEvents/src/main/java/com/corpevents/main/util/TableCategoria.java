@@ -3,6 +3,10 @@ package com.corpevents.main.util;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+
+/**
+ * Classe utilitária para criar uma tabela de categorias
+ */
 public class TableCategoria {
     private SimpleIntegerProperty id;
     private SimpleStringProperty nome;

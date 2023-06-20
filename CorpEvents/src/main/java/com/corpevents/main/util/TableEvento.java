@@ -6,6 +6,9 @@ import javafx.beans.property.SimpleStringProperty;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+/**
+ * Classe utilitária para criar uma tabela de eventos
+ */
 public class TableEvento {
     private SimpleIntegerProperty id;
     private SimpleStringProperty title;

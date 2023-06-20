@@ -16,6 +16,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de relatórios avançados
+ */
 public class FXML_RelatoriosSimples implements Initializable {
 
     @FXML

@@ -10,6 +10,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
+/**
+ * Classe DAO da tabela eventos
+ */
 public class EventoDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
 
@@ -174,7 +177,7 @@ public class EventoDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM eventos WHERE date >= NOW() ORDER BY date ASC LIMIT 10";
+            String sql = "SELECT * FROM eventos WHERE date >= NOW() ORDER BY date ASC LIMIT 8";
             this.preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 
@@ -206,7 +209,7 @@ public class EventoDAO extends DBConnection {
             Connection connection = this.getConnection();
             connection.setAutoCommit(false);
 
-            String sql = "SELECT * FROM eventos WHERE date < NOW() ORDER BY date DESC LIMIT 10";
+            String sql = "SELECT * FROM eventos WHERE date < NOW() ORDER BY date DESC LIMIT 8";
             this.preparedStatement = connection.prepareStatement(sql);
             ResultSet resultSet = this.preparedStatement.executeQuery();
 

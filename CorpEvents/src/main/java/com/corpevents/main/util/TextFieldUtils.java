@@ -4,6 +4,9 @@ import javafx.scene.control.TextField;
 
 import java.text.Normalizer;
 
+/**
+ * Classe utilitária para formatar campos de texto
+ */
 public class TextFieldUtils {
     public static void numberTextField(TextField textField, int limit) {
         textField.textProperty().addListener((observable, oldValue, newValue) -> {

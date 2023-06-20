@@ -31,6 +31,9 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de listagem de pessoas
+ */
 public class FXML_PessoasListar implements Initializable {
 
     @FXML
@@ -130,12 +133,29 @@ public class FXML_PessoasListar implements Initializable {
             }
         }
 
-         
+
     }
 
     @FXML
     public void onSearch(KeyEvent keyEvent) {
+        PessoaDAO pessoaDAO = new PessoaDAO();
+        ArrayList<Pessoa> pessoas = pessoaDAO.search(busca.getText());
+        ObservableList<TablePessoa> tablePessoas = FXCollections.observableArrayList();
 
+        if (pessoas == null) {
+            pessoas = new ArrayList<>();
+        }
+
+        column_id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        column_nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        column_username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
+
+        for (Pessoa pessoa : pessoas) {
+            tablePessoas.add(new TablePessoa(pessoa.getId(), pessoa.getNome(), pessoa.getUsername(), Usuario.getInstance().getRole(pessoa.getRole())));
+        }
+
+        table.setItems(tablePessoas);
     }
 
     public void clickDelete(MouseEvent mouseEvent) {

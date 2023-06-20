@@ -32,6 +32,9 @@ import java.util.*;
 import static com.corpevents.main.util.DateFormatter.*;
 import static com.corpevents.main.util.TextFieldUtils.numberTextField;
 
+/**
+ * Classe controladora da tela de editar eventos
+ */
 public class FXML_EventosEditar implements Initializable {
 
     private Evento evento;

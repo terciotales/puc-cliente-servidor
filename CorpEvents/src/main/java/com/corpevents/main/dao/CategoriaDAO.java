@@ -8,6 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+/**
+ * Classe DAO da tabela categorias
+ */
 public class CategoriaDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
 

@@ -19,6 +19,9 @@ import java.util.logging.Logger;
 
 import static com.corpevents.main.util.TextFieldUtils.escapeSpecialCharacters;
 
+/**
+ * Classe controladora da tela de opções
+ */
 public class FXML_Relatorios implements Initializable {
     private String page = "Simples";
 

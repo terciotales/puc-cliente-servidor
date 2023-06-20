@@ -2,6 +2,9 @@ package com.corpevents.main.util;
 
 import java.security.MessageDigest;
 
+/**
+ * Classe utilitária para criptografar senhas
+ */
 public class Encryption {
     /**
      * Função para criptografar a senha do usuário em MD5

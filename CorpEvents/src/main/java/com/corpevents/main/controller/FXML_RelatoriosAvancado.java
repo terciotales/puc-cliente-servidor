@@ -7,6 +7,9 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Classe controladora da tela de relatórios avançados
+ */
 public class FXML_RelatoriosAvancado implements Initializable {
 
     @FXML

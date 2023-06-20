@@ -17,6 +17,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
+/**
+ * Classe controladora da tela de pessoas
+ */
 public class FXML_Pessoas implements Initializable {
     private String page = "Listar";
 

@@ -2,12 +2,17 @@ package com.corpevents.main.util;
 
 import com.corpevents.main.model.Pessoa;
 
+/**
+ * Singleton para armazenar o usuário logado
+ */
 public class Usuario {
     private static Usuario instance;
 
     private Pessoa pessoa;
 
     private Boolean isLogged = false;
+
+    private String language = "pt";
 
     private Usuario() {
     }
@@ -61,5 +66,13 @@ public class Usuario {
 
     public void setIsLogged(Boolean isLogged) {
         this.isLogged = isLogged;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }

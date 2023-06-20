@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="listar_relatorios_root" maxHeight="473.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="698.0" styleClass="root-relatorios-listar" stylesheets="@../css/relatorios.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_RelatoriosSimples">
@@ -13,17 +10,7 @@
       <Pane layoutX="10.0" layoutY="10.0" maxHeight="413.0" prefHeight="430.0" prefWidth="678.0" styleClass="report-pane" stylesheets="@../css/main.css" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Gerar relatório simples" />
-            <Text layoutX="10.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Dados:" />
-            <VBox layoutX="10.0" layoutY="80.0" prefHeight="91.0" prefWidth="656.0" spacing="15.0" styleClass="box-container">
-               <children>
-                  <CheckBox fx:id="check_eventos" mnemonicParsing="false" text="Eventos" />
-                  <CheckBox fx:id="check_pessoas" layoutX="21.0" layoutY="21.0" mnemonicParsing="false" text="Pessoas" />
-                  <CheckBox fx:id="check_categorias" layoutX="21.0" layoutY="49.0" mnemonicParsing="false" text="Categorias" />
-               </children>
-               <padding>
-                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-               </padding>
-            </VBox>
+            <Text layoutX="10.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="field-title" text="Clique no botão &quot;Gerar&quot; para gerar um novo relatório simples da tabela de eventos." />
          </children>
       </Pane>
       <Button layoutX="558.0" layoutY="428.0" mnemonicParsing="false" onMouseClicked="#gerarRelatorio" prefHeight="25.0" prefWidth="120.0" styleClass="action-relatorios-button" text="Gerar" />

@@ -14,6 +14,9 @@ import java.util.Objects;
 
 import static com.corpevents.main.util.DateFormatter.*;
 
+/**
+ * Classe controladora da página de visualização de evento
+ */
 public class FXML_Evento {
     @FXML
     private Label author;
