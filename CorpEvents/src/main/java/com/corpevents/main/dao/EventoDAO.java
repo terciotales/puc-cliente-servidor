@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class EventoDAO extends DBConnection {
     private PreparedStatement preparedStatement = null;
@@ -281,6 +282,52 @@ public class EventoDAO extends DBConnection {
             connection.close();
 
             return evento;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ArrayList<Evento> search(String search, String extraCondition) {
+        try {
+            Connection connection = this.getConnection();
+            connection.setAutoCommit(false);
+
+            String sql = "SELECT * FROM eventos WHERE (title LIKE ? OR description LIKE ?)";
+
+            if (Objects.equals(search, "")) {
+                sql = "SELECT * FROM eventos WHERE (title IS NOT NULL)";
+            }
+
+            if (extraCondition != null) {
+                sql += " " + extraCondition;
+            }
+
+            this.preparedStatement = connection.prepareStatement(sql);
+
+            if (!Objects.equals(search, "")) {
+                this.preparedStatement.setString(1, "%" + search + "%");
+                this.preparedStatement.setString(2, "%" + search + "%");
+            }
+            ResultSet resultSet = this.preparedStatement.executeQuery();
+
+            ArrayList<Evento> eventos = new ArrayList<Evento>();
+            while (resultSet.next()) {
+                Evento evento = new Evento();
+                evento.setId(resultSet.getInt("id"));
+                evento.setTitle(resultSet.getString("title"));
+                evento.setDescription(resultSet.getString("description"));
+                evento.setDate(resultSet.getString("date"));
+                evento.setAuthor(resultSet.getInt("author"));
+                evento.setCategory(resultSet.getInt("category"));
+                evento.setLocal(resultSet.getString("local"));
+                eventos.add(evento);
+            }
+
+            connection.commit();
+            connection.close();
+
+            return eventos;
         } catch (Exception e) {
             e.printStackTrace();
             return null;

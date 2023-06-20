@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefWidth="400.0" styleClass="root" stylesheets="@../css/filtrar.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corpevents.main.controller.FXML_EventosFiltros">
+   <children>
+      <VBox layoutX="49.0" layoutY="39.0" prefHeight="312.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="-Infinity" prefWidth="200.0" styleClass="header-box" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="title" maxHeight="1.7976931348623157E308" maxWidth="380.0" minHeight="-Infinity" styleClass="title" text="Filtrar busca" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="SOMETIMES">
+              <content>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="400.0" minHeight="-Infinity">
+                     <children>
+                        <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label styleClass="field-title" text="Categoria:" />
+                              <ComboBox fx:id="filter_category" maxWidth="380.0" prefHeight="28.0" promptText="Filtrar por categoria">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label layoutX="20.0" layoutY="20.0" styleClass="field-title" text="Autor:" />
+                              <ComboBox fx:id="filter_author" layoutX="20.0" layoutY="40.0" maxWidth="380.0" prefHeight="28.0" promptText="Filtrar por autor">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label layoutX="20.0" layoutY="20.0" styleClass="field-title" text="Data:" />
+                              <HBox alignment="CENTER" maxWidth="380.0" spacing="10.0" styleClass="border-container" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="field-title" text="De:" />
+                                    <DatePicker fx:id="initial_date" editable="false" prefHeight="28.0" prefWidth="130.0" promptText="Data inicial" />
+                                    <Label layoutX="10.0" layoutY="10.0" styleClass="field-title" text="Até:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="final_date" editable="false" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="130.0" promptText="Data final" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" maxWidth="380.0">
+                                 <children>
+                                    <Button contentDisplay="BOTTOM" mnemonicParsing="false" onMouseClicked="#filtrarBusca" prefHeight="25.0" prefWidth="120.0" styleClass="action-filtrar-button" text="Filtrar" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

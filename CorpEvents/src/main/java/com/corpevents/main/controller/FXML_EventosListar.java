@@ -25,13 +25,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -66,6 +65,11 @@ public class FXML_EventosListar implements Initializable {
 
     @FXML
     private Button button_edit;
+
+    @FXML
+    private Button button_filter;
+
+    private Map<String, String> filters;
 
     public void initialize(URL location, ResourceBundle resources) {
         EventoDAO eventoDAO = new EventoDAO();
@@ -171,8 +175,99 @@ public class FXML_EventosListar implements Initializable {
     }
 
     @FXML
-    public void onSearch(KeyEvent keyEvent) {
+    void clickFilter(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("view/FXML_EventosFiltros.fxml"));
+            Scene scene = new Scene(loader.load(), 400, 312);
+            FXML_EventosFiltros controller = loader.getController();
+            controller.setEventosListar(this);
+            Stage stage = new Stage();
+            stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("images/icon.png"))));
+            stage.setTitle("CorpEvents - Busca avançada");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void setFilters(Map<String, String> filters) {
+        this.filters = filters;
+        String sqlCondition = this.getSqlConditionFilters();
+
+        EventoDAO eventoDAO = new EventoDAO();
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
+        PessoaDAO pessoaDAO = new PessoaDAO();
+        EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+
+        ArrayList<Evento> eventos = eventoDAO.search(busca.getText(), sqlCondition);
+        ObservableList<TableEvento> tableEventos = FXCollections.observableArrayList();
+
+        if (eventos == null) {
+            eventos = new ArrayList<Evento>();
+        }
+
+        for (Evento evento : eventos) {
+            tableEventos.add(new TableEvento(evento.getId(), evento.getTitle(), DateFormatter.dateFormatter(evento.getDate()), pessoaDAO.selectById(evento.getAuthor()).getNome(), categoriaDAO.selectById(evento.getCategory()).getNome(), eventoPessoaDAO.selectByEvento(evento.getId()).size()));
+        }
+
+        table.getItems().clear();
+        table.setItems(tableEventos);
+    }
+
+    public Map<String, String> getFilters() {
+        return this.filters;
+    }
+
+    public String getSqlConditionFilters() {
+        String sqlCondition = "";
+
+        if (!this.filters.isEmpty()) {
+            if (this.filters.get("initial_date") != null) {
+                sqlCondition += " AND date >= '" + this.filters.get("initial_date") + " 00:00:00'";
+            }
+
+            if (this.filters.get("final_date") != null) {
+                sqlCondition += " AND date <= '" + this.filters.get("final_date") + " 23:59:59'";
+            }
+
+            if (this.filters.get("category") != null) {
+                sqlCondition += " AND category = " + this.filters.get("category");
+            }
+
+            if (this.filters.get("author") != null) {
+                sqlCondition += " AND author = " + this.filters.get("author");
+            }
+        }
+
+        System.out.println(sqlCondition);
+
+        return sqlCondition;
+    }
+
+    @FXML
+    public void onSearch(KeyEvent keyEvent) {
+        String sqlCondition = this.getSqlConditionFilters();
+
+        EventoDAO eventoDAO = new EventoDAO();
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
+        PessoaDAO pessoaDAO = new PessoaDAO();
+        EventoPessoaDAO eventoPessoaDAO = new EventoPessoaDAO();
+
+        ArrayList<Evento> eventos = eventoDAO.search(busca.getText(), sqlCondition);
+        ObservableList<TableEvento> tableEventos = FXCollections.observableArrayList();
+
+        if (eventos == null) {
+            eventos = new ArrayList<Evento>();
+        }
+
+        for (Evento evento : eventos) {
+            tableEventos.add(new TableEvento(evento.getId(), evento.getTitle(), DateFormatter.dateFormatter(evento.getDate()), pessoaDAO.selectById(evento.getAuthor()).getNome(), categoriaDAO.selectById(evento.getCategory()).getNome(), eventoPessoaDAO.selectByEvento(evento.getId()).size()));
+        }
+
+        table.getItems().clear();
+        table.setItems(tableEventos);
     }
 
     public void clickDelete(MouseEvent mouseEvent) {

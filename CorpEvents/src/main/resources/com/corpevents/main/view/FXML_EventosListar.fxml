@@ -25,9 +25,17 @@
          <children>
             <HBox alignment="CENTER_LEFT" GridPane.hgrow="ALWAYS">
                <children>
-                  <HBox HBox.hgrow="ALWAYS">
+                  <HBox spacing="5.0" HBox.hgrow="ALWAYS">
                      <children>
                         <TextField fx:id="busca" maxWidth="250.0" onKeyTyped="#onSearch" prefHeight="30.0" prefWidth="250.0" promptText="Buscar evento" />
+                        <Button fx:id="button_filter" alignment="CENTER" contentDisplay="CENTER" maxHeight="30.0" maxWidth="30.0" mnemonicParsing="false" onMouseClicked="#clickFilter" prefHeight="30.0" prefWidth="30.0" styleClass="action-eventos-button">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f9f9f9" glyphName="FILTER" size="14" />
+                           </graphic>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="TOP_RIGHT" spacing="8.0" stylesheets="@../css/eventos.css" HBox.hgrow="ALWAYS">

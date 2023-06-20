@@ -22,6 +22,7 @@ public abstract class Relatorio {
         try {
             jasperReport = (JasperReport) JRLoader.loadObject(inputStream);
             jasperPrint = JasperFillManager.fillReport(jasperReport, map, connection);
+            System.out.println(map);
         } catch (Exception e) {
             e.printStackTrace();
         }

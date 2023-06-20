@@ -4,6 +4,7 @@ module com.corpevents.corpevents {
     requires java.logging;
     requires java.sql;
     requires jasperreports;
+    requires mysql.connector.j;
 
 
     opens com.corpevents.main to javafx.fxml;

@@ -3,16 +3,10 @@ package com.corpevents.main.model;
 public class Categoria {
     private int id;
     private String nome;
-    private String username;
-    private String password;
-    private int role;
 
-    public Categoria(int id, String nome, String username, String password, int role) {
+    public Categoria(int id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.username = username;
-        this.password = password;
-        this.role = role;
     }
 
     public Categoria() {
@@ -35,33 +29,6 @@ public class Categoria {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public int getRole() {
-        return role;
-    }
-
-    public void setRole(int role) {
-        this.role = role;
     }
 
     @Override
