@@ -9,7 +9,7 @@
 }
 
 .root-pessoas-listar, .root-pessoas-adicionar, .root-pessoas-editar {
-    -fx-background-color: #151515;
+    -fx-background-color: #151515!important;
     -fx-fill: #EF9E34!important;
     -fx-background-radius: 0 0 8px 0!important;
 }
@@ -18,14 +18,11 @@
     -fx-background-color: #262626;
     -fx-text-fill: #F9F9F9;
     -fx-font-weight: bold;
-    -fx-border-color: #F9F9F9;
-    -fx-border-width: 1px;
     -fx-border-radius: 3px;
 }
 
 .action-pessoas-button:hover {
-    -fx-background-color: #F9F9F9;
-    -fx-text-fill: #262626;
+    -fx-background-color: #323232;
 }
 
 .table-pessoas {

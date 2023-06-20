@@ -56,7 +56,20 @@ TextField, TextArea, ComboBox, DatePicker, PasswordField, CheckBox, RadioButton,
     -fx-text-fill: #F9F9F9!important;
     -fx-fill: #F9F9F9!important;
     -fx-prompt-text-fill: #989898!important;
+}
 
+TextField, TextArea, ComboBox, DatePicker, PasswordField, ListView {
+    -fx-background-color: #262626!important;
+    -fx-text-fill: #F9F9F9;
+    -fx-fill: #F9F9F9;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3px;
+    -fx-control-inner-background: #262626!important;
+    -fx-prompt-text-fill: #F9F9F9!important;
+}
+
+DatePicker > .text-field {
+    -fx-prompt-text-fill: #F9F9F9!important;
 }
 
 .jfx-text-field {

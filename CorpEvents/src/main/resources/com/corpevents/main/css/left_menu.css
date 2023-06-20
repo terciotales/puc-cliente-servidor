@@ -32,12 +32,17 @@
 .close-button {
     -fx-background-color: #262626;
     -fx-text-fill: #F9F9F9;
-    -fx-font-weight: bold;
+    -fx-font-weight: bold!important;
     -fx-border-radius: 3px;
+    -fx-font-size: 14px;
 }
 
 .close-button:hover {
     -fx-background-color: #EF9E34;
+    -fx-text-fill: #F9F9F9;
+    -fx-font-weight: bold!important;
+    -fx-font-size: 14px;
+    -fx-border-radius: 3px;
 }
 
 .greetings-container {

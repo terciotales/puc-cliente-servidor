@@ -186,7 +186,7 @@
                               <Insets left="18.0" right="18.0" />
                            </padding>
                         </VBox>
-                        <Button graphicTextGap="8.0" mnemonicParsing="false" onMouseClicked="#closeApplication" prefHeight="30.0" prefWidth="180.0" styleClass="close-button" text="Sair">
+                        <Button graphicTextGap="8.0" maxHeight="30.0" maxWidth="180.0" minHeight="30.0" minWidth="180.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="30.0" prefWidth="180.0" styleClass="close-button" text="Sair">
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>

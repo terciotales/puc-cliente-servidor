@@ -5,13 +5,13 @@
     -fx-control-inner-background-alt: -fx-control-inner-background;
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
-    -fx-background-radius: 0 0 8px 0!important;
+    -fx-background-radius: 0 0 8px 0 !important;
 }
 
 .root-eventos-listar, .root-eventos-adicionar, .root-eventos-editar {
-    -fx-background-color: #151515;
-    -fx-fill: #EF9E34!important;
-    -fx-background-radius: 0 0 8px 0!important;
+    -fx-background-color: #151515!important;
+    -fx-fill: #EF9E34 !important;
+    -fx-background-radius: 0 0 8px 0 !important;
 }
 
 .action-eventos-button {
@@ -27,16 +27,16 @@
 
 .table-eventos {
     -fx-background-color: #262626;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
 .table-eventos .column-header,
 .table-eventos .column-header .filler,
 .table-eventos .column-header-background .filler {
     -fx-background-color: #323232;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
     -fx-border-radius: 8px;
     -fx-pref-height: 40px;
 }
@@ -46,18 +46,18 @@
     -fx-alignment: CENTER_LEFT;
     -fx-padding: 5px 0 5px 10px;
     -fx-font-size: 12px;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
-.table-view .table-cell{
+.table-view .table-cell {
     -fx-border-color: transparent;
     -fx-padding: 3 0 3 10px;
     -fx-alignment: CENTER_LEFT;
     -fx-background-color: transparent;
     -fx-min-height: 40px;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
 .table-row-cell {
@@ -66,23 +66,23 @@
     -fx-font-size: 11px;
     -fx-alignment: CENTER_LEFT;
     -fx-background-color: #262626;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
 .table-row-cell:selected, .table-row-cell:selected:hover {
     -fx-background-color: #615647;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
 .table-row-cell:selected .table-cell {
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }
 
 .table-row-cell:hover {
     -fx-background-color: #333333;
-    -fx-text-fill: #F9F9F9!important;
-    -fx-fill: #F9F9F9!important;
+    -fx-text-fill: #F9F9F9 !important;
+    -fx-fill: #F9F9F9 !important;
 }

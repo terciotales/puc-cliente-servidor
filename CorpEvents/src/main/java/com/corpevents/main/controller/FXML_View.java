@@ -132,7 +132,21 @@ public class FXML_View implements Initializable {
     }
 
     /**
+     * Faz o logout do usuário.
+     *
+     * @param event Evento de clique do mouse.
+     * @throws IOException Exceção de I/O.
+     */
+    @FXML
+    void logout(MouseEvent event) throws IOException {
+        Usuario.getInstance().setIsLogged(false);
+        Usuario.getInstance().setPessoa(null);
+        Main.changeScene("view/FXML_Login.fxml");
+    }
+
+    /**
      * Minimiza a aplicação.
+     *
      * @param event Evento de clique do mouse.
      */
     @FXML

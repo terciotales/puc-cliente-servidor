@@ -1,4 +1,4 @@
-.report-pane {
+.root-relatorios {
     -fx-background-color: #262626;
     -fx-base: #262626;
     -fx-control-inner-background: derive(-fx-base, 35%);
@@ -6,11 +6,11 @@
     -fx-font-family: Arial;
     -fx-text-fill: #F9F9F9;
     -fx-alignment: TOP_CENTER!important;
-    -fx-background-radius: 8px!important;
+    -fx-background-radius: 0 0 8px 0!important;
 }
 
 .root-relatorios-listar, .root-relatorios-adicionar, .root-relatorios-editar {
-    -fx-background-color: #151515;
+    -fx-background-color: #151515!important;
     -fx-fill: #EF9E34!important;
     -fx-background-radius: 0 0 8px 0!important;
 }
@@ -91,4 +91,5 @@
 .box-container {
     -fx-border-width: 1px;
     -fx-border-color: #333333;
+    -fx-border-radius: 8px!important;
 }

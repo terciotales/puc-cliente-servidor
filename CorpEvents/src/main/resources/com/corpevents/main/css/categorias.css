@@ -8,7 +8,7 @@
 }
 
 .root-categorias-listar, .root-categorias-adicionar, .root-categorias-editar {
-    -fx-background-color: #151515;
+    -fx-background-color: #151515!important;
     -fx-fill: #EF9E34!important;
 }
 
