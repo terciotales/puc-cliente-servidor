@@ -24,12 +24,6 @@ public class Main extends Application {
         String resource = "view/FXML_Login.fxml";
         stage.initStyle(StageStyle.UNDECORATED);
 
-        PessoaDAO pessoaDAO = new PessoaDAO();
-        Pessoa pessoa = pessoaDAO.selectById(1);
-
-        Usuario.getInstance().setIsLogged(true);
-        Usuario.getInstance().setPessoa(pessoa);
-
         if (Usuario.getInstance().isLogged()) {
             resource = "view/FXML_View.fxml";
         }

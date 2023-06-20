@@ -35,10 +35,6 @@ public class FXML_Relatorios implements Initializable {
         try {
             this.loadPage();
             this.setActiveButton();
-
-            if (!Usuario.getInstance().isAdministrador()) {
-                buttons.getChildren().get(1).setVisible(false);
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }

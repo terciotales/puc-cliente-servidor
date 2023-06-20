@@ -39,3 +39,13 @@
     -fx-font-weight: bold;
     -fx-font-size: 11px;
 }
+
+TextField, TextArea, PasswordField {
+    -fx-background-color: #323232!important;
+    -fx-text-fill: #F9F9F9;
+    -fx-fill: #F9F9F9;
+    -fx-font-weight: bold;
+    -fx-border-radius: 3px;
+    -fx-control-inner-background: #323232!important;
+    -fx-prompt-text-fill: #F9F9F9!important;
+}
